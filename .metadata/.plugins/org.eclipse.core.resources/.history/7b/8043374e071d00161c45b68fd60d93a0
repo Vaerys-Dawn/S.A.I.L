@@ -1,0 +1,37 @@
+package SAIL;
+
+import com.google.common.util.concurrent.FutureCallback;
+
+import de.btobastian.javacord.DiscordAPI;
+import de.btobastian.javacord.Javacord;
+import de.btobastian.javacord.entities.message.Message;
+import de.btobastian.javacord.listener.message.MessageCreateListener;
+
+public class main {
+
+	public static void main (String args[]) {
+		
+		DiscordAPI api = Javacord.getApi(email, password);
+		//connect
+		api.connect(new FutureCallback<DiscordAPI>() {
+			
+			public void onSuccess(DiscordAPI api) {
+				api.registerListener(new MessageCreateListener() {
+					
+					public void onMessageCreate(DiscordAPI api, Message message) {
+						if (message.getContent().equalsIgnoreCase("ping")){
+							message.reply("pong");
+						}
+						
+					}
+				});
+				
+			}
+
+			public void onFailure(Throwable t) {
+				t.printStackTrace();	
+			}
+		});
+	}
+
+}
