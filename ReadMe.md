@@ -7,6 +7,7 @@ Personal Notes
 - this is meant to be a bot for starbound
 
 Commands
+
 	>ListRaces
 		- Lists all avalible races that users can select
 		* Vanilla Races to choose from:
