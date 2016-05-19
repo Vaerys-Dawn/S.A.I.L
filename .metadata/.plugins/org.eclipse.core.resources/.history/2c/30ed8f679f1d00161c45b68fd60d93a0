@@ -1,0 +1,12 @@
+package SAIL;
+
+public class main {
+
+	public static void main (String args[]) {
+		
+		String token = "MTgyNTAyOTY0NDA0MDI3Mzky.Ch4QoQ.Q0l_Ys2EhsCQwf3575Q0u3Isffs";
+		boolean bot = true;
+		
+	}
+
+}
