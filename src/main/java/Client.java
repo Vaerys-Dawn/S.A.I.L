@@ -8,10 +8,6 @@ import sx.blah.discord.util.DiscordException;
 public class Client {
     public static IDiscordClient getClient(String token,boolean login) throws DiscordException {
         ClientBuilder clientBuilder = new ClientBuilder();
-        try {
-
-        }catch (Exception ex){
-        }
 
         clientBuilder.withToken(token);
         if(login){
