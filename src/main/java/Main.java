@@ -10,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
         String token = "MTgyNTAyOTY0NDA0MDI3Mzky.Ch7LCQ.vNliQTexzBQ-ZvqzpgcqoPKSCZI";
         try{
-            IDiscordClient client = Client.getClient(token, true);
+            IDiscordClient client = Client.getClient(token,true);
+            client.isBot();
             EventDispatcher dispatcher = client.getDispatcher();
             dispatcher.registerListener(new InterfaceListener());
             dispatcher.registerListener(new AnnotationListener());

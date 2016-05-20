@@ -1,26 +1,30 @@
 /**
  * Created by Vaerys on 19/05/2016.
  */
-public class CommandGenerator {
+public class Command {
 
     private String name;
     private String initiator;
-    private String minRole;
+    private String minperm;
     private String room;
     private String about;
     private String command;
 
-    public CommandGenerator(String name, String initiator, String command, String about, String minRole, String room) {
+    public Command(String name, String initiator, String command, String about, String minperm, String room) {
         this.name = name;
         this.initiator = initiator;
         this.command = command;
         this.about = about;
-        this.minRole = minRole;
+        this.minperm = minperm;
         this.room = room;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getInitiator() {
@@ -31,12 +35,12 @@ public class CommandGenerator {
         this.initiator = initiator;
     }
 
-    public String getMinRole() {
-        return minRole;
+    public String getMinperm() {
+        return minperm;
     }
 
-    public void setMinRole(String minRole) {
-        this.minRole = minRole;
+    public void setMinperm(String minperm) {
+        this.minperm = minperm;
     }
 
     public String getRoom() {
@@ -58,14 +62,5 @@ public class CommandGenerator {
     public String getCommand() {
         return command;
     }
-
-    public void setCommand(String command) {
-        this.command = command;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-
-    }
 }
-//for things
+
