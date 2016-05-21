@@ -15,4 +15,8 @@ public class CreatorCommands {
         this.user = user;
         this.guild = guild;
     }
+
+    public String botMessage(){
+        return "Hello everyone, I am a Bot my Name is S.A.I.L. This command can only be run by my creator Dawn Felstar.";
+    }
 }

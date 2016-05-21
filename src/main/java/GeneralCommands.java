@@ -49,9 +49,9 @@ public class GeneralCommands {
     public String InfoSail(ArrayList<Command> commands) {
         StringBuilder responce = new StringBuilder();
         responce.append("Hello My Name is S.A.I.L\n" +
-                "Here are the commands currently at my disposal");
+                "Here are the commands currently at my disposal:");
         for (int i = 0; i < commands.size(); i++) {
-            responce.append("\n" + commands.get(i).getCommand());
+            responce.append("\n  " + commands.get(i).getCommand());
         } //add all of the commands to the list
         responce.append("\nMy Author is Dawn Felstar and I am currently In Development\n" +
                 "I am being written using Java with the Discord4J Libraries.");

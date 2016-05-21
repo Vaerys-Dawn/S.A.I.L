@@ -21,6 +21,7 @@ public class AnnotationListener {
     Command helloSail;
     Command nightlyFAQ;
     Command sailPlease;
+    Command botMessage;
 
 
     String iAmListeningMessage;
@@ -40,6 +41,7 @@ public class AnnotationListener {
         commands.add(helloSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "HelloSail", "", "Says Hello"));
         commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX + "NightlyFAQ", "", "Links the nightly FAQ Reddit post"));
         commands.add(sailPlease = new Command(Globals.ADMIN_COMMAND_PREFIX + "SailPlease", "", "Does Magic"));
+        commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX + "BotMessage", "", "Says Stuff"));
     }
 
     @EventSubscriber
@@ -89,6 +91,13 @@ public class AnnotationListener {
                 if (message.equalsIgnoreCase(sailPlease.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(adminCommands.SailPlease(userType));
+                }
+            }
+            if (message.startsWith(Globals.CREATOR_COMMAND_PREFIX)){
+                if (author.getID().equals("153159020528533505"))
+                if (message.equalsIgnoreCase(botMessage.getCommand())){
+                    System.out.println(message);
+                    channel.sendMessage(creatorCommands.botMessage());
                 }
             }
 
