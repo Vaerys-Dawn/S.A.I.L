@@ -8,6 +8,10 @@ import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
 import sx.blah.discord.util.MissingPermissionsException;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -22,19 +26,13 @@ public class AnnotationListener {
     Command nightlyFAQ;
     Command sailPlease;
     Command botMessage;
-
-
-    String iAmListeningMessage;
-    String infoSailPrefix;
-    String infoSailSuffix;
-    String nightlyFAQLink;
+    ArrayList<GuildConfig> guildConfigs;
 
     @EventSubscriber
     public void onReadyEvent(ReadyEvent event) {
         System.out.println("connected");
         //Example of a new command
         //Command command = new Command("Name", "Command", '>', "Usage", "Description");
-
         //Initiating commands
         commands.add(infoSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "InfoSail", "", "Displays some information about Sail and It's Command list"));
         commands.add(iAmListening = new Command(Globals.GENERAL_COMMAND_PREFIX + "IAmListening", "", "Tells you what Sail does"));
@@ -42,6 +40,64 @@ public class AnnotationListener {
         commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX + "NightlyFAQ", "", "Links the nightly FAQ Reddit post"));
         commands.add(sailPlease = new Command(Globals.ADMIN_COMMAND_PREFIX + "SailPlease", "", "Does Magic"));
         commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX + "BotMessage", "", "Says Stuff"));
+
+        try {
+            File configDir = new File("ServerConfigs");
+            if (!configDir.exists()) {
+                configDir.mkdirs();
+            }
+            System.out.println(event.getClient().getGuilds().size());
+            for (int i = 0; i < event.getClient().getGuilds().size() + 1; i++) {
+                String checkableGuildID = event.getClient().getGuilds().get(i).getID();
+                Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
+                channel.sendMessage("I am S.A.I.L. I am Broken. Look at me and laugh.");
+                System.out.println(checkableGuildID);
+                File file = new File("ServerConfigs/" + checkableGuildID + "_Config.json");
+                if (file.exists()) {
+                    FileReader fileReader = new FileReader(file);
+                    System.out.println("this");
+                } else {
+                    file.createNewFile();
+                    System.out.println("test");
+                }
+            }
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        } catch (DiscordException e){
+            e.printStackTrace();
+        } catch (HTTP429Exception e){
+            e.printStackTrace();
+        } catch (MissingPermissionsException e){
+            e.printStackTrace();
+        }
+
+
+//        try {
+//            System.out.println(event.getClient().getGuilds().size());
+//            for (int i = 0; i < event.getClient().getGuilds().size(); i++) {
+//                System.out.println("test");
+//                Channel channel;
+//                channel = (Channel) event.getClient().getGuilds().get(i).getChannelByID(event.getClient().getGuilds().get(i).getID());
+//                channel.sendMessage("Hello My Name is S.A.I.L, I am now listening for Commands");
+//                String key = event.getClient().getGuilds().get(i).getID() + "_config";
+//                FileReader reader = new FileReader(key);
+//            }
+//        } catch (FileNotFoundException ex) {
+//            for (int i = 0; i < event.getClient().getGuilds().size(); i++) {
+//                String key = event.getClient().getGuilds().get(i).getID() + "_config";
+//                File file = File.createTempFile(key, ".txt", new File("../ServerConfigs"));
+//            }
+//        } catch (IOException ex) {
+//            ex.printStackTrace();
+//        } catch (DiscordException ex) {
+//            ex.printStackTrace();
+//        } catch (MissingPermissionsException ex) {
+//            ex.printStackTrace();
+//        } catch (HTTP429Exception ex) {
+//            ex.printStackTrace();
+//        }
     }
 
     @EventSubscriber
@@ -93,12 +149,12 @@ public class AnnotationListener {
                     channel.sendMessage(adminCommands.SailPlease(userType));
                 }
             }
-            if (message.startsWith(Globals.CREATOR_COMMAND_PREFIX)){
+            if (message.startsWith(Globals.CREATOR_COMMAND_PREFIX)) {
                 if (author.getID().equals("153159020528533505"))
-                if (message.equalsIgnoreCase(botMessage.getCommand())){
-                    System.out.println(message);
-                    channel.sendMessage(creatorCommands.botMessage());
-                }
+                    if (message.equalsIgnoreCase(botMessage.getCommand())) {
+                        System.out.println(message);
+                        channel.sendMessage(creatorCommands.botMessage());
+                    }
             }
 
         } catch (MissingPermissionsException e) {
@@ -109,5 +165,4 @@ public class AnnotationListener {
             e.printStackTrace();
         }
     }
-
 }
