@@ -19,13 +19,13 @@
         <dependency>
             <groupId>com.github.austinv11</groupId>
             <artifactId>Discord4j</artifactId>
-            <version>31aef0e</version>
+            <version>dev-SNAPSHOT</version>
             <classifier>shaded</classifier>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-classic</artifactId>-->
+            <!--<version>1.0.13</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

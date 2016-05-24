@@ -1,6 +1,7 @@
 import sx.blah.discord.api.EventDispatcher;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.Image;
 
 /**
  * Created by Vaerys on 19/05/2016.

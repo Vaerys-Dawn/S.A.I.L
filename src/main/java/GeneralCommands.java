@@ -2,6 +2,9 @@ import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.obj.IUser;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -57,5 +60,32 @@ public class GeneralCommands {
                 "I am being written using Java with the Discord4J Libraries.");
         String message = responce.toString();
         return message;
+    }
+
+    public String whatAreYouSail() {
+        return "I am a bot i like to break on a regular basis and its all my fault.\n" +
+                "Dawn is the best. I suck";
+    }
+
+    public String sailCompetition(String message) {
+        File configDir = new File("Competition");
+        StringBuilder stringBuilder = new StringBuilder(message);
+        stringBuilder.delete(0, 9);
+        if (!configDir.exists()) {
+            configDir.mkdirs();
+        }
+        File file = new File("Competition/Entries.txt");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fileWriter = new FileWriter(file, true);
+            fileWriter.append(user.getName() + ", " + stringBuilder.toString()+ "\n");
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return user.getName() + " thank you for entering the competition.";
     }
 }

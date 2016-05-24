@@ -6,6 +6,7 @@ import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.obj.IUser;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
+import sx.blah.discord.util.Image;
 import sx.blah.discord.util.MissingPermissionsException;
 
 import java.io.File;
@@ -26,6 +27,8 @@ public class AnnotationListener {
     Command nightlyFAQ;
     Command sailPlease;
     Command botMessage;
+    Command whatAreYouSail;
+    Command sailCompetition;
     ArrayList<GuildConfig> guildConfigs;
 
     @EventSubscriber
@@ -40,17 +43,28 @@ public class AnnotationListener {
         commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX + "NightlyFAQ", "", "Links the nightly FAQ Reddit post"));
         commands.add(sailPlease = new Command(Globals.ADMIN_COMMAND_PREFIX + "SailPlease", "", "Does Magic"));
         commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX + "BotMessage", "", "Says Stuff"));
+        commands.add(whatAreYouSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "WhatAreYouSail","","Demoralises the bot"));
+        commands.add(sailCompetition = new Command(Globals.GENERAL_COMMAND_PREFIX + "SailComp"," [Link to Image]","Enters your art into the competition"));
 
         try {
+            Image avatar = new Image() {
+                public String getData() {
+                    return "Icons/S_A_I_L.png";
+                }
+            };
+            //event.getClient().logout();
+            event.getClient().changeAvatar(avatar);
+
             File configDir = new File("ServerConfigs");
             if (!configDir.exists()) {
                 configDir.mkdirs();
             }
             System.out.println(event.getClient().getGuilds().size());
-            for (int i = 0; i < event.getClient().getGuilds().size() + 1; i++) {
+            for (int i = 0; i < event.getClient().getGuilds().size(); i++) {
                 String checkableGuildID = event.getClient().getGuilds().get(i).getID();
                 Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
-                channel.sendMessage("I am S.A.I.L. I am Broken. Look at me and laugh.");
+               // channel.sendMessage("I have joined the server and am now listening for commands. If you do not want to see\n" +
+               //         "this message again have an admin perform +ToggleWelcome (not currently working)");
                 System.out.println(checkableGuildID);
                 File file = new File("ServerConfigs/" + checkableGuildID + "_Config.json");
                 if (file.exists()) {
@@ -69,8 +83,8 @@ public class AnnotationListener {
             e.printStackTrace();
         } catch (HTTP429Exception e){
             e.printStackTrace();
-        } catch (MissingPermissionsException e){
-            e.printStackTrace();
+//        } catch (MissingPermissionsException e){
+//            e.printStackTrace();
         }
 
 
@@ -141,6 +155,14 @@ public class AnnotationListener {
                 if (message.equalsIgnoreCase(nightlyFAQ.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.NightlyFAQ());
+                }
+                if(message.equalsIgnoreCase(whatAreYouSail.getCommand())){
+                    System.out.println(message);
+                    channel.sendMessage(generalCommands.whatAreYouSail());
+                }
+                if(message.contains(sailCompetition.getCommand())){
+                    System.out.println(message);
+                    channel.sendMessage(generalCommands.sailCompetition(message));
                 }
             }
             if (message.startsWith(Globals.ADMIN_COMMAND_PREFIX)) {
