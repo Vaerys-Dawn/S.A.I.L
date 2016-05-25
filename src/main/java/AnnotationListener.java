@@ -160,7 +160,7 @@ public class AnnotationListener {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.whatAreYouSail());
                 }
-                if(message.contains(sailCompetition.getCommand())){
+                if(message.toLowerCase().startsWith(sailCompetition.getCommand().toLowerCase())){
                     System.out.println(message);
                     channel.sendMessage(generalCommands.sailCompetition(message));
                 }
