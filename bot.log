@@ -1,0 +1,5 @@
+2016-05-27 17:54:48.573 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-05-27 17:54:48.577 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-05-27 17:54:49.681 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1568ms
+2016-05-27 17:54:50.980 [WebSocketClient@17642278-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v4
+2016-05-27 17:54:50.989 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.

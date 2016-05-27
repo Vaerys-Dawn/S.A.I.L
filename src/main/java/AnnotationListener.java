@@ -1,9 +1,12 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import sx.blah.discord.api.EventSubscriber;
 import sx.blah.discord.handle.impl.events.MessageReceivedEvent;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
+import sx.blah.discord.handle.obj.IRole;
 import sx.blah.discord.handle.obj.IUser;
+import sx.blah.discord.handle.obj.Permissions;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
 import sx.blah.discord.util.Image;
@@ -13,6 +16,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.Permission;
 import java.util.ArrayList;
 
 /**
@@ -29,6 +33,7 @@ public class AnnotationListener {
     Command botMessage;
     Command whatAreYouSail;
     Command sailCompetition;
+    boolean doCheck = true;
     ArrayList<GuildConfig> guildConfigs;
 
     @EventSubscriber
@@ -59,7 +64,7 @@ public class AnnotationListener {
             if (!configDir.exists()) {
                 configDir.mkdirs();
             }
-            System.out.println(event.getClient().getGuilds().size());
+            System.out.println("connected guilds: " + event.getClient().getGuilds().size());
             for (int i = 0; i < event.getClient().getGuilds().size(); i++) {
                 String checkableGuildID = event.getClient().getGuilds().get(i).getID();
                 Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
@@ -124,25 +129,41 @@ public class AnnotationListener {
         GeneralCommands generalCommands = new GeneralCommands(channel, author, guild);
         AdminCommands adminCommands = new AdminCommands(channel, author, guild);
         CreatorCommands creatorCommands = new CreatorCommands(channel, author, guild);
-        String userType;
-
-
-        //user type detectors (All those strings a temporary)
-        if (roles.contains("chucklefish")) {
-            userType = "CFStaff"; //tests for the Chucklefish role
-        } else if (roles.contains("admin")) {
-            userType = "Admin"; //tests for the Admin role
-        } else if (roles.contains("moderator")) {
-            userType = "Moderator";//tests for the Moderator role
-        } else {
-            userType = "User";
+        boolean isOwner = false;
+        boolean isAdmin = false;
+        boolean isMod = false;
+        boolean isCF = false;
+        boolean isCreator = false;
+        if (doCheck) {
+            System.out.println("connected guilds: " + event.getClient().getGuilds().size());
+            doCheck = false;
+        }
+        //get the user's type
+        if (author.getID().equals("153159020528533505")){
+            isCreator = true;
+        }
+        if (guild.getOwner().equals(author)){
+            isOwner = true;
+        }
+        for(int i = 0; i < author.getRolesForGuild(guild).size();i++){
+            IRole role = author.getRolesForGuild(guild).get(i);
+            if (role.getPermissions().contains(Permissions.ADMINISTRATOR)){
+                isAdmin = true;
+            }
+            if (role.getPermissions().contains(Permissions.MANAGE_ROLES)){
+                isMod = true;
+            }
+            if (role.getName().toLowerCase().contains("chucklefish")){
+                isCF = true;
+            }
         }
 
+        //calls the commands
         try {
             if (message.startsWith(Globals.GENERAL_COMMAND_PREFIX)) {
                 if (message.equalsIgnoreCase(helloSail.getCommand())) {
                     System.out.println(message);
-                    channel.sendMessage(generalCommands.HelloSail(userType));
+                    channel.sendMessage(generalCommands.HelloSail(isAdmin,isMod,isCF,isOwner,isCreator));
                 }
                 if (message.equalsIgnoreCase(iAmListening.getCommand())) {
                     System.out.println(message);
@@ -168,11 +189,11 @@ public class AnnotationListener {
             if (message.startsWith(Globals.ADMIN_COMMAND_PREFIX)) {
                 if (message.equalsIgnoreCase(sailPlease.getCommand())) {
                     System.out.println(message);
-                    channel.sendMessage(adminCommands.SailPlease(userType));
+                    channel.sendMessage(adminCommands.SailPlease(isAdmin,isMod,isCF,isOwner));
                 }
             }
             if (message.startsWith(Globals.CREATOR_COMMAND_PREFIX)) {
-                if (author.getID().equals("153159020528533505"))
+                if (isCreator)
                     if (message.equalsIgnoreCase(botMessage.getCommand())) {
                         System.out.println(message);
                         channel.sendMessage(creatorCommands.botMessage());

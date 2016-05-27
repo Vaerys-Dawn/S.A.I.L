@@ -17,9 +17,9 @@ public class AdminCommands {
     }
 
 
-    public String SailPlease(String userType) {
+    public String SailPlease(boolean isAdmin, boolean isMod, boolean isCF, boolean isOwner) {
 
-        if (userType.equals("Admin") || userType.equals("Moderator") || userType.equals("CFStaff")) {
+        if (isAdmin || isMod || isCF || isOwner) {
             return "Your wish is my command.";
         } else {
             return "Im afraid i cant do that for you " + user + ".";

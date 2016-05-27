@@ -22,16 +22,16 @@ public class GeneralCommands {
         this.guild = guild;
     }
 
-    public String HelloSail(String type) {
-        if (user.getID().equals("153159020528533505")) {
+    public String HelloSail(boolean isAdmin, boolean isMod, boolean isCF, boolean isOwner,boolean isCreator) {
+        if (isCreator) {
             return "Hello Creator";
-        } else if (user.equals(guild.getOwner())) {
+        } else if (isOwner) {
             return "Hello Server Owner";
-        } else if (type.equals("Admin")) {
+        } else if (isAdmin) {
             return "Hello Admin";
-        } else if (type.equals("Moderator")) {
+        } else if (isMod) {
             return "Hello Moderator";
-        } else if (type.equals("CFStaff")) {
+        } else if (isCF) {
             return "Hello Chucklefish Staff Member";
         } else {
             return "Hello User";

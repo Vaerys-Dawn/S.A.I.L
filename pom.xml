@@ -6,7 +6,7 @@
 
     <groupId>com.github.vaerys</groupId>
     <artifactId>DiscordSAIL</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 
     <repositories>
         <repository>
@@ -22,10 +22,10 @@
             <version>dev-SNAPSHOT</version>
             <classifier>shaded</classifier>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.0.13</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+        </dependency>
     </dependencies>
 </project>
