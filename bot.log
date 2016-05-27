@@ -625,3 +625,27 @@
 2016-05-28 02:37:37.543 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367057543). Took 41250 ms.
 2016-05-28 02:38:18.793 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367098793). Took 41250 ms.
 2016-05-28 02:38:24.676 [WebSocketClient@17642278-18] DEBUG sx.blah.discord.Discord4J - User "welian" changed presence to OFFLINE
+2016-05-28 02:38:36.925 [WebSocketClient@17642278-19] DEBUG sx.blah.discord.Discord4J - User "Drfreezybreeze" changed presence to OFFLINE
+2016-05-28 02:38:44.455 [WebSocketClient@17642278-20] DEBUG sx.blah.discord.Discord4J - User "LtUnreal" changed presence to OFFLINE
+2016-05-28 02:38:56.089 [WebSocketClient@17642278-16] DEBUG sx.blah.discord.Discord4J - User "Onu-Hina" changed presence to IDLE
+2016-05-28 02:39:00.043 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367140043). Took 41250 ms.
+2016-05-28 02:39:41.294 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367181294). Took 41251 ms.
+2016-05-28 02:39:54.377 [WebSocketClient@17642278-14] DEBUG sx.blah.discord.Discord4J - User "George Nordington" changed presence to ONLINE
+2016-05-28 02:40:05.609 [WebSocketClient@17642278-13] DEBUG sx.blah.discord.Discord4J - User "Artized" changed presence to ONLINE
+2016-05-28 02:40:22.543 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367222543). Took 41249 ms.
+2016-05-28 02:40:43.518 [WebSocketClient@17642278-18] DEBUG sx.blah.discord.Discord4J - User "Astraltor" changed status to NONE (name=null, url=null).
+2016-05-28 02:41:03.793 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367263793). Took 41250 ms.
+2016-05-28 02:41:45.043 [Discord4J WebSocket Client Executor 0] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367305043). Took 41250 ms.
+2016-05-28 02:42:12.948 [WebSocketClient@17642278-13] DEBUG sx.blah.discord.Discord4J - User "Zee" changed presence to IDLE
+2016-05-28 02:42:26.293 [Discord4J WebSocket Client Executor 0] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367346293). Took 41250 ms.
+2016-05-28 02:42:48.318 [WebSocketClient@17642278-18] DEBUG sx.blah.discord.Discord4J - User "emailchris" changed presence to IDLE
+2016-05-28 02:43:07.543 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367387543). Took 41250 ms.
+2016-05-28 02:43:30.640 [WebSocketClient@17642278-17] DEBUG sx.blah.discord.Discord4J - User "Kayleen029" changed status to GAME (name=Momodora III, url=null).
+2016-05-28 02:43:43.805 [WebSocketClient@17642278-13] DEBUG sx.blah.discord.Discord4J - User "Neverist" changed presence to ONLINE
+2016-05-28 02:43:48.793 [Discord4J WebSocket Client Executor 0] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367428793). Took 41250 ms.
+2016-05-28 02:44:06.011 [WebSocketClient@17642278-19] DEBUG sx.blah.discord.Discord4J - User "Drfreezybreeze" changed presence to ONLINE
+2016-05-28 02:44:20.546 [WebSocketClient@17642278-14] DEBUG sx.blah.discord.Discord4J - User "Heemi" changed presence to ONLINE
+2016-05-28 02:44:29.731 [WebSocketClient@17642278-16] DEBUG sx.blah.discord.Discord4J - User "Inurian" changed presence to ONLINE
+2016-05-28 02:44:30.043 [Discord4J WebSocket Client Executor 1] DEBUG sx.blah.discord.Discord4J - Sending keep alive... (1464367470043). Took 41249 ms.
+2016-05-28 02:44:39.347 [WebSocketClient@17642278-18] DEBUG sx.blah.discord.Discord4J - User "healthire" changed presence to ONLINE
+2016-05-28 02:44:46.478 [WebSocketClient@17642278-17] DEBUG sx.blah.discord.Discord4J - User "Astraltor" changed presence to OFFLINE
