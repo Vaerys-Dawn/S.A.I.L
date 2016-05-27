@@ -4,6 +4,7 @@ import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.Image;
 
+import java.io.*;
 import java.util.logging.Logger;
 
 /**
@@ -11,11 +12,23 @@ import java.util.logging.Logger;
  */
 public class Main {
 
+
     public static void main(String[] args) {
-        String token = "MTgyNTAyOTY0NDA0MDI3Mzky.Ch7LCQ.vNliQTexzBQ-ZvqzpgcqoPKSCZI";
 
-
+        String token;
+        // you need to set a token in Token/Token.txt for the bot to run
         try {
+            File configDir = new File("Token");
+            if (!configDir.exists()) {
+                configDir.mkdirs();
+            }
+            File file = new File("Token/Token.txt");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            token = bufferedReader.readLine();
             IDiscordClient client = Client.getClient(token, true);
             client.isBot();
             EventDispatcher dispatcher = client.getDispatcher();
@@ -23,6 +36,10 @@ public class Main {
             dispatcher.registerListener(new AnnotationListener());
         } catch (DiscordException ex) {
             System.out.println(ex);
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

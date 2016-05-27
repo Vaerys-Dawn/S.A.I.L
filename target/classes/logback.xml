@@ -7,7 +7,7 @@
     <!-- Avoid logger spam from web socket -->
     <logger name="org.eclipse.jetty" level="INFO"/>
     <!-- Configure Discord4J logger level -->
-    <logger name="sx.blah.discord.Discord4J" level="INFO"/>
+    <logger name="sx.blah.discord.Discord4J" level="TRACER"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
