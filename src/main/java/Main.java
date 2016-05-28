@@ -37,7 +37,7 @@ public class Main {
         } catch (DiscordException ex) {
             System.out.println(ex);
         } catch (FileNotFoundException e) {
-
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

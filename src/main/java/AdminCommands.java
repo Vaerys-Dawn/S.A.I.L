@@ -17,12 +17,11 @@ public class AdminCommands {
     }
 
 
-    public String SailPlease(boolean isAdmin, boolean isMod, boolean isCF, boolean isOwner) {
-
-        if (isAdmin || isMod || isCF || isOwner) {
+    public String SailPlease() {
             return "Your wish is my command.";
-        } else {
-            return "Im afraid i cant do that for you " + user + ".";
-        }
+    }
+
+    public String AddRace() {
+        return "Still in Testing Phase";
     }
 }

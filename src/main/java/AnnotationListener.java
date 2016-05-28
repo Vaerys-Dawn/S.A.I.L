@@ -1,5 +1,7 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.EventSubscriber;
+import sx.blah.discord.handle.impl.events.GuildCreateEvent;
 import sx.blah.discord.handle.impl.events.MessageReceivedEvent;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
@@ -9,14 +11,12 @@ import sx.blah.discord.handle.obj.IUser;
 import sx.blah.discord.handle.obj.Permissions;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
-import sx.blah.discord.util.Image;
 import sx.blah.discord.util.MissingPermissionsException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.security.Permission;
 import java.util.ArrayList;
 
 /**
@@ -24,74 +24,39 @@ import java.util.ArrayList;
  */
 public class AnnotationListener {
 
+    final static Logger logger = LoggerFactory.getLogger(AnnotationListener.class);
+
     ArrayList<Command> commands = new ArrayList<Command>();
-    Command infoSail;
+    Command info;
     Command iAmListening;
-    Command helloSail;
+    Command hello;
     Command nightlyFAQ;
-    Command sailPlease;
+    Command please;
     Command botMessage;
-    Command whatAreYouSail;
-    Command sailCompetition;
-    boolean doCheck = true;
+    Command whatAreYou;
+    Command competition;
+    Command addRace;
+    Command help;
     ArrayList<GuildConfig> guildConfigs;
 
     @EventSubscriber
     public void onReadyEvent(ReadyEvent event) {
-        System.out.println("connected");
+        logger.info("Connected to Discord");
         //Example of a new command
         //Command command = new Command("Name", "Command", '>', "Usage", "Description");
         //Initiating commands
-        commands.add(infoSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "InfoSail", "", "Displays some information about Sail and It's Command list"));
-        commands.add(iAmListening = new Command(Globals.GENERAL_COMMAND_PREFIX + "IAmListening", "", "Tells you what Sail does"));
-        commands.add(helloSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "HelloSail", "", "Says Hello"));
-        commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX + "NightlyFAQ", "", "Links the nightly FAQ Reddit post"));
-        commands.add(sailPlease = new Command(Globals.ADMIN_COMMAND_PREFIX + "SailPlease", "", "Does Magic"));
-        commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX + "BotMessage", "", "Says Stuff"));
-        commands.add(whatAreYouSail = new Command(Globals.GENERAL_COMMAND_PREFIX + "WhatAreYouSail","","Demoralises the bot"));
-        commands.add(sailCompetition = new Command(Globals.GENERAL_COMMAND_PREFIX + "SailComp"," [Link to Image]","Enters your art into the competition"));
+        commands.add(info = new Command(Globals.GENERAL_COMMAND_PREFIX, "Info", "", "Displays some information about Sail and It's Command list"));
+        commands.add(iAmListening = new Command(Globals.GENERAL_COMMAND_PREFIX, "IAmListening", "", "Tells you what Sail does"));
+        commands.add(hello = new Command(Globals.GENERAL_COMMAND_PREFIX, "Hello", "", "Says Hello"));
+        commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX, "NightlyFAQ", "", "Links the nightly FAQ Reddit post"));
+        commands.add(whatAreYou = new Command(Globals.GENERAL_COMMAND_PREFIX, "WhatAreYou", "", "Demoralises the bot"));
+        commands.add(competition = new Command(Globals.GENERAL_COMMAND_PREFIX, "Comp", " [Link to Image]", "Enters your art into the competition"));
+        commands.add(help = new Command(Globals.GENERAL_COMMAND_PREFIX, "Help", " [Command]", "Gives information about commands"));
 
-        try {
-            Image avatar = new Image() {
-                public String getData() {
-                    return "Icons/S_A_I_L.png";
-                }
-            };
-            //event.getClient().logout();
-            event.getClient().changeAvatar(avatar);
+        commands.add(please = new Command(Globals.ADMIN_COMMAND_PREFIX, "Please", "", "Does Magic"));
+        commands.add(addRace = new Command(Globals.ADMIN_COMMAND_PREFIX, "AddRace", " [Role Name]", "adds a race to the list of races that can be self assigned"));
 
-            File configDir = new File("ServerConfigs");
-            if (!configDir.exists()) {
-                configDir.mkdirs();
-            }
-            System.out.println("connected guilds: " + event.getClient().getGuilds().size());
-            for (int i = 0; i < event.getClient().getGuilds().size(); i++) {
-                String checkableGuildID = event.getClient().getGuilds().get(i).getID();
-                Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
-               // channel.sendMessage("I have joined the server and am now listening for commands. If you do not want to see\n" +
-               //         "this message again have an admin perform +ToggleWelcome (not currently working)");
-                System.out.println(checkableGuildID);
-                File file = new File("ServerConfigs/" + checkableGuildID + "_Config.json");
-                if (file.exists()) {
-                    FileReader fileReader = new FileReader(file);
-                    System.out.println("this");
-                } else {
-                    file.createNewFile();
-                    System.out.println("test");
-                }
-            }
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-        } catch (DiscordException e){
-            e.printStackTrace();
-        } catch (HTTP429Exception e){
-            e.printStackTrace();
-//        } catch (MissingPermissionsException e){
-//            e.printStackTrace();
-        }
-
+        commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX, "BotMessage", "", "Says Stuff"));
 
 //        try {
 //            System.out.println(event.getClient().getGuilds().size());
@@ -120,6 +85,34 @@ public class AnnotationListener {
     }
 
     @EventSubscriber
+    public void onGuildCreateEvent(GuildCreateEvent event) {
+        logger.info("[GuildCreateEvent] connected Guilds: " + event.getClient().getGuilds().size());
+        try {
+            File configDir = new File("ServerConfigs");
+            if (!configDir.exists()) {
+                configDir.mkdirs();
+            }
+            Guild guild = (Guild) event.getGuild();
+            String checkableGuildID = guild.getID();
+            Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
+
+            File file = new File("ServerConfigs/" + checkableGuildID + "_Config.json");
+            if (file.exists()) {
+                FileReader fileReader = new FileReader(file);
+            } else {
+                System.out.println("[GuildCreateEvent] Guild with ID " + checkableGuildID + " Is being Initialised");
+                file.createNewFile();
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @EventSubscriber
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
         String message = event.getMessage().toString(); //gets the message converts it to a String
         String roles = event.getMessage().getAuthor().getRolesForGuild(event.getMessage().getGuild()).toString().toLowerCase(); //gets the roles of the user and turns it into a string
@@ -134,42 +127,49 @@ public class AnnotationListener {
         boolean isMod = false;
         boolean isCF = false;
         boolean isCreator = false;
-        if (doCheck) {
-            System.out.println("connected guilds: " + event.getClient().getGuilds().size());
-            doCheck = false;
-        }
         //get the user's type
-        if (author.getID().equals("153159020528533505")){
+        if (author.getID().equals("153159020528533505")) {
             isCreator = true;
         }
-        if (guild.getOwner().equals(author)){
+        if (guild.getOwner().equals(author)) {
             isOwner = true;
         }
-        for(int i = 0; i < author.getRolesForGuild(guild).size();i++){
+        for (int i = 0; i < author.getRolesForGuild(guild).size(); i++) {
             IRole role = author.getRolesForGuild(guild).get(i);
-            if (role.getPermissions().contains(Permissions.ADMINISTRATOR)){
+            if (role.getPermissions().contains(Permissions.ADMINISTRATOR)) {
                 isAdmin = true;
             }
-            if (role.getPermissions().contains(Permissions.MANAGE_ROLES)){
+            if (role.getPermissions().contains(Permissions.MANAGE_ROLES)) {
                 isMod = true;
             }
-            if (role.getName().toLowerCase().contains("chucklefish")){
+            if (role.getName().toLowerCase().contains("chucklefish")) {
                 isCF = true;
             }
         }
-
         //calls the commands
         try {
-            if (message.startsWith(Globals.GENERAL_COMMAND_PREFIX)) {
-                if (message.equalsIgnoreCase(helloSail.getCommand())) {
+            //unlisted commanda
+            if (message.equalsIgnoreCase("/tableflip")){
+                channel.sendMessage("(╯°□°）╯︵ ┻━┻");
+            }
+            if (message.equalsIgnoreCase("/unflip")){
+                channel.sendMessage("┬─┬ノ( ゜-゜ノ)");
+            }
+            if (message.equalsIgnoreCase("/shrug")){
+                channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
+            }
+
+            //listed commands
+            if (message.toLowerCase().startsWith(Globals.GENERAL_COMMAND_PREFIX.toLowerCase())) {
+                if (message.equalsIgnoreCase(hello.getCommand())) {
                     System.out.println(message);
-                    channel.sendMessage(generalCommands.HelloSail(isAdmin,isMod,isCF,isOwner,isCreator));
+                    channel.sendMessage(generalCommands.HelloSail(isAdmin, isMod, isCF, isOwner, isCreator));
                 }
                 if (message.equalsIgnoreCase(iAmListening.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.IAmListening());
                 }
-                if (message.equalsIgnoreCase(infoSail.getCommand())) {
+                if (message.equalsIgnoreCase(info.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.InfoSail(commands));
                 }
@@ -177,22 +177,36 @@ public class AnnotationListener {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.NightlyFAQ());
                 }
-                if(message.equalsIgnoreCase(whatAreYouSail.getCommand())){
+                if (message.equalsIgnoreCase(whatAreYou.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.whatAreYouSail());
                 }
-                if(message.toLowerCase().startsWith(sailCompetition.getCommand().toLowerCase())){
+                if (message.toLowerCase().startsWith(competition.getCommand())) {
                     System.out.println(message);
                     channel.sendMessage(generalCommands.sailCompetition(message));
                 }
-            }
-            if (message.startsWith(Globals.ADMIN_COMMAND_PREFIX)) {
-                if (message.equalsIgnoreCase(sailPlease.getCommand())) {
+                if (message.toLowerCase().startsWith(help.getCommand())){
                     System.out.println(message);
-                    channel.sendMessage(adminCommands.SailPlease(isAdmin,isMod,isCF,isOwner));
+                    channel.sendMessage(generalCommands.Help(commands, message));
                 }
             }
-            if (message.startsWith(Globals.CREATOR_COMMAND_PREFIX)) {
+            if (message.toLowerCase().startsWith(Globals.ADMIN_COMMAND_PREFIX.toLowerCase())) {
+                if(isAdmin || isMod || isCF ||isOwner) {
+                    if (message.equalsIgnoreCase(please.getCommand())) {
+                        System.out.println(message);
+                        channel.sendMessage(adminCommands.SailPlease());
+                    }
+                    if (message.toLowerCase().startsWith(addRace.getCommand().toLowerCase())){
+                        channel.sendMessage(adminCommands.AddRace());
+                    }
+                }else if(isAdmin || isOwner){
+
+                }else{
+                    channel.sendMessage("I'm afraid I cannot do that for you " + author.getName());
+                }
+
+            }
+            if (message.toLowerCase().startsWith(Globals.CREATOR_COMMAND_PREFIX.toLowerCase())) {
                 if (isCreator)
                     if (message.equalsIgnoreCase(botMessage.getCommand())) {
                         System.out.println(message);

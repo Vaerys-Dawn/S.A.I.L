@@ -8,32 +8,25 @@ public class Command {
     private String command;
     private String usage;
     private String description;
-    private ArrayList<String> text;
+    private String prefix;
 
-    public Command(String command, String usage, String description) {
+    public Command(String prefix, String command, String usage, String description) {
+        this.prefix = prefix;
         this.command = command;
         this.usage = usage;
         this.description = description;
     }
 
+    public String getPrefix() {
+        return prefix.toLowerCase();
+    }
+
     public String getCommand() {
-        return command;
+        return (prefix + command).toLowerCase();
     }
 
-    public String getUsage() {
-        return usage;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public ArrayList<String> getText(int i) {
-        return getText(i);
-    }
-
-    public void addText(String addText) {
-        text.add(addText);
+    public String getHelp() {
+        return "Usage: "+ (prefix + command).toLowerCase() + usage + "\n" + description;
     }
 }
 

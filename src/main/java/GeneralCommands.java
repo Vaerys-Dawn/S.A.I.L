@@ -68,13 +68,13 @@ public class GeneralCommands {
     }
 
     public String sailCompetition(String message) {
-        File configDir = new File("Competition");
+        File configDir = new File("competition");
         StringBuilder stringBuilder = new StringBuilder(message);
         stringBuilder.delete(0, 9);
         if (!configDir.exists()) {
             configDir.mkdirs();
         }
-        File file = new File("Competition/Entries.txt");
+        File file = new File("competition/Entries.txt");
         try {
             if (!file.exists()) {
                 file.createNewFile();
@@ -87,5 +87,32 @@ public class GeneralCommands {
             e.printStackTrace();
         }
         return user.getName() + " thank you for entering the competition.";
+    }
+
+    public String Help(ArrayList<Command> commands, String message) {
+        StringBuilder messageBuilder = new StringBuilder(message);
+        StringBuilder commandBuilder = new StringBuilder();
+        int location = 0;
+
+        for (int i = 0;i < commands.size();i++){
+            if (commands.get(i).getCommand().contains("help")){
+                location = i;
+                messageBuilder.delete(0, commands.get(i).getCommand().length());
+            }
+        }
+        for (int i = 0; i < commands.size();i++){
+            commandBuilder.append(commands.get(i).getCommand());
+            commandBuilder.delete(0, commands.get(i).getPrefix().length());
+            //return stringBuilder.toString();
+            if (messageBuilder.toString().toLowerCase().contains(commandBuilder.toString())){
+                return commands.get(i).getHelp();
+            }
+            commandBuilder.delete(0,commandBuilder.length());
+        }
+        if (message.length() == commands.get(location).getCommand().length()){
+            return commands.get(location).getHelp();
+        }else {
+            return "Command does not exist";
+        }
     }
 }
