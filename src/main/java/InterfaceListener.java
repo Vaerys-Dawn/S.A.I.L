@@ -1,3 +1,4 @@
+import sx.blah.discord.api.EventSubscriber;
 import sx.blah.discord.api.IListener;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 

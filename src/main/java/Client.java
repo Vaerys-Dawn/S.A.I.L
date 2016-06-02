@@ -3,6 +3,7 @@ import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.ClientBuilder;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.Image;
 
 /**
  * Created by Vaerys on 19/05/2016.

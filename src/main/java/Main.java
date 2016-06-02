@@ -1,8 +1,11 @@
 import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.EventDispatcher;
 import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.HTTP429Exception;
 import sx.blah.discord.util.Image;
+import sx.blah.discord.util.MissingPermissionsException;
 
 import java.io.*;
 import java.util.logging.Logger;
@@ -34,11 +37,27 @@ public class Main {
             EventDispatcher dispatcher = client.getDispatcher();
             dispatcher.registerListener(new InterfaceListener());
             dispatcher.registerListener(new AnnotationListener());
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            while(true){
+                try {
+                    String s = br.readLine();
+                    Channel channel = (Channel) client.getChannelByID(Globals.consoleMessageCID);
+                    channel.sendMessage(s);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         } catch (DiscordException ex) {
             System.out.println(ex);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (HTTP429Exception e){
+            e.printStackTrace();
+        } catch (MissingPermissionsException e){
             e.printStackTrace();
         }
     }
