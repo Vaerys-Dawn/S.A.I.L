@@ -6163,3 +6163,63 @@ java.lang.UnsupportedOperationException: JsonNull
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
 	at java.lang.Thread.run(Thread.java:745)
+2016-06-03 00:25:21.902 [main] INFO  Client - Logging in to Discord
+2016-06-03 00:25:22.124 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-03 00:25:22.126 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-03 00:25:28.424 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6994ms
+2016-06-03 00:25:33.274 [WebSocketClient@17642278-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v4
+2016-06-03 00:25:33.288 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-03 00:25:39.425 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 1
+2016-06-03 00:25:39.856 [Event Dispatch Thread] INFO  AnnotationListener - Connected to Discord
+2016-06-03 00:25:52.182 [WebSocketClient@17642278-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-03 00:25:58.713 [WebSocketClient@17642278-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-03 00:25:58.714 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 2
+2016-06-03 11:10:08.216 [main] INFO  Client - Logging in to Discord
+2016-06-03 11:10:08.448 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-03 11:10:08.450 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-03 11:10:09.936 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2679ms
+2016-06-03 11:10:11.241 [WebSocketClient@17642278-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v4
+2016-06-03 11:10:11.253 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-03 11:10:15.598 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 1
+2016-06-03 11:10:16.889 [Event Dispatch Thread] INFO  AnnotationListener - Connected to Discord
+2016-06-03 11:10:23.581 [WebSocketClient@17642278-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-03 11:10:27.219 [WebSocketClient@17642278-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-03 11:10:27.220 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 2
+2016-06-04 21:20:03.590 [main] INFO  Client - Logging in to Discord
+2016-06-04 21:20:03.755 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-04 21:20:03.757 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-04 21:20:04.975 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1782ms
+2016-06-04 21:20:06.346 [WebSocketClient@17642278-14] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v4
+2016-06-04 21:20:06.360 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-04 21:20:11.977 [Event Dispatch Thread] INFO  AnnotationListener - Connected to Discord
+2016-06-04 21:20:12.070 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 1
+2016-06-04 21:20:20.467 [WebSocketClient@17642278-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-04 21:20:24.148 [WebSocketClient@17642278-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-04 21:20:24.149 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 2
+2016-06-04 22:27:58.780 [main] INFO  Client - Logging in to Discord
+2016-06-04 22:27:58.903 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-04 22:27:58.904 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-04 22:28:00.012 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1544ms
+2016-06-04 22:28:01.345 [WebSocketClient@17642278-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v4
+2016-06-04 22:28:01.353 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-04 22:28:07.409 [Event Dispatch Thread] INFO  AnnotationListener - Connected to Discord
+2016-06-04 22:28:08.122 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 1
+2016-06-04 22:28:17.898 [WebSocketClient@17642278-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-04 22:28:21.656 [WebSocketClient@17642278-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-04 22:28:21.656 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] connected Guilds: 2
+2016-06-04 22:39:19.796 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-04 22:39:19.797 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
+2016-06-04 22:39:19.826 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-04 22:39:19.826 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
+2016-06-04 22:39:19.826 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-04 22:39:19.827 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:24.093 [WebSocketClient@17642278-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:24.105 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:24.105 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:33.321 [WebSocketClient@17642278-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:33.322 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:33.322 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:33.323 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:34.304 [WebSocketClient@17642278-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:34.304 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
+2016-06-05 03:06:34.304 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feeback. If this is an error, report this it the Discord4J dev!
