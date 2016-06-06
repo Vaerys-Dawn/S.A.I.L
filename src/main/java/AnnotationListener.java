@@ -6,8 +6,7 @@ import sx.blah.discord.handle.impl.events.MentionEvent;
 import sx.blah.discord.handle.impl.events.MessageReceivedEvent;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
-import sx.blah.discord.handle.impl.obj.Guild;
-import sx.blah.discord.handle.obj.IUser;
+import sx.blah.discord.handle.impl.obj.Message;
 import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
@@ -15,7 +14,10 @@ import sx.blah.discord.util.Image;
 import sx.blah.discord.util.MissingPermissionsException;
 
 import java.io.*;
-import java.util.ArrayList;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Created by Vaerys on 19/05/2016.
@@ -24,153 +26,162 @@ public class AnnotationListener {
 
     final static Logger logger = LoggerFactory.getLogger(AnnotationListener.class);
 
-    ArrayList<Command> commands = new ArrayList<Command>();
-    Command info;
-    Command iAmListening;
-    Command hello;
-    Command nightlyFAQ;
-    Command please;
-    Command botMessage;
-    Command whatAreYou;
-    Command competition;
-    Command addRace;
-    Command help;
-    Command newQC;
-    Command nightlyfix;
-    ArrayList<GuildConfig> guildConfigs;
+    FileHandler handler;
 
 
     @EventSubscriber
     public void onReadyEvent(ReadyEvent event) {
-        logger.info("Connected to Discord");
-        //Example of a new command
-        //Command command = new Command("Name", "Command", '>', "Usage", "Description");
-        //Initiating commands
-        commands.add(info = new Command(Globals.GENERAL_COMMAND_PREFIX, Globals.INFO_NAME, "", "Displays some information about Sail and It's Command list"));
-        // commands.add(iAmListening = new Command(Globals.GENERAL_COMMAND_PREFIX, "IAmListening", "", "Tells you what Sail does"));
-        commands.add(hello = new Command(Globals.GENERAL_COMMAND_PREFIX, Globals.HELLO_NAME, "", "Says Hello"));
-        commands.add(nightlyFAQ = new Command(Globals.GENERAL_COMMAND_PREFIX, Globals.FAQ_NAME, "", "Links the nightly FAQ Reddit post"));
-        // commands.add(whatAreYou = new Command(Globals.GENERAL_COMMAND_PREFIX, "WhatAreYou", "", "Demoralises the bot"));
-        // commands.add(competition = new Command(Globals.GENERAL_COMMAND_PREFIX, "Comp", " [Link to Image]", "Enters your art into the competition"));
-        commands.add(help = new Command(Globals.GENERAL_COMMAND_PREFIX, Globals.HELP_NAME, " [Command]", "Gives information about commands"));
-        // commands.add(newQC = new Command(Globals.GENERAL_COMMAND_PREFIX, "NewQC", " [Command name] [Responce]", "Makes a New Quick Response Command"));
-        commands.add(nightlyfix = new Command(Globals.GENERAL_COMMAND_PREFIX, Globals.NFIX_NAME, "", "Posts a link to the Nightly fix Mod"));
-
-//        commands.add(please = new Command(Globals.ADMIN_COMMAND_PREFIX, "Please", "", "Does Magic"));
-//        commands.add(addRace = new Command(Globals.ADMIN_COMMAND_PREFIX, "AddRace", " [Role Name]", "adds a race to the list of races that can be self assigned"));
-//
-//        commands.add(botMessage = new Command(Globals.CREATOR_COMMAND_PREFIX, "BotMessage", "", "Says Stuff"));
-
         try {
             final Image avatar = Image.forFile(new File("Icons/Sailvector.png"));
             event.getClient().changeAvatar(avatar);
             final Status status = Status.game("with your heart.");
             event.getClient().changeStatus(status);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            while (true) {
+                String message = reader.readLine();
+                Channel channel = (Channel) event.getClient().getChannelByID(Globals.consoleMessageCID);
+                channel.sendMessage(message);
+            }
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (HTTP429Exception e) {
+            e.printStackTrace();
+        } catch (MissingPermissionsException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @EventSubscriber
     public void onGuildCreateEvent(GuildCreateEvent event) {
-        logger.info("[GuildCreateEvent] connected Guilds: " + event.getClient().getGuilds().size());
         try {
-            SailFileManager SFManager = new SailFileManager();
-            File configDir = new File("ServerConfigs");
-            SFManager.createDirectory(configDir);
-            Guild guild = (Guild) event.getGuild();
-            String checkableGuildID = guild.getID();
-            Channel channel = (Channel) event.getClient().getGuildByID(checkableGuildID).getChannelByID(checkableGuildID);
-
-            File file = new File("ServerConfigs/" + checkableGuildID + "_Config.txt");
-            if (file.exists()) {
-                FileReader fileReader = new FileReader(file);
-                BufferedReader reader = new BufferedReader(fileReader);
-            } else {
-                SFManager.createFile(file);
-                boolean canSendmessage = false;
-                int i = 0;
-                System.out.println("[GuildCreateEvent] Guild with ID " + checkableGuildID + " Is being Initialised");
-                do {
-                    try {
-                        channel = (Channel) event.getGuild().getChannels().get(i);
-                        channel.sendMessage("Hello My Name is S.A.I.L, I am now listening for Commands\n");
-                        canSendmessage = true;
-                    } catch (MissingPermissionsException e) {
-                        i++;
-                    }
-                } while (!canSendmessage);
-                FileWriter writer = new FileWriter(file, true);
-                for (int o = 0; o < 3; o++) {
-                    writer.append(channel.toString() + "\n");
-                }
-                writer.flush();
-                writer.close();
+            String readableGuildID = event.getGuild().getID();
+            logger.info("[GuildCreateEvent] - Connected to Guild with ID " + readableGuildID);
+            handler = new FileHandler();
+            handler.createDirectory("GuildConfigs");
+            String file = "GuildConfigs/" + readableGuildID + "_config.json";
+            GuildConfig guildConfig = new GuildConfig();
+            if (!Files.exists(Paths.get(file))) {
+                handler.writetoJson(file, guildConfig);
+                logger.info("[GuildCreateEvent] - Creating config file for Guild with ID " + readableGuildID);
             }
-            Globals.consoleMessageCID = checkableGuildID;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
+            if (guildConfig.getDoLoginMessage()) {
+                Channel channel;
+                if (!guildConfig.getGeneralChannel().equals("")) {
+                    channel = (Channel) event.getClient().getChannelByID(guildConfig.getGeneralChannel());
+                } else {
+                    channel = (Channel) event.getClient().getChannelByID(event.getGuild().getID());
+                }
+                channel.sendMessage("Hello everyone I am a Bot and my name is S.A.I.L, I am now helping out on your server. " +
+                        "If you want to see my commands you can perform " + Globals.commandPrefix + "Help\n" +
+                        "(if you dont want to see this message again have an admin do the command " + Globals.commandPrefix + "doLoginMessage)");
+            }
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (HTTP429Exception e) {
+            e.printStackTrace();
+        } catch (MissingPermissionsException e) {
             e.printStackTrace();
         }
     }
 
     @EventSubscriber
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
-        String message = event.getMessage().toString(); //gets the message converts it to a String
-        String roles = event.getMessage().getAuthor().getRolesForGuild(event.getMessage().getGuild()).toString().toLowerCase(); //gets the roles of the user and turns it into a string
-        Guild guild = (Guild) event.getMessage().getGuild(); //gets the guild that the message was sent to
-        Channel channel = (Channel) event.getMessage().getChannel(); //gets the channel the message was sent to
-        IUser author = event.getMessage().getAuthor();
-        GeneralCommands generalCommands = new GeneralCommands(channel, author, guild, commands, message);
-        AdminCommands adminCommands = new AdminCommands(channel, author, guild);
-        CreatorCommands creatorCommands = new CreatorCommands(channel, author, guild);
+        String readableGuildID = event.getMessage().getGuild().getID();
+        Message message = (Message) event.getMessage();
+        String file;
+
+        Commands commands = new Commands(message);
+        Channel channel = (Channel) event.getMessage().getChannel();
+
+        file = "GuildConfigs/" + readableGuildID + "_config.json";
+        GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
+
         if (event.getMessage().getAuthor().getID().equals(Globals.creatorID)) {
             Globals.consoleMessageCID = event.getMessage().getChannel().getID().toString();
         }
         //calls the commands
         try {
-            //unlisted commanda
-            if (message.equalsIgnoreCase("/tableflip")) {
+            if (message.toString().equalsIgnoreCase("/tableflip")) {
                 channel.sendMessage("(╯°□°）╯︵ ┻━┻");
             }
-            if (message.equalsIgnoreCase("/unflip")) {
+            if (message.toString().equalsIgnoreCase("/unflip")) {
                 channel.sendMessage("┬─┬ノ( ゜-゜ノ)");
             }
-            if (message.equalsIgnoreCase("/shrug")) {
+            if (message.toString().equalsIgnoreCase("/shrug")) {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
-            if (message.toLowerCase().startsWith(Globals.RESPONSE_COMMAND_PREFIX.toLowerCase())) {
+            commands.setPOGOS(guildConfig);
+            Method[] methods = Commands.class.getMethods();
+            for (Method m : methods) {
+                if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                    CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
+                    String testMessage = message.toString().toLowerCase();
+                    String testTo = (Globals.commandPrefix + anno.name()).toLowerCase();
 
-            }
-
-            //listed commands
-            if (message.toLowerCase().startsWith(Globals.GENERAL_COMMAND_PREFIX.toLowerCase())) {
-                for(Command c : commands){
-                    if (message.toLowerCase().startsWith(c.getCommand())) {
-                        GeneralCommands.callEvent(c.getCommand());
+                    if (testMessage.startsWith(testTo) && anno.channel().equalsIgnoreCase("any")) {
+                        channel.sendMessage((String) m.invoke(commands, new Object[]{}));
+                    }
+                    if (guildConfig.getServersChannel().equals("") && anno.channel().equalsIgnoreCase("Servers")) {
+                        if (testMessage.startsWith(testTo)) {
+                            channel.sendMessage("This Command must be run in a 'Servers' Channel. Currently there is no Race Select Channel Configured." +
+                                    "Please Run the command " + Globals.commandPrefix + "SetServersChannel in the channel you would like to assign as the server's" +
+                                    "'Servers' channel.");
+                        }
+                    } else {
+                        if ((testMessage.startsWith(testTo)) && anno.channel().equalsIgnoreCase("Servers")) {
+                            if (channel.getID().equals(guildConfig.getServersChannel())) {
+                                channel.sendMessage((String) m.invoke(commands, new Object[]{}));
+                            } else {
+                                Channel channelName = (Channel) event.getClient().getChannelByID(guildConfig.getServersChannel());
+                                channel.sendMessage("Cannot perform command in this channel please go to " + channelName);
+                            }
+                        }
+                    }
+                    if (guildConfig.getRaceSelectChannel().equals("") && anno.channel().equalsIgnoreCase("RaceSelect")) {
+                        if (testMessage.startsWith(testTo)) {
+                            channel.sendMessage("This Command must be run in a 'Race Select' Channel. Currently there is no Race Select Channel Configured." +
+                                    "Please Run the command " + Globals.commandPrefix + "SetRaceSelect in the channel you would like to assign as the server's" +
+                                    "'Race Select' channel.");
+                        }
+                    } else {
+                        if (testMessage.startsWith(testTo) && anno.channel().equalsIgnoreCase("RaceSelect")) {
+                            if (channel.getID().equals(guildConfig.getRaceSelectChannel())) {
+                                channel.sendMessage((String) m.invoke(commands, new Object[]{}));
+                            } else {
+                                Channel channelName = (Channel) event.getClient().getChannelByID(guildConfig.getRaceSelectChannel());
+                                channel.sendMessage("Cannot perform command in this channel please go to " + channelName);
+                            }
+                        }
                     }
                 }
             }
+            commands.flushFiles();
         } catch (MissingPermissionsException e) {
             e.printStackTrace();
         } catch (HTTP429Exception e) {
             e.printStackTrace();
         } catch (DiscordException e) {
             e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
     }
 
     @EventSubscriber
     public void onMentionEvent(MentionEvent event) {
-        if (event.getMessage().getMentions().toString().contains("182502964404027392")) {
-
+        String mentions = event.getMessage().getMentions().toString();
+        String[] message = event.getMessage().toString().split("@!182502964404027392>");
+        if (mentions.contains(event.getClient().getOurUser().mention())) {
+            handler.createDirectory("Mentions");
+            String location = "Mentions/Mentions.txt";
+            String mention = event.getMessage().getGuild().getID() + ": " + event.getMessage().getAuthor().getName() + " - " + message[1];
+            handler.writeToFile(location, mention);
         }
     }
 }

@@ -6,7 +6,7 @@
 
     <groupId>com.github.vaerys</groupId>
     <artifactId>DiscordSAIL</artifactId>
-    <version>1.0.5</version>
+    <version>1.2.0</version>
     <build>
         <plugins>
             <plugin>
@@ -39,10 +39,5 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.github.Kaioru</groupId>-->
-            <!--<artifactId>instructability</artifactId>-->
-            <!--<version>a7d8a51</version>-->
-        <!--</dependency>-->
     </dependencies>
 </project>

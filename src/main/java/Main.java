@@ -1,14 +1,11 @@
-import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.EventDispatcher;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
-import sx.blah.discord.util.Image;
 import sx.blah.discord.util.MissingPermissionsException;
 
 import java.io.*;
-import java.util.logging.Logger;
 
 /**
  * Created by Vaerys on 19/05/2016.

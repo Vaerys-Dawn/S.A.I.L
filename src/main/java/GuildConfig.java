@@ -1,46 +1,38 @@
-import sx.blah.discord.handle.impl.obj.Channel;
-
 /**
  * Created by Vaerys on 22/05/2016.
  */
 public class GuildConfig {
 
-    Channel raceSelect;
-    Channel general;
-    Channel servers;
-    String storedGuildID;
-    Boolean doLoginMessage;
+    String raceSelectChannel = "";
+    String generalChannel = "";
+    String serversChannel = "";
+    Boolean doLoginMessage = false;
 
-    public Channel getRaceSelect() {
-        return raceSelect;
+    public GuildConfig() {
     }
 
-    public void setRaceSelect(Channel raceSelect) {
-        this.raceSelect = raceSelect;
+    public String getRaceSelectChannel() {
+        return raceSelectChannel;
     }
 
-    public Channel getGeneral() {
-        return general;
+    public void setRaceSelectChannel(String raceSelect) {
+        this.raceSelectChannel = raceSelect;
     }
 
-    public void setGeneral(Channel general) {
-        this.general = general;
+    public String getGeneralChannel() {
+        return generalChannel;
     }
 
-    public Channel getServers() {
-        return servers;
+    public void setGeneralChannel(String generalChannel) {
+        this.generalChannel = generalChannel;
     }
 
-    public void setServers(Channel servers) {
-        this.servers = servers;
+    public String getServersChannel() {
+        return serversChannel;
     }
 
-    public String getStoredGuildID() {
-        return storedGuildID;
-    }
-
-    public void setStoredGuildID(String storedGuildID) {
-        this.storedGuildID = storedGuildID;
+    public void setServersChannel(String serversChannel) {
+        this.serversChannel = serversChannel;
     }
 
     public Boolean getDoLoginMessage() {

@@ -36,29 +36,29 @@ Commands
 		* The most current version of Starbound is #Version# it was released on #versionDate#.
 		@everyone #any
 	>Servers
-		- Lists servers
-		* Multiplayer servers:
+		- Lists serversChannel
+		* Multiplayer serversChannel:
 		  - #serverName# ~Repeat on all in list on new line~
 		  More information can be gotten by doing >ServerInfo #serverName#
-		@everyone #servers
+		@everyone #serversChannel
 	>ServerInfo #serverName#
 		- Lists information of the server
 		* #serverName#
 		  Server IP: #serverIP# #port#
 		  #MotD#
-		@everyone #servers
+		@everyone #serversChannel
 	+AddServer #serverName# #serverIP# #port# #MotD#
-		- Adds a server to the list of servers
-		* #serverName# has been added to list of multiplayer servers.
+		- Adds a server to the list of serversChannel
+		* #serverName# has been added to list of multiplayer serversChannel.
 		@Moderator @Admin #bot_commands
 	+RemoveServer #serverName#
-		- Removes the server from the list of servers
-		* #serverName# has been removed from the list of multiplayer servers.
+		- Removes the server from the list of serversChannel
+		* #serverName# has been removed from the list of multiplayer serversChannel.
 		@Admin #bot_commands
 	>Help
 		- Displays Commands that can be run on the server
-		* List of available commands on this server:
-			#command# ~repeat for all commands~
+		* List of available commandses on this server:
+			#command# ~repeat for all commandses~
 		@everyone #any
 	>Help #command#
 		- Shows command description and usage
