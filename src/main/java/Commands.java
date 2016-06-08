@@ -9,6 +9,7 @@ import sx.blah.discord.handle.obj.Permissions;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.HTTP429Exception;
 import sx.blah.discord.util.MissingPermissionsException;
+import sx.blah.discord.util.RateLimitException;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -103,8 +104,8 @@ public class Commands {
                 if (r.getName().equalsIgnoreCase("felin")) roles = r.getName();
             }
             Random r = new Random();
-            int randomInt = r.nextInt();
-            if (!message.toString().equalsIgnoreCase("sail.hello")) {
+            int randomInt = r.nextInt(10);
+            if (message.toString().length() > 10) {
                 lock = message.toString().split(" ");
                 randomInt = Integer.parseInt(lock[1]);
             }
@@ -154,6 +155,16 @@ public class Commands {
                 return "How did you get this message " + author.getName();
             }
         }
+    }
+
+    @CommandAnnotation(name = "Goodbye", channel = "any", description = "Says Goodbye")
+    public String goodbye(){
+        return "Goodbye " + author.getName();
+    }
+
+    @CommandAnnotation(name = "GoodNight", channel = "any", description = "Says Goodbye")
+    public String goodNight(){
+        return "Goodnight " + author.getName();
     }
 
     @CommandAnnotation(name = "NightlyFAQ", channel = "any", description = "Posts a link to the nightly FAQ post on Reddit.")
@@ -347,9 +358,9 @@ public class Commands {
             return "Your race has been updated";
         } catch (MissingPermissionsException e) {
             e.printStackTrace();
-        } catch (HTTP429Exception e) {
+        }  catch (DiscordException e) {
             e.printStackTrace();
-        } catch (DiscordException e) {
+        } catch (RateLimitException e) {
             e.printStackTrace();
         }
         return "failed to update race, if you are an admin S.A.I.L Cannot change your race, but you can do it manually, you lazy person.";

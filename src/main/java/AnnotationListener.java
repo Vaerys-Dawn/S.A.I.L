@@ -8,10 +8,7 @@ import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Message;
 import sx.blah.discord.handle.obj.Status;
-import sx.blah.discord.util.DiscordException;
-import sx.blah.discord.util.HTTP429Exception;
-import sx.blah.discord.util.Image;
-import sx.blah.discord.util.MissingPermissionsException;
+import sx.blah.discord.util.*;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -35,7 +32,7 @@ public class AnnotationListener {
         try {
             final Image avatar = Image.forFile(new File("Icons/Sailvector.png"));
             event.getClient().changeAvatar(avatar);
-            final Status status = Status.game("with your heart.");
+            final Status status = Status.game("Starbound");
             event.getClient().changeStatus(status);
 
             Scanner scanner = new Scanner(System.in);
@@ -48,9 +45,9 @@ public class AnnotationListener {
             }
         } catch (DiscordException e) {
             e.printStackTrace();
-        } catch (HTTP429Exception e) {
-            e.printStackTrace();
         } catch (MissingPermissionsException e) {
+            e.printStackTrace();
+        } catch (RateLimitException e) {
             e.printStackTrace();
         }
     }
@@ -82,9 +79,9 @@ public class AnnotationListener {
             }
         } catch (DiscordException e) {
             e.printStackTrace();
-        } catch (HTTP429Exception e) {
+        }  catch (MissingPermissionsException e) {
             e.printStackTrace();
-        } catch (MissingPermissionsException e) {
+        } catch (RateLimitException e) {
             e.printStackTrace();
         }
     }
@@ -169,15 +166,15 @@ public class AnnotationListener {
             commands.flushFiles();
         } catch (MissingPermissionsException e) {
             logger.info("Bot does not have Permission for that thing");
-        } catch (HTTP429Exception e) {
-            e.printStackTrace();
-        } catch (DiscordException e) {
+        }catch (DiscordException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (RateLimitException e) {
             e.printStackTrace();
         }
     }
