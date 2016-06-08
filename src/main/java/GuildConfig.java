@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created by Vaerys on 22/05/2016.
  */
@@ -7,6 +9,8 @@ public class GuildConfig {
     String generalChannel = "";
     String serversChannel = "";
     Boolean doLoginMessage = false;
+    ArrayList<String> races = new ArrayList<String>();
+    ArrayList<String> serverList = new ArrayList<String>();
 
     public GuildConfig() {
     }
@@ -42,4 +46,21 @@ public class GuildConfig {
     public void setDoLoginMessage(Boolean doLoginMessage) {
         this.doLoginMessage = doLoginMessage;
     }
+
+    public ArrayList<String> getRaces() {
+        return races;
+    }
+
+    public void addRace(String race) {
+        races.add(race);
+    }
+
+    public void removeRace(String race){
+        for (int i = 0; i < races.size();i++){
+            if (races.get(i).toLowerCase().equals(race.toLowerCase())){
+                races.remove(i);
+            }
+        }
+    }
+
 }

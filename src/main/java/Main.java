@@ -36,25 +36,12 @@ public class Main {
             dispatcher.registerListener(new AnnotationListener());
 
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            while(true){
-                try {
-                    String s = br.readLine();
-                    Channel channel = (Channel) client.getChannelByID(Globals.consoleMessageCID);
-                    channel.sendMessage(s);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
 
         } catch (DiscordException ex) {
             System.out.println(ex);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (HTTP429Exception e){
-            e.printStackTrace();
-        } catch (MissingPermissionsException e){
             e.printStackTrace();
         }
     }

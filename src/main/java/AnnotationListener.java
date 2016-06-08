@@ -18,6 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 /**
  * Created by Vaerys on 19/05/2016.
@@ -37,19 +38,19 @@ public class AnnotationListener {
             final Status status = Status.game("with your heart.");
             event.getClient().changeStatus(status);
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            while (true) {
-                String message = reader.readLine();
+            Scanner scanner = new Scanner(System.in);
+            while(scanner.hasNextLine()){
                 Channel channel = (Channel) event.getClient().getChannelByID(Globals.consoleMessageCID);
-                channel.sendMessage(message);
+                String message = scanner.nextLine();
+                if (!message.equals("")){
+                    channel.sendMessage(message);
+                }
             }
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (HTTP429Exception e) {
             e.printStackTrace();
         } catch (MissingPermissionsException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -114,6 +115,12 @@ public class AnnotationListener {
             if (message.toString().equalsIgnoreCase("/shrug")) {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
+            if (message.toString().equalsIgnoreCase("sail.image")){
+                if (event.getMessage().getAuthor().equals(event.getMessage().getGuild().getOwner())){
+                    File iconfile = new File("Icons/Chathead.png");
+                    channel.sendFile(iconfile);
+                }
+            }
             commands.setPOGOS(guildConfig);
             Method[] methods = Commands.class.getMethods();
             for (Method m : methods) {
@@ -161,7 +168,7 @@ public class AnnotationListener {
             }
             commands.flushFiles();
         } catch (MissingPermissionsException e) {
-            e.printStackTrace();
+            logger.info("Bot does not have Permission for that thing");
         } catch (HTTP429Exception e) {
             e.printStackTrace();
         } catch (DiscordException e) {
@@ -170,18 +177,22 @@ public class AnnotationListener {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     @EventSubscriber
     public void onMentionEvent(MentionEvent event) {
-        String mentions = event.getMessage().getMentions().toString();
-        String[] message = event.getMessage().toString().split("@!182502964404027392>");
-        if (mentions.contains(event.getClient().getOurUser().mention())) {
-            handler.createDirectory("Mentions");
-            String location = "Mentions/Mentions.txt";
-            String mention = event.getMessage().getGuild().getID() + ": " + event.getMessage().getAuthor().getName() + " - " + message[1];
-            handler.writeToFile(location, mention);
+        if (!event.getMessage().toString().toLowerCase().contains("@everyone") || !event.getMessage().toString().toLowerCase().contains("@here")) {
+            String mentions = event.getMessage().getMentions().toString();
+            String[] message = event.getMessage().toString().split("@!182502964404027392>");
+            if (mentions.contains(event.getClient().getOurUser().mention())) {
+                handler.createDirectory("Mentions");
+                String location = "Mentions/Mentions.txt";
+                String mention = event.getMessage().getGuild().getID() + ": " + event.getMessage().getAuthor().getName() + " - " + message[1];
+                handler.writeToFile(location, mention);
+            }
         }
     }
 }
