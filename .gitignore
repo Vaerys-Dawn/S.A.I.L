@@ -52,3 +52,9 @@ bot.log
 bot.log
 Mentions/Mentions.txt
 *.json
+Icons/Buiders/
+Icons/Headers/
+Icons/Text/
+Icons/Races/
+*.psd
+Info discord.txt
