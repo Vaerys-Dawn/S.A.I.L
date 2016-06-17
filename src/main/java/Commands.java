@@ -1,13 +1,10 @@
-import org.apache.commons.lang3.ArrayUtils;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
-import sx.blah.discord.handle.obj.IMessage;
 import sx.blah.discord.handle.obj.IRole;
 import sx.blah.discord.handle.obj.IUser;
 import sx.blah.discord.handle.obj.Permissions;
 import sx.blah.discord.util.DiscordException;
-import sx.blah.discord.util.HTTP429Exception;
 import sx.blah.discord.util.MissingPermissionsException;
 import sx.blah.discord.util.RateLimitException;
 
@@ -35,6 +32,7 @@ public class Commands {
     private boolean isCF;
     private boolean isCreator;
     String notAllowed;
+    String errorMessage;
 
     public Commands(Message message) {
         this.message = message;
@@ -44,7 +42,7 @@ public class Commands {
         guildID = message.getGuild().getID();
         notAllowed = "I'm Sorry " + author.getName() + " I'm afraid I can't do that.";
         guildConfigFile = "GuildConfigs/" + guildID + "_config.json";
-
+        errorMessage = "You have Found an error, please Mention this bot or " + guild.getUserByID(Globals.creatorID).getName() + " to let them know of this error";
         if (author.getID().equals(Globals.creatorID)) {
             isCreator = true;
         }
@@ -158,12 +156,12 @@ public class Commands {
     }
 
     @CommandAnnotation(name = "Goodbye", channel = "any", description = "Says Goodbye")
-    public String goodbye(){
+    public String goodbye() {
         return "Goodbye " + author.getName();
     }
 
     @CommandAnnotation(name = "GoodNight", channel = "any", description = "Says Goodbye")
-    public String goodNight(){
+    public String goodNight() {
         return "Goodnight " + author.getName();
     }
 
@@ -230,7 +228,6 @@ public class Commands {
 
     @CommandAnnotation(name = "Info", channel = "any", description = "Gives information about a specific command\nUsage: Sail.Info [Command]")
     public String sailInfo() {
-        String response;
         Method[] methods = this.getClass().getMethods();
         String buildMessage = message.toString();
         if (message.toString().toLowerCase().equals("sail.info")) {
@@ -293,7 +290,7 @@ public class Commands {
     public String addRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
-            if (message.toString().equalsIgnoreCase("Sail.AddRace")|| testMessage[1].equals("")) {
+            if (message.toString().equalsIgnoreCase("Sail.AddRace") || testMessage[1].equals("")) {
                 return "Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\nUsage Sail.AddRace [role]";
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
@@ -358,12 +355,141 @@ public class Commands {
             return "Your race has been updated";
         } catch (MissingPermissionsException e) {
             e.printStackTrace();
-        }  catch (DiscordException e) {
+        } catch (DiscordException e) {
             e.printStackTrace();
         } catch (RateLimitException e) {
             e.printStackTrace();
         }
         return "failed to update race, if you are an admin S.A.I.L Cannot change your race, but you can do it manually, you lazy person.";
+    }
+
+    @CommandAnnotation(name = "AddServer", channel = "Servers", description = "Adds a sever to the server list.\nUsage: Sail.AddServer [ServerName]")
+    public String addServer() {
+        String[] testMessage = message.toString().split(" ");
+        boolean isUsed = false;
+        if (testMessage.length == 2) {
+            for (String[] sa : guildConfig.getServerList()) {
+                if (sa[1].equalsIgnoreCase(testMessage[1])) {
+                    isUsed = true;
+                }
+            }
+            if (!isUsed) {
+                guildConfig.addServer(author.getID(), testMessage[1]);
+                return "Server Added";
+            } else {
+                return "Server name has already been used";
+            }
+        } else if (testMessage.length == 1) {
+            return "You must Specify a Server Name\nSail.AddServer [ServerName]";
+        } else {
+            return "Server name cannot have spaces";
+        }
+    }
+
+    @CommandAnnotation(name = "ListServers", channel = "Servers", description = "Lists all of the servers")
+    public String listServers() {
+        StringBuilder response = new StringBuilder();
+        response.append("Here are the Servers Currently Saved to my list\n");
+        for (String[] sa : guildConfig.getServerList()) {
+            response.append("  " + sa[1] + "\n");
+        }
+        response.append("You can get the server information of each server by performing\n" +
+                "Sail.Server [ServerName]");
+        return response.toString();
+    }
+
+    @CommandAnnotation(name = "Server", channel = "Servers", description = "Gives the server's Details\nUsage: Sail.Server [ServerName]")
+    public String serverInfo() {
+        String[] testMessage = message.toString().split(" ");
+        StringBuilder response = new StringBuilder();
+        response.append("Server does not exist");
+        for (String[] sa : guildConfig.getServerList()) {
+            if (testMessage[1].equalsIgnoreCase(sa[1])) {
+                response.delete(0, response.length());
+                response.append(sa[1]);
+                response.append("\n**Listing Creator:** " + guild.getUserByID(sa[0]).getName());
+                response.append("\n**Server IP:** " + sa[2] + " **Port:** " + sa[3]);
+                response.append("\n" + sa[4]);
+            }
+        }
+        return response.toString();
+    }
+
+    @CommandAnnotation(name = "EditServer", channel = "Servers", description = "Edits the server\nUsage: Sail.EditServer [ServerName] Ip, Port, or Desc")
+    public String editServer() {
+        String[] testMessage = message.toString().split(" ");
+        if (guildConfig.getEditingServer()) {
+            if (guildConfig.getServerEditor().equals(author.getID())) {
+                for (String[] sa : guildConfig.getServerList()) {
+                    if (sa[1].equalsIgnoreCase(guildConfig.getServerToEdit())) {
+                        if (guildConfig.getServerEditingType().equalsIgnoreCase("IP")) {
+                            sa[2] = testMessage[1];
+                            stopServerEdit();
+                            return "IP Edited";
+                        } else if (guildConfig.getServerEditingType().equalsIgnoreCase("Port")) {
+                            sa[3] = testMessage[1];
+                            stopServerEdit();
+                            return "Port Edited";
+                        } else if (guildConfig.getServerEditingType().equalsIgnoreCase("Desc")) {
+                            StringBuilder stringBuilder = new StringBuilder();
+                            stringBuilder.append(message.toString());
+                            stringBuilder.delete(0,testMessage[0].length() + 1);
+                            sa[4] = stringBuilder.toString();
+                            stopServerEdit();
+                            return "Description Edited";
+                        } else {
+                            stopServerEdit();
+                           return errorMessage;
+                        }
+                    }
+                }
+                stopServerEdit();
+            } else {
+                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform Sail.AbandonEdit to allow for another edit.";
+            }
+        } else {
+            if (testMessage.length == 3) {
+                for (String[] sa : guildConfig.getServerList()) {
+                    if (testMessage[1].equalsIgnoreCase(sa[1])) {
+                        if (author.getID().equals(sa[0]) || isOwner || isAdmin) {
+                            if (testMessage[2].equalsIgnoreCase("desc") || testMessage[2].equalsIgnoreCase("IP") || testMessage[2].equalsIgnoreCase("port")) {
+                                guildConfig.setEditingServer(true);
+                                guildConfig.setServerEditor(author.getID());
+                                guildConfig.setServerEditingType(testMessage[2]);
+                                guildConfig.setServerToEdit(testMessage[1]);
+                                return "You are now Editing the Server " + testMessage[2] + "\nPerform Sail.EditServer [Contents] to change the server properties,\nOr Sail.AbandonEdit to cancel editing";
+                            } else {
+                                return "Cannot edit " + testMessage[2];
+                            }
+                        } else {
+                            return "You do not have permission to edit this server listing.";
+                        }
+                    }
+                }
+                return "server does not exist";
+            } else if (testMessage.length == 2) {
+                return "You must specify a type, this type is either IP, Port or Desc";
+            } else if (testMessage.length == 1) {
+                return "You must specify a server to edit\n Sail.EditServer [ServerName] Ip, Port, or Desc";
+            } else {
+                return "Too many or too few arguments\n" +
+                        "Sail.EditServer [ServerName] Ip, Port, or Desc";
+            }
+        }
+        return errorMessage;
+    }
+
+    @CommandAnnotation(name = "AbandonEdit", channel = "Servers", description = "Stops the Server Listing Editing process")
+    public String stopServerEdit() {
+        if (isAdmin || isMod || isOwner || author.equals(guild.getUserByID(guildConfig.getServerEditor()))) {
+            guildConfig.setEditingServer(false);
+            guildConfig.setServerEditor("");
+            guildConfig.setServerEditingType("");
+            guildConfig.setServerToEdit("");
+            return "Stopped the Server Listing Editing process";
+        }else {
+            return notAllowed;
+        }
     }
 }
 

@@ -9,8 +9,48 @@ public class GuildConfig {
     String generalChannel = "";
     String serversChannel = "";
     Boolean doLoginMessage = false;
+    Boolean editingServer = false;
+    String serverEditor = "";
+    String serverEditingType = "";
+    String ServerToEdit = "";
     ArrayList<String> races = new ArrayList<String>();
-    ArrayList<String> serverList = new ArrayList<String>();
+    ArrayList<String[]> serverList = new ArrayList<String[]>();
+    /*first part of the array should be the User ID.
+    the next part should be the server name no spaces allowed.
+    then comes the server IP and port
+    lastly the server description*/
+
+    public String getServerToEdit() {
+        return ServerToEdit;
+    }
+
+    public void setServerToEdit(String serverToEdit) {
+        ServerToEdit = serverToEdit;
+    }
+
+    public String getServerEditingType() {
+        return serverEditingType;
+    }
+
+    public void setServerEditingType(String serverEditingType) {
+        this.serverEditingType = serverEditingType;
+    }
+
+    public String getServerEditor() {
+        return serverEditor;
+    }
+
+    public void setServerEditor(String serverEditor) {
+        this.serverEditor = serverEditor;
+    }
+
+    public Boolean getEditingServer() {
+        return editingServer;
+    }
+
+    public void setEditingServer(Boolean editingServer) {
+        this.editingServer = editingServer;
+    }
 
     public GuildConfig() {
     }
@@ -61,6 +101,17 @@ public class GuildConfig {
                 races.remove(i);
             }
         }
+    }
+
+    public void addServer(String userID, String serverName){
+        String[] newEntry = new String[5];
+        newEntry[0] = userID;
+        newEntry[1] = serverName;
+        serverList.add(newEntry);
+    }
+
+    public ArrayList<String[]> getServerList(){
+        return serverList;
     }
 
 }

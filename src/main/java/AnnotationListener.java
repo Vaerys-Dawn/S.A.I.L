@@ -39,6 +39,9 @@ public class AnnotationListener {
             while(scanner.hasNextLine()){
                 Channel channel = (Channel) event.getClient().getChannelByID(Globals.consoleMessageCID);
                 String message = scanner.nextLine();
+                message = message.replaceAll("#Dawn#",event.getClient().getUserByID("153159020528533505").toString());
+                message = message.replaceAll("teh","the");
+                message = message.replaceAll("Teh","The");
                 if (!message.equals("")){
                     channel.sendMessage(message);
                 }
@@ -91,7 +94,6 @@ public class AnnotationListener {
         String readableGuildID = event.getMessage().getGuild().getID();
         Message message = (Message) event.getMessage();
         String file;
-
         Commands commands = new Commands(message);
         Channel channel = (Channel) event.getMessage().getChannel();
 
@@ -101,6 +103,8 @@ public class AnnotationListener {
         if (event.getMessage().getAuthor().getID().equals(Globals.creatorID)) {
             Globals.consoleMessageCID = event.getMessage().getChannel().getID().toString();
         }
+
+
         //calls the commands
         try {
             if (message.toString().equalsIgnoreCase("/tableflip")) {
@@ -181,15 +185,15 @@ public class AnnotationListener {
 
     @EventSubscriber
     public void onMentionEvent(MentionEvent event) {
-        if (!event.getMessage().toString().toLowerCase().contains("@everyone") || !event.getMessage().toString().toLowerCase().contains("@here")) {
-            String mentions = event.getMessage().getMentions().toString();
-            String[] message = event.getMessage().toString().split("@!182502964404027392>");
-            if (mentions.contains(event.getClient().getOurUser().mention())) {
-                handler.createDirectory("Mentions");
-                String location = "Mentions/Mentions.txt";
-                String mention = event.getMessage().getGuild().getID() + ": " + event.getMessage().getAuthor().getName() + " - " + message[1];
-                handler.writeToFile(location, mention);
-            }
-        }
+//        if (!event.getMessage().toString().toLowerCase().contains("@everyone") || !event.getMessage().toString().toLowerCase().contains("@here")) {
+//            String mentions = event.getMessage().getMentions().toString();
+//            String[] message = event.getMessage().toString().split("@!182502964404027392>");
+//            if (mentions.contains(event.getClient().getOurUser().mention())) {
+//                handler.createDirectory("Mentions");
+//                String location = "Mentions/Mentions.txt";
+//                String mention = event.getMessage().getGuild().getID() + ": " + event.getMessage().getAuthor().getName() + " - " + message[1];
+//                handler.writeToFile(location, mention);
+//            }
+//        }
     }
 }
