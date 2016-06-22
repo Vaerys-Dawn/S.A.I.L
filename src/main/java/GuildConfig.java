@@ -52,9 +52,6 @@ public class GuildConfig {
         this.editingServer = editingServer;
     }
 
-    public GuildConfig() {
-    }
-
     public String getRaceSelectChannel() {
         return raceSelectChannel;
     }

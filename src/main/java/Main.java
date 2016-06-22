@@ -1,4 +1,4 @@
-import sx.blah.discord.api.EventDispatcher;
+import sx.blah.discord.api.events.EventDispatcher;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.util.DiscordException;
 

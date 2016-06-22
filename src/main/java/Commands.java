@@ -79,7 +79,7 @@ public class Commands {
         return "Command must be performed in " + guild.getChannelByID(channelID).toString();
     }
 
-    @AliasAnnotation(alias = {"Hi", "Hello", "Greeting", "Hai", "HiHi"})
+    @AliasAnnotation(alias = {"Hi", "Hello", "Greeting", "Hai", "Hoi"})
     @CommandAnnotation(name = "Hello", description = "Says Hello")
     public String HelloSail() {
         if (isCreator) {
@@ -496,7 +496,8 @@ public class Commands {
                                 guildConfig.setServerEditor(author.getID());
                                 guildConfig.setServerEditingType(testMessage[2]);
                                 guildConfig.setServerToEdit(testMessage[1]);
-                                return "You are now Editing the Server " + testMessage[2] + "\nPerform Sail.EditServer [Contents] to change the server properties,\nOr Sail.AbandonEdit to cancel editing";
+                                return "You are now Editing the Server " + testMessage[2] + "\nPerform Sail.EditServer [Contents] to change the server properties,\nOr Sail.AbandonEdit to cancel editing\n" +
+                                        "❗*IMPORTANT: Please Surround links with* `<>`❗";
                             } else {
                                 return "Cannot edit " + testMessage[2];
                             }
