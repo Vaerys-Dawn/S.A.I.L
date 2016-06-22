@@ -71,7 +71,16 @@ public class Commands {
         handler.writetoJson(guildConfigFile, guildConfig);
     }
 
-    @CommandAnnotation(name = "Hello", channel = "any", description = "Says Hello")
+    public String channelNotInit(String channelType) {
+        return "The " + channelType + " Channel has not been set up yet please have an admin perform the command `" + Globals.commandPrefix + channelType + "Here` in the appropriate channel";
+    }
+
+    public String wrongChannel(String channelID){
+        return "Command must be performed in " + guild.getChannelByID(channelID).toString();
+    }
+
+    @AliasAnnotation(alias = {"Hi", "Hello", "Greeting", "Hai", "HiHi"})
+    @CommandAnnotation(name = "Hello", description = "Says Hello")
     public String HelloSail() {
         if (isCreator) {
             return "Hello Creator";
@@ -155,29 +164,30 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "Goodbye", channel = "any", description = "Says Goodbye")
+    @AliasAnnotation(alias = {"Bye", "Goodbye", "Boi", "Bai"})
+    @CommandAnnotation(name = "Goodbye", description = "Says Goodbye")
     public String goodbye() {
         return "Goodbye " + author.getName();
     }
 
-    @CommandAnnotation(name = "GoodNight", channel = "any", description = "Says Goodbye")
+    @CommandAnnotation(name = "GoodNight", description = "Says Goodbye")
     public String goodNight() {
         return "Goodnight " + author.getName();
     }
 
-    @CommandAnnotation(name = "NightlyFAQ", channel = "any", description = "Posts a link to the nightly FAQ post on Reddit.")
+    @CommandAnnotation(name = "NightlyFAQ", description = "Posts a link to the nightly FAQ post on Reddit.")
     public String NightlyFAQ() {
         return "Here are the Frequently Asked Questions when it comes to the starbound nightly Build.\n" +
                 "https://www.reddit.com/r/starbound/comments/4jnhjw/nightly_faq_so_you_want_to_play_nightly/#announce";
     }
 
-    @CommandAnnotation(name = "NightlyFix", channel = "any", description = "Posts a link to the Nightly Fix mod")
+    @CommandAnnotation(name = "NightlyFix", description = "Posts a link to the Nightly Fix mod")
     public String nightlyFix() {
         return "Add this to your Starbound - Unstable/mods folder\n" +
                 "http://community.playstarbound.com/resources/cheerful-giraffe-nightly-fix.3397/";
     }
 
-    @CommandAnnotation(name = "SetGeneral", channel = "any", description = "Sets the current Channel as the Server's 'General' Channel")
+    @CommandAnnotation(name = "SetGeneral", description = "Sets the current Channel as the Server's 'General' Channel")
     public String setGeneral() {
         if (isAdmin || isOwner) {
             guildConfig.setGeneralChannel(channel.getID());
@@ -187,7 +197,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "setServersChannel", channel = "any", description = "Sets the current Channel as the Server's 'Servers' Channel")
+    @CommandAnnotation(name = "ServersHere", description = "Sets the current Channel as the Server's 'Servers' Channel")
     public String setServersChannel() {
         if (isAdmin || isOwner) {
             guildConfig.setServersChannel(channel.getID());
@@ -197,7 +207,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "setRaceSelect", channel = "any", description = "Sets the current Channel as the Server's 'Race Select' Channel")
+    @CommandAnnotation(name = "RaceSelectHere", description = "Sets the current Channel as the Server's 'Race Select' Channel")
     public String setRaceSelect() {
         if (isAdmin || isOwner) {
             guildConfig.setRaceSelectChannel(channel.getID());
@@ -207,7 +217,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "Help", channel = "any", description = "Lists all of the Commands Sail can run")
+    @CommandAnnotation(name = "Help", description = "Lists all of the Commands Sail can run")
     public String sailHelp() {
         Method[] methods = this.getClass().getMethods();
         StringBuilder commandList = new StringBuilder();
@@ -226,27 +236,38 @@ public class Commands {
         return commandList.toString();
     }
 
-    @CommandAnnotation(name = "Info", channel = "any", description = "Gives information about a specific command\nUsage: Sail.Info [Command]")
+    @CommandAnnotation(name = "Info", description = "Gives information about a specific command\nUsage: Sail.Info [Command]")
     public String sailInfo() {
         Method[] methods = this.getClass().getMethods();
         String buildMessage = message.toString();
         if (message.toString().toLowerCase().equals("sail.info")) {
             return "Sail.Info\nGives information about a specific command\nUsage: Sail.Info [Command]";
         }
-        String[] testMessage = buildMessage.split(" ");
-
+        String[] splitMessage = buildMessage.split(" ");
         for (Method m : methods) {
-            if (m.isAnnotationPresent(CommandAnnotation.class) && !testMessage[1].equals("")) {
-                CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
-                if (testMessage[1].toLowerCase().contains(anno.name().toLowerCase())) {
-                    return Globals.commandPrefix + anno.name() + "\n" + anno.description();
+            if (m.isAnnotationPresent(CommandAnnotation.class) && !splitMessage[1].equals("")) {
+                CommandAnnotation commandAnno = m.getAnnotation(CommandAnnotation.class);
+                String testMessage = splitMessage[1].toLowerCase();
+                String testTo = commandAnno.name().toLowerCase();
+                if ((testMessage.startsWith(testTo)) && (testMessage.length() == testTo.length())) {
+                    StringBuilder builder = new StringBuilder();
+                    builder.append(Globals.commandPrefix + commandAnno.name() + "\n" + commandAnno.description() + "\n");
+                    if (m.isAnnotationPresent(AliasAnnotation.class)){
+                        AliasAnnotation aliasAnno = m.getAnnotation(AliasAnnotation.class);
+                        String[] alias = aliasAnno.alias();
+                        builder.append("Aliases: ");
+                        for (int i = 0; i < alias.length;i++){
+                            builder.append(alias[i] + ", ");
+                        }
+                    }
+                    return builder.toString();
                 }
             }
         }
         return "That command does not exist.";
     }
 
-    @CommandAnnotation(name = "doLoginMessage", channel = "any", description = "Toggles the login mesaage")
+    @CommandAnnotation(name = "doLoginMessage", description = "Toggles the login mesaage")
     public String setLoginMessage() {
         if (isAdmin || isOwner) {
             if (guildConfig.getDoLoginMessage()) {
@@ -260,7 +281,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "reboot", channel = "any", description = "sends a custom message")
+    @CommandAnnotation(name = "reboot", description = "sends a custom message")
     public String newMessage() {
         if (isOwner) {
             String newMessage = "Hello @everyone I am S.A.I.L, I am your Ship-based Artificial Intelligence Lattice," +
@@ -335,6 +356,7 @@ public class Commands {
         List<IRole> roles = author.getRolesForGuild(guild);
         ArrayList<String> races = guildConfig.getRaces();
         List<IRole> guildRoles = guild.getRoles();
+        String response = "";
         for (int i = 0; i < roles.size(); i++) {
             for (String r : races) {
                 if (roles.get(i).equals(guild.getRoleByID(r))) {
@@ -342,17 +364,34 @@ public class Commands {
                 }
             }
         }
+        boolean racefound = false;
         String[] newRole = message.toString().split(" ");
+
+        if (newRole[1].equalsIgnoreCase("remove")) {
+            racefound = true;
+            response = "Your race was removed";
+        }
         for (String r : races) {
             if (newRole[1].equalsIgnoreCase(guild.getRoleByID(r).getName())) {
                 roles.add(guild.getRoleByID(r));
+                racefound = true;
             }
         }
         IRole[] newRoleList;
         newRoleList = roles.stream().toArray(IRole[]::new);
         try {
-            guild.editUserRoles(author, newRoleList);
-            return "Your race has been updated";
+            if (racefound) {
+                guild.editUserRoles(author, newRoleList);
+                if (response.equals("")) {
+                    return "Your race has been updated";
+                }
+            } else {
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append(message.toString());
+                stringBuilder.delete(0, newRole[0].length());
+                response = "You cannot have the race:" + stringBuilder.toString() + " as that role does not exist";
+            }
+            return response;
         } catch (MissingPermissionsException e) {
             e.printStackTrace();
         } catch (DiscordException e) {
@@ -433,13 +472,13 @@ public class Commands {
                         } else if (guildConfig.getServerEditingType().equalsIgnoreCase("Desc")) {
                             StringBuilder stringBuilder = new StringBuilder();
                             stringBuilder.append(message.toString());
-                            stringBuilder.delete(0,testMessage[0].length() + 1);
+                            stringBuilder.delete(0, testMessage[0].length() + 1);
                             sa[4] = stringBuilder.toString();
                             stopServerEdit();
                             return "Description Edited";
                         } else {
                             stopServerEdit();
-                           return errorMessage;
+                            return errorMessage;
                         }
                     }
                 }
@@ -468,7 +507,7 @@ public class Commands {
                 }
                 return "server does not exist";
             } else if (testMessage.length == 2) {
-                return "You must specify a type, this type is either IP, Port or Desc";
+                return "You must specify a channel, this channel is either IP, Port or Desc";
             } else if (testMessage.length == 1) {
                 return "You must specify a server to edit\n Sail.EditServer [ServerName] Ip, Port, or Desc";
             } else {
@@ -487,7 +526,7 @@ public class Commands {
             guildConfig.setServerEditingType("");
             guildConfig.setServerToEdit("");
             return "Stopped the Server Listing Editing process";
-        }else {
+        } else {
             return notAllowed;
         }
     }

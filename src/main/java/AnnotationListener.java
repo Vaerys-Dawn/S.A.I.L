@@ -36,13 +36,13 @@ public class AnnotationListener {
             event.getClient().changeStatus(status);
 
             Scanner scanner = new Scanner(System.in);
-            while(scanner.hasNextLine()){
+            while (scanner.hasNextLine()) {
                 Channel channel = (Channel) event.getClient().getChannelByID(Globals.consoleMessageCID);
                 String message = scanner.nextLine();
-                message = message.replaceAll("#Dawn#",event.getClient().getUserByID("153159020528533505").toString());
-                message = message.replaceAll("teh","the");
-                message = message.replaceAll("Teh","The");
-                if (!message.equals("")){
+                message = message.replaceAll("#Dawn#", event.getClient().getUserByID("153159020528533505").toString());
+                message = message.replaceAll("teh", "the");
+                message = message.replaceAll("Teh", "The");
+                if (!message.equals("")) {
                     channel.sendMessage(message);
                 }
             }
@@ -82,7 +82,7 @@ public class AnnotationListener {
             }
         } catch (DiscordException e) {
             e.printStackTrace();
-        }  catch (MissingPermissionsException e) {
+        } catch (MissingPermissionsException e) {
             e.printStackTrace();
         } catch (RateLimitException e) {
             e.printStackTrace();
@@ -91,14 +91,8 @@ public class AnnotationListener {
 
     @EventSubscriber
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
-        String readableGuildID = event.getMessage().getGuild().getID();
         Message message = (Message) event.getMessage();
-        String file;
-        Commands commands = new Commands(message);
         Channel channel = (Channel) event.getMessage().getChannel();
-
-        file = "GuildConfigs/" + readableGuildID + "_config.json";
-        GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
 
         if (event.getMessage().getAuthor().getID().equals(Globals.creatorID)) {
             Globals.consoleMessageCID = event.getMessage().getChannel().getID().toString();
@@ -116,65 +110,44 @@ public class AnnotationListener {
             if (message.toString().equalsIgnoreCase("/shrug")) {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
-            if (message.toString().equalsIgnoreCase("sail.image")){
-                if (event.getMessage().getAuthor().equals(event.getMessage().getGuild().getOwner())){
+            if (message.toString().equalsIgnoreCase("sail.image")) {
+                if (event.getMessage().getAuthor().equals(event.getMessage().getGuild().getOwner())) {
                     File iconfile = new File("Icons/Chathead.png");
                     channel.sendFile(iconfile);
                 }
             }
-            commands.setPOGOS(guildConfig);
-            Method[] methods = Commands.class.getMethods();
-            for (Method m : methods) {
-                if (m.isAnnotationPresent(CommandAnnotation.class)) {
-                    CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
-                    String testMessage = message.toString().toLowerCase();
-                    String testTo = (Globals.commandPrefix + anno.name()).toLowerCase();
 
-                    if (testMessage.startsWith(testTo) && anno.channel().equalsIgnoreCase("any")) {
-                        channel.sendMessage((String) m.invoke(commands, new Object[]{}));
-                    }
-                    if (guildConfig.getServersChannel().equals("") && anno.channel().equalsIgnoreCase("Servers")) {
-                        if (testMessage.startsWith(testTo)) {
-                            channel.sendMessage("This Command must be run in a 'Servers' Channel. Currently there is no Race Select Channel Configured." +
-                                    "Please Run the command " + Globals.commandPrefix + "SetServersChannel in the channel you would like to assign as the server's" +
-                                    "'Servers' channel.");
-                        }
-                    } else {
-                        if ((testMessage.startsWith(testTo)) && anno.channel().equalsIgnoreCase("Servers")) {
-                            if (channel.getID().equals(guildConfig.getServersChannel())) {
-                                channel.sendMessage((String) m.invoke(commands, new Object[]{}));
-                            } else {
-                                Channel channelName = (Channel) event.getClient().getChannelByID(guildConfig.getServersChannel());
-                                channel.sendMessage("Cannot perform command in this channel please go to " + channelName);
+            Method[] methods = Commands.class.getMethods();
+            Method doMethod;
+
+            if (message.toString().toLowerCase().startsWith(Globals.commandPrefix.toLowerCase())) {
+                for (Method m : methods) {
+                    if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                        CommandAnnotation commandAnno = m.getAnnotation(CommandAnnotation.class);
+                        String testMessage = message.toString().toLowerCase();
+                        String[] splitMessage = testMessage.split(" ");
+                        String testTo = (Globals.commandPrefix + commandAnno.name()).toLowerCase();
+                        if (m.isAnnotationPresent(AliasAnnotation.class)) {
+                            AliasAnnotation aliasAnno = m.getAnnotation(AliasAnnotation.class);
+                            String[] alias = aliasAnno.alias();
+                            for (int i = 0; i < alias.length; i++) {
+                                String testAlias = Globals.commandPrefix.toLowerCase() + alias[i].toLowerCase();
+                                if (testMessage.startsWith(testAlias) && splitMessage[0].length() == testAlias.length()) {
+                                    handleCommand(m, event);
+                                }
                             }
-                        }
-                    }
-                    if (guildConfig.getRaceSelectChannel().equals("") && anno.channel().equalsIgnoreCase("RaceSelect")) {
-                        if (testMessage.startsWith(testTo)) {
-                            channel.sendMessage("This Command must be run in a 'Race Select' Channel. Currently there is no Race Select Channel Configured." +
-                                    "Please Run the command " + Globals.commandPrefix + "SetRaceSelect in the channel you would like to assign as the server's" +
-                                    "'Race Select' channel.");
-                        }
-                    } else {
-                        if (testMessage.startsWith(testTo) && anno.channel().equalsIgnoreCase("RaceSelect")) {
-                            if (channel.getID().equals(guildConfig.getRaceSelectChannel())) {
-                                channel.sendMessage((String) m.invoke(commands, new Object[]{}));
-                            } else {
-                                Channel channelName = (Channel) event.getClient().getChannelByID(guildConfig.getRaceSelectChannel());
-                                channel.sendMessage("Cannot perform command in this channel please go to " + channelName);
+                        } else {
+                            if (testMessage.startsWith(testTo) && splitMessage[0].length() == testTo.length()) {
+                                handleCommand(m, event);
                             }
                         }
                     }
                 }
             }
-            commands.flushFiles();
+
         } catch (MissingPermissionsException e) {
             logger.info("Bot does not have Permission for that thing");
-        }catch (DiscordException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (DiscordException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -182,6 +155,55 @@ public class AnnotationListener {
             e.printStackTrace();
         }
     }
+
+    public void handleCommand(Method doMethod, MessageReceivedEvent event) {
+        try {
+            Channel channel = (Channel) event.getMessage().getChannel();
+            Commands commands = new Commands((Message) event.getMessage());
+            String file;
+            String readableGuildID = event.getMessage().getGuild().getID();
+            file = "GuildConfigs/" + readableGuildID + "_config.json";
+            GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
+            commands.setPOGOS(guildConfig);
+            CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
+
+            if (commandAnno.channel().equalsIgnoreCase("any")) {
+                channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+            } else if (commandAnno.channel().equalsIgnoreCase("servers")) {
+                if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
+                    channel.sendMessage(commands.channelNotInit("Servers"));
+                } else {
+                    if (channel.equals((Channel) event.getClient().getChannelByID(guildConfig.getServersChannel()))) {
+                        channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+                    } else {
+                        channel.sendMessage(commands.wrongChannel(guildConfig.getServersChannel()));
+                    }
+                }
+            } else if (commandAnno.channel().equalsIgnoreCase("raceselect")) {
+                if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
+                    channel.sendMessage(commands.channelNotInit("RaceSelect"));
+                } else {
+                    if (channel.equals((Channel) event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {
+                        channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+                    } else {
+                        channel.sendMessage(commands.wrongChannel(guildConfig.getRaceSelectChannel()));
+                    }
+                }
+            }
+            commands.flushFiles();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (DiscordException e) {
+            e.printStackTrace();
+        } catch (RateLimitException e) {
+            e.printStackTrace();
+        } catch (MissingPermissionsException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @EventSubscriber
     public void onMentionEvent(MentionEvent event) {
