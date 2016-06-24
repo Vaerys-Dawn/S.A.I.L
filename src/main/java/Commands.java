@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.text.WordUtils;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
@@ -170,6 +171,7 @@ public class Commands {
         return "Goodbye " + author.getName();
     }
 
+    @AliasAnnotation(alias = {"Goodnight", "Night", "SleepyTime", "NightNight"})
     @CommandAnnotation(name = "GoodNight", description = "Says Goodbye")
     public String goodNight() {
         return "Goodnight " + author.getName();
@@ -351,6 +353,7 @@ public class Commands {
         }
     }
 
+    @AliasAnnotation(alias = {"Race","Iam","Role"})
     @CommandAnnotation(name = "Race", channel = "RaceSelect", description = "Gives you a race.\nUsage: Sail.Race [Race]")
     public String race() {
         List<IRole> roles = author.getRolesForGuild(guild);
@@ -530,6 +533,39 @@ public class Commands {
         } else {
             return notAllowed;
         }
+    }
+
+    @AliasAnnotation(alias = {"Wiki", "Starbounder", "SBWIKI"})
+    @CommandAnnotation(name = "Wiki", description = "Links a Page From Starbounder based on your message\nUsage: Sail.Wiki [Search]")
+    public String sailWiki(){
+        String[] splitMessage = message.toString().split(" ");
+        StringBuilder response = new StringBuilder();
+        StringBuilder newMessage = new StringBuilder();
+        newMessage.append(message.toString());
+        newMessage.delete(0,splitMessage[0].length() + 1);
+        String regexedMessage = WordUtils.capitalize(newMessage.toString());
+        regexedMessage = regexedMessage.replaceAll(" ", "_");
+        regexedMessage = regexedMessage.replaceAll("Sail","SAIL");
+        regexedMessage = regexedMessage.replaceAll("!tilededitor","Modding:Tiled/Editor");
+        regexedMessage = regexedMessage.replaceAll("!modding","Modding:Portal");
+        regexedMessage = regexedMessage.replaceAll("!multiplayersetup","Guide:Setting_Up_Multiplayer");
+        regexedMessage = regexedMessage.replaceAll("!gettingstarted","Guide:Getting_Started");
+        response.append("Here is Your Search\n<http://starbounder.org/");
+        response.append(regexedMessage);
+        response.append(">");
+        return response.toString();
+    }
+
+    @CommandAnnotation(name = "WikiCodes", description = "give a list of codes usable within the Sail.Wiki Command")
+    public String wikiRegex(){
+        StringBuilder response = new StringBuilder();
+        return response.toString();
+    }
+
+    @AliasAnnotation(alias = {"StarboundIDs","ItemID", "ItemList","IDList"})
+    @CommandAnnotation(name = "StarboundIDs",description = "Gives the Herokuapp for the starbound IDs")
+    public String IDList(){
+        return "<https://starbounditems.herokuapp.com/>";
     }
 }
 

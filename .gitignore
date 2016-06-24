@@ -58,3 +58,5 @@ Icons/Text/
 Icons/Races/
 *.psd
 Info discord.txt
+bot.log
+*.log

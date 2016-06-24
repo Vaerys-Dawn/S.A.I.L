@@ -1,70 +1,47 @@
 Welcome To S.A.I.L
 
-Developer - Vaerys Dawn
+Developer - Vaerys Dawn ('Dawn Felstar #1235' on discord)
 
-Personal Notes
 
-- this is meant to be a bot for starbound
+#Todo Add the rest of the Commands to this list.
 
 Commands
 
-	>ListRaces
+	Sail.ListRaces
 		- Lists all avalible races that users can select
-		* Vanilla Races to choose from:
-		  - #raceName#, ~repeat for all vanilla races~.
-		  Modded races to choose from:
-		  - #raceName#, ~repeat for all modded races~.
 		@everyone #raceselect
-	>Race #raceName#
-		- Asigns ths race removes any other races
-		* @User@ Your Race is now #raceName#.
+	Sail.Race #raceName#
+		- Assigns ths race removes any other races
 		@everyone #raceselect
-	>RaceStats
+	Sail.RaceStats <- Incomplete ->
 		- Lists all of the race roles and the amount of people in each role
-		* #raceName# #userCount# ~repeat for all roles on a new line~
 		@everyone #raceselect
-	+AddRace #raceName# #isModded#
+	Sail.AddRace #raceName#
 		- adds the Race to the list of races that can be assigned
-		* #raceName# has been added to list of avalible races.
-		@Admin #bot_commands
-	+RemoveRace #raceName#
+		@Admin #raceSelect
+	Sail.RemoveRace #raceName#
 		removes the Race from the list of races that can be selected
-		* #raceName# has been removed from the list of avalible races.
-		@Admin #bot_commands
-	>Version
+		@Admin #raceSelect
+	Sail.Version <- Incomplete ->
 		- Displays the most current version of Starbound
-		* The most current version of Starbound is #Version# it was released on #versionDate#.
 		@everyone #any
-	>Servers
+	Sail.ListServers
 		- Lists serversChannel
-		* Multiplayer serversChannel:
-		  - #serverName# ~Repeat on all in list on new line~
-		  More information can be gotten by doing >ServerInfo #serverName#
 		@everyone #serversChannel
-	>ServerInfo #serverName#
+	Sail.Server #serverName#
 		- Lists information of the server
-		* #serverName#
-		  Server IP: #serverIP# #port#
-		  #MotD#
 		@everyone #serversChannel
-	+AddServer #serverName# #serverIP# #port# #MotD#
+	Sail.AddServer #serverName#
 		- Adds a server to the list of serversChannel
-		* #serverName# has been added to list of multiplayer serversChannel.
-		@Moderator @Admin #bot_commands
-	+RemoveServer #serverName#
+		@everyone #serversChannel
+	Sail.RemoveServer #serverName# <- Incomplete ->
 		- Removes the server from the list of serversChannel
-		* #serverName# has been removed from the list of multiplayer serversChannel.
-		@Admin #bot_commands
-	>Help
+		@Admin @ListingCreator #serversChannel
+	Sail.Help
 		- Displays Commands that can be run on the server
-		* List of available commandses on this server:
-			#command# ~repeat for all commandses~
 		@everyone #any
-	>Help #command#
+	Sail.Info #command#
 		- Shows command description and usage
-		* #command#
-		#description#
-		Usage #usage#
 		@everyone #any
 	
 
