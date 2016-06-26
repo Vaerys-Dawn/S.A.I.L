@@ -8890,3 +8890,462 @@ java.lang.IllegalStateException: Blocking message pending 10000 for BLOCKING
 2016-06-24 09:17:03.111 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
 2016-06-24 09:17:06.732 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
 2016-06-24 09:17:06.733 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-24 13:58:04.529 [main] INFO  Client - Logging in to Discord
+2016-06-24 13:58:04.652 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-24 13:58:04.654 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-24 13:58:05.788 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1516ms
+2016-06-24 13:58:07.141 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-24 13:58:07.149 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-24 13:58:14.853 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-24 13:58:23.816 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-24 13:58:27.444 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-24 13:58:27.444 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-24 14:00:35.023 [main] INFO  Client - Logging in to Discord
+2016-06-24 14:00:35.150 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-24 14:00:35.151 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-24 14:00:36.685 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1940ms
+2016-06-24 14:00:38.039 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-24 14:00:38.047 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-24 14:00:45.589 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-24 14:00:54.142 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-24 14:00:57.697 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-24 14:00:57.697 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-24 21:02:14.613 [WebSocketClient@27084827-18] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-24 22:22:53.405 [WebSocketClient@27084827-12] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-24 23:51:19.848 [WebSocketClient@27084827-12] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-24 23:52:36.887 [WebSocketClient@27084827-13] ERROR sx.blah.discord.Discord4J - Reconnection was attempted too many times (4 attempts)
+2016-06-25 00:40:37.420 [main] INFO  Client - Logging in to Discord
+2016-06-25 00:40:37.660 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 00:40:37.662 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 00:40:39.114 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2300ms
+2016-06-25 00:40:40.480 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 00:40:40.495 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 00:40:48.013 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 00:40:56.024 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 00:40:57.826 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284)
+	at org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:266)
+	at org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:227)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:186)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137)
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:238)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	at java.util.zip.GZIPInputStream.read(GZIPInputStream.java:117)
+	at org.apache.http.client.entity.LazyDecompressingInputStream.read(LazyDecompressingInputStream.java:73)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:247)
+	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:291)
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:132)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:157)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:332)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:115)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:101)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:407)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:253)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:607)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:325)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:984)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-06-25 00:40:59.526 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 00:40:59.527 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 00:41:39.931 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 00:42:00.069 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 00:42:20.633 [WebSocketClient@27084827-12] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 00:42:41.151 [WebSocketClient@27084827-14] ERROR sx.blah.discord.Discord4J - Reconnection was attempted too many times (4 attempts)
+2016-06-25 00:46:11.985 [main] INFO  Client - Logging in to Discord
+2016-06-25 00:46:12.221 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 00:46:12.223 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 00:46:13.444 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1844ms
+2016-06-25 00:46:14.759 [WebSocketClient@27084827-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 00:46:14.773 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 00:46:21.763 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 00:46:30.003 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 00:46:33.561 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 00:46:33.561 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 07:40:04.797 [WebSocketClient@27084827-18] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 07:40:14.816 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 07:41:10.987 [WebSocketClient@27084827-13] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 07:42:07.161 [WebSocketClient@27084827-13] ERROR sx.blah.discord.Discord4J - Reconnection was attempted too many times (4 attempts)
+2016-06-25 12:03:09.527 [main] INFO  Client - Logging in to Discord
+2016-06-25 12:03:09.853 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 12:03:09.854 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 12:03:11.111 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1971ms
+2016-06-25 12:03:12.497 [WebSocketClient@27084827-12] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 12:03:12.507 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 12:03:20.661 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 12:03:29.055 [WebSocketClient@27084827-12] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 12:03:32.965 [WebSocketClient@27084827-12] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 12:03:32.966 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 21:25:43.452 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 21:26:23.319 [WebSocketClient@27084827-18] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 21:26:43.269 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Attempting to reconnect...
+2016-06-25 21:26:55.753 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Reconnection was attempted too many times (4 attempts)
+2016-06-25 22:03:14.641 [main] INFO  Client - Logging in to Discord
+2016-06-25 22:03:14.904 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 22:03:14.906 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 22:03:19.742 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @5710ms
+2016-06-25 22:03:24.819 [WebSocketClient@27084827-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 22:03:24.838 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 22:03:39.542 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 22:03:57.378 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 22:04:05.210 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 22:04:05.214 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:05:02.108 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:05:02.250 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:05:02.251 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:05:05.958 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @4175ms
+2016-06-25 23:05:10.160 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:05:10.168 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:05:24.554 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:05:24.590 [Event Dispatch Thread] INFO  AnnotationListener - Creating Custom Commands List
+2016-06-25 23:05:44.861 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:05:53.639 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:05:53.640 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:05:53.641 [Event Dispatch Thread] INFO  AnnotationListener - Creating Custom Commands List
+2016-06-25 23:07:18.801 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:07:18.970 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:07:18.972 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:07:29.052 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @10568ms
+2016-06-25 23:07:40.150 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:07:40.162 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:07:58.925 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:08:16.052 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:08:24.791 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:08:24.791 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:11:34.690 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:11:34.811 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:11:34.812 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:11:42.096 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @7681ms
+2016-06-25 23:11:50.499 [WebSocketClient@27084827-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:11:50.510 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:12:10.345 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:12:31.598 [WebSocketClient@27084827-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:12:42.410 [WebSocketClient@27084827-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:12:42.410 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:14:27.374 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:14:27.519 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:14:27.521 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:14:35.306 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8252ms
+2016-06-25 23:14:41.015 [WebSocketClient@27084827-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:14:41.026 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:14:54.484 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:15:11.156 [WebSocketClient@27084827-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:15:16.809 [WebSocketClient@27084827-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:15:16.809 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:15:27.005 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:15:27.127 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:15:27.128 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:15:32.355 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @5624ms
+2016-06-25 23:15:37.437 [WebSocketClient@27084827-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:15:37.444 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:15:54.316 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:16:16.289 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:16:23.897 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:16:23.897 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:29:19.211 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:29:20.478 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:29:20.479 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:29:26.036 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @7471ms
+2016-06-25 23:29:31.037 [WebSocketClient@27084827-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:29:31.044 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:29:47.277 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:29:47.282 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event GuildCreateEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at AnnotationListener.onGuildCreateEvent(AnnotationListener.java:79)
+	... 25 common frames omitted
+2016-06-25 23:30:07.741 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:30:07.996 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:30:08.001 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:30:14.106 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6760ms
+2016-06-25 23:30:20.381 [WebSocketClient@27084827-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:30:20.390 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:30:33.425 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:30:33.428 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event GuildCreateEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at AnnotationListener.onGuildCreateEvent(AnnotationListener.java:79)
+	... 25 common frames omitted
+2016-06-25 23:30:52.047 [WebSocketClient@27084827-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:30:59.237 [WebSocketClient@27084827-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:30:59.237 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:32:38.345 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected a string but was BEGIN_ARRAY at line 9 column 23 path $.commandNotFound
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:220)
+	at com.google.gson.Gson.fromJson(Gson.java:879)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at FileHandler.readfromJson(FileHandler.java:68)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:114)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalStateException: Expected a string but was BEGIN_ARRAY at line 9 column 23 path $.commandNotFound
+	at com.google.gson.stream.JsonReader.nextString(JsonReader.java:831)
+	at com.google.gson.internal.bind.TypeAdapters$16.read(TypeAdapters.java:422)
+	at com.google.gson.internal.bind.TypeAdapters$16.read(TypeAdapters.java:410)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.read(ReflectiveTypeAdapterFactory.java:116)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:216)
+	... 29 common frames omitted
+2016-06-25 23:34:36.029 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:34:36.210 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:34:36.211 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:34:40.370 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @4930ms
+2016-06-25 23:34:44.639 [WebSocketClient@27084827-14] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:34:44.646 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:35:02.075 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:35:02.079 [Event Dispatch Thread] INFO  AnnotationListener - Creating Custom Commands List
+2016-06-25 23:35:20.700 [WebSocketClient@27084827-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:35:28.816 [WebSocketClient@27084827-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:35:28.819 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:35:28.820 [Event Dispatch Thread] INFO  AnnotationListener - Creating Custom Commands List
+2016-06-25 23:40:04.134 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:40:04.318 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:40:04.320 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:40:09.407 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @5597ms
+2016-06-25 23:40:15.736 [WebSocketClient@27084827-12] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:40:15.747 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:40:32.368 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:40:46.763 [WebSocketClient@27084827-12] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:40:52.726 [WebSocketClient@27084827-12] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:40:52.727 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:48:45.865 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:48:46.040 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:48:46.042 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:48:48.710 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @3161ms
+2016-06-25 23:48:51.839 [WebSocketClient@27084827-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:48:51.854 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:49:03.995 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:49:14.105 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:49:17.695 [WebSocketClient@27084827-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:49:17.695 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-25 23:49:37.945 [main] INFO  Client - Logging in to Discord
+2016-06-25 23:49:38.135 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-25 23:49:38.136 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-25 23:49:39.739 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2193ms
+2016-06-25 23:49:41.148 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-25 23:49:41.166 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-25 23:49:49.762 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-25 23:49:59.003 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:50:03.061 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-25 23:50:03.061 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-26 00:09:39.589 [main] INFO  Client - Logging in to Discord
+2016-06-26 00:09:39.787 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-26 00:09:39.788 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-26 00:09:45.069 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6041ms
+2016-06-26 00:09:51.841 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-26 00:09:51.852 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-26 00:10:08.201 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-26 00:10:23.796 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:10:30.946 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:10:30.947 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-26 00:20:55.469 [main] INFO  Client - Logging in to Discord
+2016-06-26 00:20:55.796 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-26 00:20:55.798 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-26 00:20:57.317 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2762ms
+2016-06-26 00:20:58.630 [WebSocketClient@27084827-14] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-26 00:20:58.652 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-26 00:21:06.420 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-26 00:21:14.755 [WebSocketClient@27084827-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:21:18.287 [WebSocketClient@27084827-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:21:18.288 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-26 00:22:31.087 [main] INFO  Client - Logging in to Discord
+2016-06-26 00:22:31.302 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-26 00:22:31.304 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-26 00:22:32.592 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1929ms
+2016-06-26 00:22:33.935 [WebSocketClient@27084827-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-26 00:22:33.943 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-26 00:22:42.097 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-26 00:22:50.631 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:22:54.191 [WebSocketClient@27084827-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:22:54.191 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-26 00:23:57.832 [main] INFO  Client - Logging in to Discord
+2016-06-26 00:23:58.087 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-06-26 00:23:58.089 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-06-26 00:23:59.369 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1994ms
+2016-06-26 00:24:00.738 [WebSocketClient@27084827-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-06-26 00:24:00.752 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-06-26 00:24:08.824 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-06-26 00:24:16.961 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:24:20.431 [WebSocketClient@27084827-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-06-26 00:24:20.432 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-06-26 09:48:51.643 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedOperationException: null
+	at sx.blah.discord.handle.impl.obj.PrivateChannel.getGuild(PrivateChannel.java:131)
+	at sx.blah.discord.handle.impl.obj.Message.getGuild(Message.java:282)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:103)
+	... 24 common frames omitted
+2016-06-26 09:48:54.861 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.UnsupportedOperationException: null
+	at sx.blah.discord.handle.impl.obj.PrivateChannel.getGuild(PrivateChannel.java:131)
+	at sx.blah.discord.handle.impl.obj.Message.getGuild(Message.java:282)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:103)
+	... 24 common frames omitted
+2016-06-26 11:30:02.759 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-06-26 11:30:02.759 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!

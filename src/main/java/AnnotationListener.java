@@ -62,11 +62,18 @@ public class AnnotationListener {
             logger.info("[GuildCreateEvent] - Connected to Guild with ID " + readableGuildID);
             handler = new FileHandler();
             handler.createDirectory("GuildConfigs");
+            handler.createDirectory("CommandLists");
             String file = "GuildConfigs/" + readableGuildID + "_config.json";
             GuildConfig guildConfig = new GuildConfig();
             if (!Files.exists(Paths.get(file))) {
                 handler.writetoJson(file, guildConfig);
                 logger.info("[GuildCreateEvent] - Creating config file for Guild with ID " + readableGuildID);
+            }
+            file = "CommandLists/" + readableGuildID + "_CustomCommands.json";
+            CustomCommands customCommands = new CustomCommands();
+            if (!Files.exists(Paths.get(file))){
+                handler.writetoJson(file, customCommands);
+                logger.info("Creating Custom Commands List");
             }
             guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
             if (guildConfig.getDoLoginMessage()) {
@@ -93,11 +100,20 @@ public class AnnotationListener {
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
         Message message = (Message) event.getMessage();
         Channel channel = (Channel) event.getMessage().getChannel();
+        String readableGuildID = event.getMessage().getGuild().getID();
+        String file;
 
         if (event.getMessage().getAuthor().getID().equals(Globals.creatorID)) {
             Globals.consoleMessageCID = event.getMessage().getChannel().getID().toString();
         }
 
+
+        file = "GuildConfigs/" + readableGuildID + "_config.json";
+        GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
+        file = "CommandLists/" + readableGuildID + "_CustomCommands.json";
+        CustomCommands customCommands = (CustomCommands) handler.readfromJson(file, CustomCommands.class);
+
+        Commands commands = new Commands((Message) event.getMessage());
 
         //calls the commands
         try {
@@ -117,8 +133,21 @@ public class AnnotationListener {
                 }
             }
 
+
+            commands.setPOGOS(guildConfig,customCommands);
+
             Method[] methods = Commands.class.getMethods();
             Method doMethod;
+
+            if (message.toString().toLowerCase().startsWith(Globals.CCPrefix.toLowerCase())){
+                StringBuilder CCName = new StringBuilder();
+                CCName.append(message.toString());
+                CCName.delete(0,Globals.CCPrefix.length());
+                String CCResponse = customCommands.getCommand(CCName.toString());
+                CCResponse = CCResponse.replaceAll("#author#", message.getAuthor().getName());
+                channel.sendMessage(CCResponse);
+            }
+
 
             if (message.toString().toLowerCase().startsWith(Globals.commandPrefix.toLowerCase())) {
                 for (Method m : methods) {
@@ -133,18 +162,18 @@ public class AnnotationListener {
                             for (int i = 0; i < alias.length; i++) {
                                 String testAlias = Globals.commandPrefix.toLowerCase() + alias[i].toLowerCase();
                                 if (testMessage.startsWith(testAlias) && splitMessage[0].length() == testAlias.length()) {
-                                    handleCommand(m, event);
+                                    handleCommand(m, event, guildConfig, commands);
                                 }
                             }
                         } else {
                             if (testMessage.startsWith(testTo) && splitMessage[0].length() == testTo.length()) {
-                                handleCommand(m, event);
+                                handleCommand(m, event,guildConfig, commands);
                             }
                         }
                     }
                 }
             }
-
+            commands.flushFiles();
         } catch (MissingPermissionsException e) {
             logger.info("Bot does not have Permission for that thing");
         } catch (DiscordException e) {
@@ -156,15 +185,11 @@ public class AnnotationListener {
         }
     }
 
-    public void handleCommand(Method doMethod, MessageReceivedEvent event) {
+    public void handleCommand(Method doMethod, MessageReceivedEvent event, GuildConfig guildConfig,Commands commands) {
         try {
             Channel channel = (Channel) event.getMessage().getChannel();
-            Commands commands = new Commands((Message) event.getMessage());
-            String file;
-            String readableGuildID = event.getMessage().getGuild().getID();
-            file = "GuildConfigs/" + readableGuildID + "_config.json";
-            GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
-            commands.setPOGOS(guildConfig);
+
+
             CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
 
             if (commandAnno.channel().equalsIgnoreCase("any")) {
@@ -190,7 +215,7 @@ public class AnnotationListener {
                     }
                 }
             }
-            commands.flushFiles();
+
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

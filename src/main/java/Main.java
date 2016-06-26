@@ -1,5 +1,6 @@
 import sx.blah.discord.api.events.EventDispatcher;
 import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.handle.impl.events.DiscordDisconnectedEvent;
 import sx.blah.discord.util.DiscordException;
 
 import java.io.*;
@@ -31,9 +32,6 @@ public class Main {
             EventDispatcher dispatcher = client.getDispatcher();
             dispatcher.registerListener(new InterfaceListener());
             dispatcher.registerListener(new AnnotationListener());
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         } catch (DiscordException ex) {
             System.out.println(ex);
         } catch (FileNotFoundException e) {

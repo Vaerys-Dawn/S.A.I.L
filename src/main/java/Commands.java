@@ -20,12 +20,14 @@ import java.util.Random;
 public class Commands {
 
     String guildConfigFile;
+    String CCFile;
     Guild guild;
     Channel channel;
     Message message;
     IUser author;
     String guildID;
     private GuildConfig guildConfig;
+    private CustomCommands customCommands;
     FileHandler handler = new FileHandler();
     private boolean isOwner;
     private boolean isAdmin;
@@ -43,6 +45,7 @@ public class Commands {
         guildID = message.getGuild().getID();
         notAllowed = "I'm Sorry " + author.getName() + " I'm afraid I can't do that.";
         guildConfigFile = "GuildConfigs/" + guildID + "_config.json";
+        CCFile = "CommandLists/" + guildID + "_CustomCommands.json";
         errorMessage = "You have Found an error, please Mention this bot or " + guild.getUserByID(Globals.creatorID).getName() + " to let them know of this error";
         if (author.getID().equals(Globals.creatorID)) {
             isCreator = true;
@@ -64,12 +67,14 @@ public class Commands {
         }
     }
 
-    public void setPOGOS(GuildConfig guildConfig) {
+    public void setPOGOS(GuildConfig guildConfig,CustomCommands customCommands) {
         this.guildConfig = guildConfig;
+        this.customCommands = customCommands;
     }
 
     public void flushFiles() {
         handler.writetoJson(guildConfigFile, guildConfig);
+        handler.writetoJson(CCFile, customCommands);
     }
 
     public String channelNotInit(String channelType) {
@@ -165,30 +170,6 @@ public class Commands {
         }
     }
 
-    @AliasAnnotation(alias = {"Bye", "Goodbye", "Boi", "Bai"})
-    @CommandAnnotation(name = "Goodbye", description = "Says Goodbye")
-    public String goodbye() {
-        return "Goodbye " + author.getName();
-    }
-
-    @AliasAnnotation(alias = {"Goodnight", "Night", "SleepyTime", "NightNight"})
-    @CommandAnnotation(name = "GoodNight", description = "Says Goodbye")
-    public String goodNight() {
-        return "Goodnight " + author.getName();
-    }
-
-    @CommandAnnotation(name = "NightlyFAQ", description = "Posts a link to the nightly FAQ post on Reddit.")
-    public String NightlyFAQ() {
-        return "Here are the Frequently Asked Questions when it comes to the starbound nightly Build.\n" +
-                "https://www.reddit.com/r/starbound/comments/4jnhjw/nightly_faq_so_you_want_to_play_nightly/#announce";
-    }
-
-    @CommandAnnotation(name = "NightlyFix", description = "Posts a link to the Nightly Fix mod")
-    public String nightlyFix() {
-        return "Add this to your Starbound - Unstable/mods folder\n" +
-                "http://community.playstarbound.com/resources/cheerful-giraffe-nightly-fix.3397/";
-    }
-
     @CommandAnnotation(name = "SetGeneral", description = "Sets the current Channel as the Server's 'General' Channel")
     public String setGeneral() {
         if (isAdmin || isOwner) {
@@ -278,21 +259,6 @@ public class Commands {
                 guildConfig.setDoLoginMessage(true);
             }
             return "Toggled the Login Message";
-        } else {
-            return notAllowed;
-        }
-    }
-
-    @CommandAnnotation(name = "reboot", description = "sends a custom message")
-    public String newMessage() {
-        if (isOwner) {
-            String newMessage = "Hello @everyone I am S.A.I.L, I am your Ship-based Artificial Intelligence Lattice," +
-                    " I am now back up and running and ready to go. I currently have a small selection of commands that I can run, " +
-                    "You can see these commands by running 'Sail.Help'.\n\nWith my new reboot I can now have commands created for me" +
-                    " at a very fast rate, so if you would like to see a new command mention me with your ideas. I am still going through upgrades and soon" +
-                    " I should be able to show a server list, change your race for you, upgrade your matter manipulator, and allow you to create custom commands." +
-                    "/nLastly thank you HadronKalido for my new coat of pixels.";
-            return newMessage;
         } else {
             return notAllowed;
         }
@@ -562,10 +528,25 @@ public class Commands {
         return response.toString();
     }
 
-    @AliasAnnotation(alias = {"StarboundIDs","ItemID", "ItemList","IDList"})
-    @CommandAnnotation(name = "StarboundIDs",description = "Gives the Herokuapp for the starbound IDs")
-    public String IDList(){
-        return "<https://starbounditems.herokuapp.com/>";
+
+    @CommandAnnotation(name = "NewCC", description = "Creates a custom command\nUsage: Sail.NewCC [CommandName] [Message]")
+    public String newCC(){
+        String[] splitString = message.toString().split(" ");
+        StringBuilder command = new StringBuilder();
+        command.append(message.toString());
+        command.delete(0, (splitString[0].length() + splitString[1].length() + 2));
+        return customCommands.createCommand(author.getID(),splitString[1],command.toString());
+    }
+
+    @CommandAnnotation(name = "DelCC", description = "Removes the Command\nUsage: Sail.DelCC [CommandName")
+    public String delCC(){
+        String[] splitString = message.toString().split(" ");
+        return customCommands.removeCommand(isMod,author.getID(),splitString[1]);
+    }
+
+    @CommandAnnotation(name = "CCList", description = "Lists the Server's Custom Commands")
+    public String listCCs(){
+        return customCommands.listCommands();
     }
 }
 
