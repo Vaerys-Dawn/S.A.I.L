@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CommandAnnotation {
     String name();
-    String type() default "general";
+    String type() default "General";
     String channel() default "any";
     String description() default "Has no Description Set Yet";
     String usage() default "";

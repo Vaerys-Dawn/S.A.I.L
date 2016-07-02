@@ -286,7 +286,11 @@ public class Commands {
             commandList.append("\nYou can search for commands with those types by doing \n`"+ getUsage("sailHelp") +"`");
             commandList.append("\nGitHub Page: <https://github.com/Vaerys-Dawn/S.A.I.L>");
         } else if (splitMessage[1].equalsIgnoreCase("Admin")){
-            commandList.append(helpHandler("Admin"));
+            if (isMod || isAdmin) {
+                commandList.append(helpHandler("Admin"));
+            }else {
+                return notAllowed;
+            }
         } else if (splitMessage[1].equalsIgnoreCase("Race")){
             commandList.append(helpHandler("Race"));
         } else if (splitMessage[1].equalsIgnoreCase("Servers")){
