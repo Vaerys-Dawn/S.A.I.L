@@ -264,7 +264,7 @@ public class Commands {
         String[] splitMessage = message.toString().split(" ");
         StringBuilder commandList = new StringBuilder();
         ArrayList<String> types = new ArrayList<>();
-        if (message.toString().length() == (Globals.commandPrefix + "Help").length()){
+        if (message.toString().length() == getName("sailhelp").length()){
             for (Method m : methods) {
                 if (m.isAnnotationPresent(CommandAnnotation.class)) {
                     boolean typeFound = false;
@@ -366,7 +366,7 @@ public class Commands {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
             if (message.toString().equalsIgnoreCase("Sail.AddRace") || testMessage[1].equals("")) {
-                return "Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\nUsage Sail.AddRace [role]";
+                return "Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\n" + getUsage("addRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
             String raceID;
@@ -388,7 +388,7 @@ public class Commands {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
             if (message.toString().equalsIgnoreCase("Sail.RemoveRace") || testMessage[1].equals("")) {
-                return "ERROR: USER SPECIFIED NOTHING AS A PARAMETER, CANNOT REMOVE NOTHING FROM RACE LIST.\nUsage Sail.AddRace [role]";
+                return "ERROR: USER SPECIFIED NOTHING AS A PARAMETER, CANNOT REMOVE NOTHING FROM RACE LIST.\n" + getUsage("removeRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
             String raceID;
@@ -422,6 +422,9 @@ public class Commands {
         boolean racefound = false;
         String[] newRole = message.toString().split(" ");
 
+        if (message.toString().length() == getName("race").length()){
+            return getDescription("race");
+        }
         if (newRole[1].equalsIgnoreCase("remove")) {
             racefound = true;
             response = "Your race was removed";
@@ -474,7 +477,7 @@ public class Commands {
                 return "Server name has already been used";
             }
         } else if (testMessage.length == 1) {
-            return "You must Specify a Server Name\nSail.AddServer [ServerName]";
+            return "You must Specify a Server Name\n" + getUsage("addServer");
         } else {
             return "Server name cannot have spaces";
         }
@@ -487,8 +490,7 @@ public class Commands {
         for (String[] sa : guildConfig.getServerList()) {
             response.append("  " + sa[1] + "\n");
         }
-        response.append("You can get the server information of each server by performing\n" +
-                "Sail.Server [ServerName]");
+        response.append("You can get the server information of each server by performing\n" + getUsage("listServers"));
         return response.toString();
     }
 
@@ -497,6 +499,9 @@ public class Commands {
         String[] testMessage = message.toString().split(" ");
         StringBuilder response = new StringBuilder();
         response.append("Server does not exist");
+        if (message.toString().length() == getName("serverInfo").length()){
+            return getDescription("serverInfo");
+        }
         for (String[] sa : guildConfig.getServerList()) {
             if (testMessage[1].equalsIgnoreCase(sa[1])) {
                 response.delete(0, response.length());
@@ -539,7 +544,7 @@ public class Commands {
                 }
                 stopServerEdit();
             } else {
-                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform Sail.AbandonEdit to allow for another edit.";
+                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform `Sail.AbandonEdit` to allow for another edit.";
             }
         } else {
             if (testMessage.length == 3) {
@@ -551,7 +556,7 @@ public class Commands {
                                 guildConfig.setServerEditor(author.getID());
                                 guildConfig.setServerEditingType(testMessage[2]);
                                 guildConfig.setServerToEdit(testMessage[1]);
-                                return "You are now Editing the Server " + testMessage[2] + "\nPerform Sail.EditServer [Contents] to change the server properties,\nOr Sail.AbandonEdit to cancel editing\n" +
+                                return "You are now Editing the Server " + testMessage[2] + "\nPerform `" + getName("editServer") + " [Contents]` to change the server properties,\nOr `Sail.AbandonEdit` to cancel editing\n" +
                                         "❗*IMPORTANT: Please Surround links with* `<>`❗";
                             } else {
                                 return "Cannot edit " + testMessage[2];
@@ -565,10 +570,9 @@ public class Commands {
             } else if (testMessage.length == 2) {
                 return "You must specify a channel, this channel is either IP, Port or Desc";
             } else if (testMessage.length == 1) {
-                return "You must specify a server to edit\n Sail.EditServer [ServerName] Ip, Port, or Desc";
+                return "You must specify a server to edit\n" + getUsage("editServer");
             } else {
-                return "Too many or too few arguments\n" +
-                        "Sail.EditServer [ServerName] Ip, Port, or Desc";
+                return "Too many or too few arguments\n" + getUsage("editServer");
             }
         }
         return errorMessage;
@@ -590,6 +594,9 @@ public class Commands {
     @AliasAnnotation(alias = {"Wiki", "Starbounder", "SBWIKI","Search"})
     @CommandAnnotation(name = "Wiki", description = "Links a Page From Starbounder based on your message",usage = "[Search]")
     public String sailWiki(){
+        if (message.toString().length() == getName("sailWiki").length()){
+            return getUsage("sailWiki");
+        }
         String[] splitMessage = message.toString().split(" ");
         StringBuilder response = new StringBuilder();
         StringBuilder newMessage = new StringBuilder();
@@ -597,11 +604,6 @@ public class Commands {
         newMessage.delete(0,splitMessage[0].length() + 1);
         String regexedMessage = WordUtils.capitalize(newMessage.toString());
         regexedMessage = regexedMessage.replaceAll(" ", "_");
-//        regexedMessage = regexedMessage.replaceAll("Sail","SAIL");
-//        regexedMessage = regexedMessage.replaceAll("!tilededitor","Modding:Tiled/Editor");
-//        regexedMessage = regexedMessage.replaceAll("!modding","Modding:Portal");
-//        regexedMessage = regexedMessage.replaceAll("!multiplayersetup","Guide:Setting_Up_Multiplayer");
-//        regexedMessage = regexedMessage.replaceAll("!gettingstarted","Guide:Getting_Started");
         response.append("Here is Your Search\n<http://starbounder.org/Special:Search/");
         response.append(regexedMessage);
         response.append(">");
@@ -617,6 +619,9 @@ public class Commands {
     @AliasAnnotation(alias = {"NewCC","CCnew","CCmake","CreateCC","MakeCC"})
     @CommandAnnotation(name = "NewCC",type = "CC", description = "Creates a custom command",usage = "[CommandName] [Message]")
     public String newCC(){
+        if(message.toString().length() == getName("newCC").length()){
+            return getUsage("newCC");
+        }
         String[] splitString = message.toString().split(" ");
         StringBuilder command = new StringBuilder();
         command.append(message.toString());
@@ -627,6 +632,9 @@ public class Commands {
     @AliasAnnotation(alias = {"DelCC", "CCDel","RemoveCC"})
     @CommandAnnotation(name = "DelCC",type = "CC", description = "Removes the Command",usage = "[CommandName]")
     public String delCC(){
+        if (message.toString().length() == getName("delCC").length()){
+            return getUsage("delCC");
+        }
         String[] splitString = message.toString().split(" ");
         return customCommands.removeCommand(isMod,author.getID(),splitString[1]);
     }
