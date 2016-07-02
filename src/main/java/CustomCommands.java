@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class CustomCommands {
 
     ArrayList<String[]> commands = new ArrayList<String[]>();
-    final String commandNotFound = "No Command with that name found.";
+    final String[] commandNotFound = {"noUser","404","No Command with that name found."};
 
     public String createCommand(String userID, String commandName, String response){
         boolean noDuplicate = true;
@@ -26,10 +26,10 @@ public class CustomCommands {
         return "A Command with that name already exists, Cannot create command.";
     }
 
-    public String getCommand(String commandName){
+    public String[] getCommand(String commandName){
         for (String[] cA: commands){
             if (cA[1].equalsIgnoreCase(commandName)){
-                return cA[2];
+                return cA;
             }
         }
         return commandNotFound;

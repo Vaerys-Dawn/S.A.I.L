@@ -6,6 +6,7 @@ import sx.blah.discord.handle.impl.events.MentionEvent;
 import sx.blah.discord.handle.impl.events.MessageReceivedEvent;
 import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
+import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
 import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.*;
@@ -100,6 +101,7 @@ public class AnnotationListener {
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
         Message message = (Message) event.getMessage();
         Channel channel = (Channel) event.getMessage().getChannel();
+        Guild guild = (Guild) event.getMessage().getGuild();
         String readableGuildID = event.getMessage().getGuild().getID();
         String file;
 
@@ -126,10 +128,10 @@ public class AnnotationListener {
             if (message.toString().equalsIgnoreCase("/shrug")) {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
-            if (message.toString().equalsIgnoreCase("sail.image")) {
+            if (message.toString().equalsIgnoreCase("sail.updateInfo")) {
                 if (event.getMessage().getAuthor().equals(event.getMessage().getGuild().getOwner())) {
-                    File iconfile = new File("Icons/Chathead.png");
-                    channel.sendFile(iconfile);
+                    InfoChannel infoChannel = new InfoChannel();
+                    infoChannel.updateInfo(channel,guild);
                 }
             }
 
@@ -141,11 +143,25 @@ public class AnnotationListener {
 
             if (message.toString().toLowerCase().startsWith(Globals.CCPrefix.toLowerCase())){
                 StringBuilder CCName = new StringBuilder();
-                CCName.append(message.toString());
-                CCName.delete(0,Globals.CCPrefix.length());
-                String CCResponse = customCommands.getCommand(CCName.toString());
-                CCResponse = CCResponse.replaceAll("#author#", message.getAuthor().getName());
-                channel.sendMessage(CCResponse);
+                String[] splitMessage = message.toString().split(" ");
+                CCName.append(splitMessage[0]);
+                CCName.delete(0, Globals.CCPrefix.length());
+                String regex;
+                String args;
+                StringBuilder builder = new StringBuilder();
+                String[] CCResponse = customCommands.getCommand(CCName.toString());
+                if (message.toString().length() != (CCResponse[1].length() + Globals.CCPrefix.length())){
+                    builder.append(message.toString());
+                    builder.delete(0,CCResponse[1].length() + Globals.CCPrefix.length() + 1);
+                    args = builder.toString();
+                } else {
+                    args = "Nothing";
+                }
+                regex = CCResponse[2];
+                regex = regex.replaceAll("#author!#", message.getAuthor().getName());
+                regex = regex.replaceAll("#author#", message.getAuthor().getDisplayName(message.getGuild()));
+                regex = regex.replaceAll("#args", args);
+                channel.sendMessage(regex);
             }
 
 
@@ -178,8 +194,6 @@ public class AnnotationListener {
             logger.info("Bot does not have Permission for that thing");
         } catch (DiscordException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (RateLimitException e) {
             e.printStackTrace();
         }
@@ -205,7 +219,7 @@ public class AnnotationListener {
                     }
                 }
             } else if (commandAnno.channel().equalsIgnoreCase("raceselect")) {
-                if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
+                if (guildConfig.getRaceSelectChannel().equalsIgnoreCase("")) {
                     channel.sendMessage(commands.channelNotInit("RaceSelect"));
                 } else {
                     if (channel.equals((Channel) event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {

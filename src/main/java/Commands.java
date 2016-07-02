@@ -1,4 +1,6 @@
+import org.apache.commons.lang3.text.FormatFactory;
 import org.apache.commons.lang3.text.WordUtils;
+import org.slf4j.LoggerFactory;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
@@ -13,6 +15,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Logger;
 
 /**
  * Created by Vaerys on 19/05/2016.
@@ -36,6 +39,8 @@ public class Commands {
     private boolean isCreator;
     String notAllowed;
     String errorMessage;
+
+    final static org.slf4j.Logger logger = LoggerFactory.getLogger(AnnotationListener.class);
 
     public Commands(Message message) {
         this.message = message;
@@ -73,8 +78,16 @@ public class Commands {
     }
 
     public void flushFiles() {
-        handler.writetoJson(guildConfigFile, guildConfig);
-        handler.writetoJson(CCFile, customCommands);
+        if (guildConfig.equals(null)){
+            logger.error("Config Object is empty stopping flush");
+        }else{
+            handler.writetoJson(guildConfigFile, guildConfig);
+        }
+        if (customCommands.equals(null)){
+            logger.error("Commands Object is empty stopping flush");
+        }else {
+            handler.writetoJson(CCFile, customCommands);
+        }
     }
 
     public String channelNotInit(String channelType) {
@@ -83,6 +96,51 @@ public class Commands {
 
     public String wrongChannel(String channelID){
         return "Command must be performed in " + guild.getChannelByID(channelID).toString();
+    }
+
+    private String getDescription(String name){
+        try {
+            CommandAnnotation Ca = this.getClass().getMethod(name).getAnnotation(CommandAnnotation.class);
+            return Globals.commandPrefix + Ca.name() + "\n" + Ca.description() + "\nUsage: `" + getUsage(name)+ "`";
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        return "Failed to Find Method";
+    }
+
+    private String getName(String name){
+        try {
+            CommandAnnotation Ca = this.getClass().getMethod(name).getAnnotation(CommandAnnotation.class);
+            return Globals.commandPrefix + Ca.name();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        return "Failed to Find Method";
+    }
+
+    private String getUsage(String name){
+        try {
+            CommandAnnotation Ca = this.getClass().getMethod(name).getAnnotation(CommandAnnotation.class);
+            return getName(name) + " " + Ca.usage();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        return "Failed to Find Method";
+    }
+
+    private String helpHandler(String type){
+        Method[] methods = this.getClass().getMethods();
+        StringBuilder builder = new StringBuilder();
+        builder.append("Here are all of the "+ WordUtils.capitalize(type) + "Commands:");
+        for (Method m : methods) {
+            if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
+                if (anno.type().equalsIgnoreCase(type)) {
+                    builder.append("\n   " + Globals.commandPrefix + anno.name());
+                }
+            }
+        }
+        return builder.toString();
     }
 
     @AliasAnnotation(alias = {"Hi", "Hello", "Greeting", "Hai", "Hoi"})
@@ -170,7 +228,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "SetGeneral", description = "Sets the current Channel as the Server's 'General' Channel")
+    @CommandAnnotation(name = "GeneralHere",type = "Admin",description = "Sets the current Channel as the Server's 'General' Channel")
     public String setGeneral() {
         if (isAdmin || isOwner) {
             guildConfig.setGeneralChannel(channel.getID());
@@ -180,7 +238,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "ServersHere", description = "Sets the current Channel as the Server's 'Servers' Channel")
+    @CommandAnnotation(name = "ServersHere", type = "Admin",description = "Sets the current Channel as the Server's 'Servers' Channel")
     public String setServersChannel() {
         if (isAdmin || isOwner) {
             guildConfig.setServersChannel(channel.getID());
@@ -190,7 +248,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "RaceSelectHere", description = "Sets the current Channel as the Server's 'Race Select' Channel")
+    @CommandAnnotation(name = "RaceSelectHere", type = "Admin", description = "Sets the current Channel as the Server's 'Race Select' Channel")
     public String setRaceSelect() {
         if (isAdmin || isOwner) {
             guildConfig.setRaceSelectChannel(channel.getID());
@@ -200,31 +258,55 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "Help", description = "Lists all of the Commands Sail can run")
+    @CommandAnnotation(name = "Help", description = "Lists all of the Commands Sail can run",usage = "[Type]")
     public String sailHelp() {
         Method[] methods = this.getClass().getMethods();
+        String[] splitMessage = message.toString().split(" ");
         StringBuilder commandList = new StringBuilder();
-        commandList.append("Hello My Name is S.A.I.L\n" +
-                "Here are the commands currently at my disposal:");
-        for (Method m : methods) {
-            if (m.isAnnotationPresent(CommandAnnotation.class)) {
-                CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
-                commandList.append("\n   " + Globals.commandPrefix + anno.name());
+        ArrayList<String> types = new ArrayList<>();
+        if (message.toString().length() == (Globals.commandPrefix + "Help").length()){
+            for (Method m : methods) {
+                if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                    boolean typeFound = false;
+                    CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
+                    for (String s : types){
+                        if (s.equalsIgnoreCase(anno.type())){
+                            typeFound = true;
+                        }
+                    }
+                    if (!typeFound){
+                        types.add(anno.type());
+                    }
+                }
             }
+            commandList.append("Here are the command types you can search from:");
+            for (String s : types){
+                commandList.append("\n   " + s);
+            }
+            commandList.append("\nYou can search for commands with those types by doing \n`"+ getUsage("sailHelp") +"`");
+            commandList.append("\nGitHub Page: <https://github.com/Vaerys-Dawn/S.A.I.L>");
+        } else if (splitMessage[1].equalsIgnoreCase("Admin")){
+            commandList.append(helpHandler("Admin"));
+        } else if (splitMessage[1].equalsIgnoreCase("Race")){
+            commandList.append(helpHandler("Race"));
+        } else if (splitMessage[1].equalsIgnoreCase("Servers")){
+            commandList.append(helpHandler("Servers"));
+        } else if (splitMessage[1].equalsIgnoreCase("General")){
+            commandList.append(helpHandler("General"));
+        } else if (splitMessage[1].equalsIgnoreCase("CC")){
+            commandList.append(helpHandler("CC"));
+        } else {
+            return getDescription("sailHelp");
         }
-        commandList.append("\nMy Author is Dawn Felstar and I am currently In Development\n" +
-                "I am being written using Java with the Discord4J Libraries.\n" +
-                "My avatar was created by HadronKalido,\n" +
-                "if you have any feedback or issues send a mention at me to let my creator know.");
         return commandList.toString();
     }
 
-    @CommandAnnotation(name = "Info", description = "Gives information about a specific command\nUsage: Sail.Info [Command]")
+    @CommandAnnotation(name = "Info", description = "Gives information about a specific command",usage = "[Command]")
     public String sailInfo() {
         Method[] methods = this.getClass().getMethods();
         String buildMessage = message.toString();
         if (message.toString().toLowerCase().equals("sail.info")) {
-            return "Sail.Info\nGives information about a specific command\nUsage: Sail.Info [Command]";
+            return getDescription("sailInfo");
         }
         String[] splitMessage = buildMessage.split(" ");
         for (Method m : methods) {
@@ -234,7 +316,7 @@ public class Commands {
                 String testTo = commandAnno.name().toLowerCase();
                 if ((testMessage.startsWith(testTo)) && (testMessage.length() == testTo.length())) {
                     StringBuilder builder = new StringBuilder();
-                    builder.append(Globals.commandPrefix + commandAnno.name() + "\n" + commandAnno.description() + "\n");
+                    builder.append(Globals.commandPrefix + commandAnno.name() + "\n" + getDescription(m.getName())+ "\n");
                     if (m.isAnnotationPresent(AliasAnnotation.class)){
                         AliasAnnotation aliasAnno = m.getAnnotation(AliasAnnotation.class);
                         String[] alias = aliasAnno.alias();
@@ -250,7 +332,7 @@ public class Commands {
         return "That command does not exist.";
     }
 
-    @CommandAnnotation(name = "doLoginMessage", description = "Toggles the login mesaage")
+    @CommandAnnotation(name = "doLoginMessage",type = "Admin", description = "Toggles the login mesaage")
     public String setLoginMessage() {
         if (isAdmin || isOwner) {
             if (guildConfig.getDoLoginMessage()) {
@@ -264,7 +346,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "ListRaces", channel = "RaceSelect", description = "Lists the Available races that you can choose from")
+    @CommandAnnotation(name = "ListRaces",type = "Race", channel = "RaceSelect", description = "Lists the Available races that you can choose from")
     public String listRaces() {
         StringBuilder response = new StringBuilder();
         ArrayList<String> races = guildConfig.getRaces();
@@ -275,7 +357,7 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "AddRace", channel = "RaceSelect", description = "Adds role to selectable races\nUsage: Sail.AddRace [Role name]")
+    @CommandAnnotation(name = "AddRace",type = "Admin",channel = "RaceSelect", description = "Adds role to selectable races",usage = "[Role name]")
     public String addRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
@@ -297,7 +379,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "RemoveRace", channel = "RaceSelect", description = "Removes the role from the selectable races\nUsage: Sail.AddRace [Role name]")
+    @CommandAnnotation(name = "RemoveRace",type = "Admin", channel = "RaceSelect", description = "Removes the role from the selectable races",usage = "[Role name]")
     public String removeRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
@@ -320,7 +402,7 @@ public class Commands {
     }
 
     @AliasAnnotation(alias = {"Race","Iam","Role"})
-    @CommandAnnotation(name = "Race", channel = "RaceSelect", description = "Gives you a race.\nUsage: Sail.Race [Race]")
+    @CommandAnnotation(name = "Race",type = "Race", channel = "RaceSelect", description = "Gives you a race.",usage = "[Race]")
     public String race() {
         List<IRole> roles = author.getRolesForGuild(guild);
         ArrayList<String> races = guildConfig.getRaces();
@@ -371,7 +453,7 @@ public class Commands {
         return "failed to update race, if you are an admin S.A.I.L Cannot change your race, but you can do it manually, you lazy person.";
     }
 
-    @CommandAnnotation(name = "AddServer", channel = "Servers", description = "Adds a sever to the server list.\nUsage: Sail.AddServer [ServerName]")
+    @CommandAnnotation(name = "AddServer",type = "Servers", channel = "Servers", description = "Adds a sever to the server list.",usage = "[ServerName]")
     public String addServer() {
         String[] testMessage = message.toString().split(" ");
         boolean isUsed = false;
@@ -394,7 +476,7 @@ public class Commands {
         }
     }
 
-    @CommandAnnotation(name = "ListServers", channel = "Servers", description = "Lists all of the servers")
+    @CommandAnnotation(name = "ListServers",type = "Servers", channel = "Servers", description = "Lists all of the servers")
     public String listServers() {
         StringBuilder response = new StringBuilder();
         response.append("Here are the Servers Currently Saved to my list\n");
@@ -406,7 +488,7 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "Server", channel = "Servers", description = "Gives the server's Details\nUsage: Sail.Server [ServerName]")
+    @CommandAnnotation(name = "Server",type = "Servers", channel = "Servers", description = "Gives the server's Details",usage = "[ServerName]")
     public String serverInfo() {
         String[] testMessage = message.toString().split(" ");
         StringBuilder response = new StringBuilder();
@@ -423,7 +505,7 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "EditServer", channel = "Servers", description = "Edits the server\nUsage: Sail.EditServer [ServerName] Ip, Port, or Desc")
+    @CommandAnnotation(name = "EditServer",type = "Servers", channel = "Servers", description = "Edits the server",usage = "[ServerName] Ip, Port, or Desc")
     public String editServer() {
         String[] testMessage = message.toString().split(" ");
         if (guildConfig.getEditingServer()) {
@@ -488,7 +570,7 @@ public class Commands {
         return errorMessage;
     }
 
-    @CommandAnnotation(name = "AbandonEdit", channel = "Servers", description = "Stops the Server Listing Editing process")
+    @CommandAnnotation(name = "AbandonEdit",type = "Servers", channel = "Servers", description = "Stops the Server Listing Editing process")
     public String stopServerEdit() {
         if (isAdmin || isMod || isOwner || author.equals(guild.getUserByID(guildConfig.getServerEditor()))) {
             guildConfig.setEditingServer(false);
@@ -501,8 +583,8 @@ public class Commands {
         }
     }
 
-    @AliasAnnotation(alias = {"Wiki", "Starbounder", "SBWIKI"})
-    @CommandAnnotation(name = "Wiki", description = "Links a Page From Starbounder based on your message\nUsage: Sail.Wiki [Search]")
+    @AliasAnnotation(alias = {"Wiki", "Starbounder", "SBWIKI","Search"})
+    @CommandAnnotation(name = "Wiki", description = "Links a Page From Starbounder based on your message",usage = "[Search]")
     public String sailWiki(){
         String[] splitMessage = message.toString().split(" ");
         StringBuilder response = new StringBuilder();
@@ -511,12 +593,12 @@ public class Commands {
         newMessage.delete(0,splitMessage[0].length() + 1);
         String regexedMessage = WordUtils.capitalize(newMessage.toString());
         regexedMessage = regexedMessage.replaceAll(" ", "_");
-        regexedMessage = regexedMessage.replaceAll("Sail","SAIL");
-        regexedMessage = regexedMessage.replaceAll("!tilededitor","Modding:Tiled/Editor");
-        regexedMessage = regexedMessage.replaceAll("!modding","Modding:Portal");
-        regexedMessage = regexedMessage.replaceAll("!multiplayersetup","Guide:Setting_Up_Multiplayer");
-        regexedMessage = regexedMessage.replaceAll("!gettingstarted","Guide:Getting_Started");
-        response.append("Here is Your Search\n<http://starbounder.org/");
+//        regexedMessage = regexedMessage.replaceAll("Sail","SAIL");
+//        regexedMessage = regexedMessage.replaceAll("!tilededitor","Modding:Tiled/Editor");
+//        regexedMessage = regexedMessage.replaceAll("!modding","Modding:Portal");
+//        regexedMessage = regexedMessage.replaceAll("!multiplayersetup","Guide:Setting_Up_Multiplayer");
+//        regexedMessage = regexedMessage.replaceAll("!gettingstarted","Guide:Getting_Started");
+        response.append("Here is Your Search\n<http://starbounder.org/Special:Search/");
         response.append(regexedMessage);
         response.append(">");
         return response.toString();
@@ -528,8 +610,8 @@ public class Commands {
         return response.toString();
     }
 
-
-    @CommandAnnotation(name = "NewCC", description = "Creates a custom command\nUsage: Sail.NewCC [CommandName] [Message]")
+    @AliasAnnotation(alias = {"NewCC","CCnew","CCmake","CreateCC","MakeCC"})
+    @CommandAnnotation(name = "NewCC",type = "CC", description = "Creates a custom command",usage = "[CommandName] [Message]")
     public String newCC(){
         String[] splitString = message.toString().split(" ");
         StringBuilder command = new StringBuilder();
@@ -538,15 +620,26 @@ public class Commands {
         return customCommands.createCommand(author.getID(),splitString[1],command.toString());
     }
 
-    @CommandAnnotation(name = "DelCC", description = "Removes the Command\nUsage: Sail.DelCC [CommandName")
+    @AliasAnnotation(alias = {"DelCC", "CCDel","RemoveCC"})
+    @CommandAnnotation(name = "DelCC",type = "CC", description = "Removes the Command",usage = "[CommandName]")
     public String delCC(){
         String[] splitString = message.toString().split(" ");
         return customCommands.removeCommand(isMod,author.getID(),splitString[1]);
     }
 
-    @CommandAnnotation(name = "CCList", description = "Lists the Server's Custom Commands")
+    @AliasAnnotation(alias = {"CClist","ListCCs"})
+    @CommandAnnotation(name = "CCList",type = "CC", description = "Lists the Server's Custom Commands")
     public String listCCs(){
         return customCommands.listCommands();
+    }
+
+    @CommandAnnotation(name = "CCTags",type = "CC", description = "List all of the tags available to use in a custom command")
+    public String tagsCC(){
+        return "You can add any of the following tags to a Custom command to \n" +
+                "get a special responce:\n" +
+                "  #author# - replaces with the senders nickname\n" +
+                "  #author!# - replaces with the senders username\n" +
+                "  #args# - replaces with any text after the command";
     }
 }
 

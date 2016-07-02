@@ -1,6 +1,9 @@
 Welcome To S.A.I.L
 
 Developer - Vaerys Dawn ('Dawn Felstar #1235' on discord)
+Made using Discord4J Libraries
+
+Thank you HadronKalido for Creating the bot's Icon;
 
 
 #Todo Add the rest of the Commands to this list.
