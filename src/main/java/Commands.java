@@ -264,7 +264,7 @@ public class Commands {
         String[] splitMessage = message.toString().split(" ");
         StringBuilder commandList = new StringBuilder();
         ArrayList<String> types = new ArrayList<>();
-        if (message.toString().length() == getName("sailhelp").length()){
+        if (message.toString().length() == getName("sailHelp").length()){
             for (Method m : methods) {
                 if (m.isAnnotationPresent(CommandAnnotation.class)) {
                     boolean typeFound = false;
@@ -365,7 +365,7 @@ public class Commands {
     public String addRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
-            if (message.toString().equalsIgnoreCase("Sail.AddRace") || testMessage[1].equals("")) {
+            if (message.toString().length() == getName("addRace").length() || testMessage[1].equals("")) {
                 return "Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\n" + getUsage("addRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
@@ -387,7 +387,7 @@ public class Commands {
     public String removeRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
-            if (message.toString().equalsIgnoreCase("Sail.RemoveRace") || testMessage[1].equals("")) {
+            if (message.toString().length() == getName("removeRace").length() || testMessage[1].equals("")) {
                 return "ERROR: USER SPECIFIED NOTHING AS A PARAMETER, CANNOT REMOVE NOTHING FROM RACE LIST.\n" + getUsage("removeRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
@@ -544,7 +544,7 @@ public class Commands {
                 }
                 stopServerEdit();
             } else {
-                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform `Sail.AbandonEdit` to allow for another edit.";
+                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform  "+ Globals.commandPrefix + "AbandonEdit` to allow for another edit.";
             }
         } else {
             if (testMessage.length == 3) {
@@ -556,7 +556,7 @@ public class Commands {
                                 guildConfig.setServerEditor(author.getID());
                                 guildConfig.setServerEditingType(testMessage[2]);
                                 guildConfig.setServerToEdit(testMessage[1]);
-                                return "You are now Editing the Server " + testMessage[2] + "\nPerform `" + getName("editServer") + " [Contents]` to change the server properties,\nOr `Sail.AbandonEdit` to cancel editing\n" +
+                                return "You are now Editing the Server " + testMessage[2] + "\nPerform `" + getName("editServer") + " [Contents]` to change the server properties,\nOr  "+ Globals.commandPrefix + "AbandonEdit` to cancel editing\n" +
                                         "❗*IMPORTANT: Please Surround links with* `<>`❗";
                             } else {
                                 return "Cannot edit " + testMessage[2];
@@ -610,7 +610,7 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "WikiCodes", description = "give a list of codes usable within the Sail.Wiki Command")
+    @CommandAnnotation(name = "WikiCodes", description = "give a list of codes usable within the "+ Globals.commandPrefix + "Wiki Command")
     public String wikiRegex(){
         StringBuilder response = new StringBuilder();
         return response.toString();

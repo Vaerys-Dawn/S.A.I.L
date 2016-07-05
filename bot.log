@@ -9988,3 +9988,1466 @@ Caused by: java.lang.NullPointerException: null
 2016-07-02 23:43:22.657 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
 2016-07-02 23:43:24.387 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
 2016-07-02 23:43:24.387 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-03 00:07:31.022 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:07:31.023 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:07:31.023 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:07:31.024 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:07:31.028 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:07:31.029 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:50.849 [WebSocketClient@2579439-17] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:50.850 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:50.850 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:51.846 [WebSocketClient@2579439-17] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:51.847 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:11:51.847 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.656 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.656 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.657 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.657 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.689 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.689 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.689 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.689 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.691 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.691 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.691 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:38.691 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.010 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.010 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.010 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.011 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.048 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.049 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.049 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.049 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.049 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.049 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.050 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-03 00:25:42.050 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-03 08:37:54.012 [main] INFO  Client - Logging in to Discord
+2016-07-03 08:37:54.292 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @711ms
+2016-07-03 08:37:54.294 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-03 08:37:54.294 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-03 08:37:59.846 [WebSocketClient@2579439-20] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-03 08:37:59.860 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-03 08:38:08.357 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-03 08:38:18.369 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-03 08:38:18.540 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-03 08:38:23.204 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-03 08:38:23.205 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-03 08:52:25.208 [main] INFO  Client - Logging in to Discord
+2016-07-03 08:52:25.725 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1046ms
+2016-07-03 08:52:25.728 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-03 08:52:25.728 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-03 08:52:28.397 [WebSocketClient@2579439-21] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-03 08:52:28.408 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-03 08:52:36.620 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-03 08:52:45.166 [WebSocketClient@2579439-21] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-03 08:52:46.632 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-03 08:52:48.760 [WebSocketClient@2579439-21] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-03 08:52:48.760 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 17:51:16.268 [WebSocketClient@2579439-21] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 17:51:16.270 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 17:51:16.271 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 17:51:17.596 [WebSocketClient@2579439-21] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 17:51:17.596 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 17:51:17.596 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 18:02:37.411 [main] INFO  Client - Logging in to Discord
+2016-07-04 18:02:37.680 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @862ms
+2016-07-04 18:02:37.684 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 18:02:37.685 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 18:02:40.695 [WebSocketClient@2579439-14] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 18:02:40.704 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 18:02:48.107 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 18:02:56.268 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:02:58.170 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 18:02:59.887 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:02:59.887 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 18:04:53.526 [main] INFO  Client - Logging in to Discord
+2016-07-04 18:04:53.687 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @498ms
+2016-07-04 18:04:53.689 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 18:04:53.689 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 18:04:56.272 [WebSocketClient@2579439-13] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 18:04:56.283 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 18:05:04.186 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 18:05:12.553 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:05:14.198 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 18:05:16.299 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:05:16.299 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 18:14:49.502 [main] INFO  Client - Logging in to Discord
+2016-07-04 18:14:49.705 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @536ms
+2016-07-04 18:14:49.708 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 18:14:49.708 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 18:14:52.353 [WebSocketClient@2579439-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 18:14:52.361 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 18:14:59.827 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 18:15:08.436 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:15:09.837 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 18:15:12.260 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 18:15:12.261 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 19:36:20.888 [main] INFO  Client - Logging in to Discord
+2016-07-04 19:36:21.035 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @494ms
+2016-07-04 19:36:21.038 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 19:36:21.038 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 19:36:23.604 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 19:36:23.614 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 19:36:32.003 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 19:36:36.478 [main] INFO  Client - Logging in to Discord
+2016-07-04 19:36:36.640 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @491ms
+2016-07-04 19:36:36.645 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 19:36:36.645 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 19:36:39.970 [WebSocketClient@2579439-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 19:36:40.116 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 19:36:48.084 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 19:36:57.624 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 19:36:58.131 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 19:37:01.572 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 19:37:01.573 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:08:21.841 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:08:22.372 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @905ms
+2016-07-04 20:08:22.374 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:08:22.375 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:08:25.230 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:08:25.238 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:08:33.107 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:08:42.006 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:08:43.114 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 20:08:45.882 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:08:45.882 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:17:40.672 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:17:40.961 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @644ms
+2016-07-04 20:17:41.011 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:17:41.011 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:17:43.546 [WebSocketClient@2579439-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:17:43.563 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:17:51.493 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:17:59.681 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:18:01.498 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 20:18:03.418 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:18:03.418 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:20:26.285 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+java.io.FileNotFoundException: Icons\Headers\Links_Icon.png (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116)
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134)
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157)
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:103)
+	at org.apache.http.impl.DefaultBHttpClientConnection.sendRequestEntity(DefaultBHttpClientConnection.java:158)
+	at org.apache.http.impl.conn.CPoolProxy.sendRequestEntity(CPoolProxy.java:162)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:237)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:122)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:127)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:115)
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:223)
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:241)
+	at InfoChannel.updateInfo(InfoChannel.java:109)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 20:20:26.286 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:227)
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:241)
+	at InfoChannel.updateInfo(InfoChannel.java:109)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:134)
+	... 25 common frames omitted
+2016-07-04 20:21:19.834 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:21:20.303 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1448ms
+2016-07-04 20:21:20.310 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:21:20.310 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:21:33.878 [WebSocketClient@2579439-20] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:21:34.098 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:21:54.100 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 2 guilds determined unavailable!
+2016-07-04 20:21:54.118 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:22:18.347 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:22:29.222 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:22:31.489 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:22:31.583 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:81)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 20:24:15.574 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:24:15.757 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @532ms
+2016-07-04 20:24:15.761 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:24:15.761 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:24:32.914 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:24:32.921 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:24:52.101 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:24:52.105 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 20:25:17.314 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:25:28.260 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:25:30.412 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:29:33.854 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:29:34.363 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @862ms
+2016-07-04 20:29:34.366 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:29:34.366 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:29:50.460 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:29:50.469 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:30:10.154 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:30:10.165 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 20:30:38.299 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:30:50.831 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:30:54.552 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:31:28.574 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199469136580050944/messages. If you believe this is a Discord4J error, report this!
+2016-07-04 20:31:28.576 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:227)
+	at sx.blah.discord.handle.impl.obj.Channel.sendFile(Channel.java:241)
+	at InfoChannel.updateInfo(InfoChannel.java:43)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:134)
+	... 25 common frames omitted
+2016-07-04 20:32:17.872 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:32:18.138 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @835ms
+2016-07-04 20:32:18.141 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:32:18.141 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:32:28.442 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:32:28.453 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:32:46.957 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:32:46.962 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 20:33:11.028 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:33:20.503 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:33:22.159 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:34:08.694 [main] INFO  Client - Logging in to Discord
+2016-07-04 20:34:08.913 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @727ms
+2016-07-04 20:34:08.916 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 20:34:08.916 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 20:34:30.767 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 20:34:30.776 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 20:34:48.062 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 20:34:48.075 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 20:34:57.292 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:35:01.035 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:35:01.644 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 20:45:40.156 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199475838968791040/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:46:01.450 [WebSocketClient@2579439-15] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel floran-death-arena. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:01.451 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel floran-death-arena. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:01.451 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel floran-death-arena. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:05.813 [WebSocketClient@2579439-13] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:05.814 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:05.814 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:06.823 [WebSocketClient@2579439-13] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:06.824 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:06.824 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:37.648 [WebSocketClient@2579439-17] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel floran-death-arena. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:46:40.196 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199475838968791040/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:51:11.113 [WebSocketClient@2579439-15] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:11.113 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:11.114 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:11.114 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:12.775 [WebSocketClient@2579439-15] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:12.776 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:12.776 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:51:12.776 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:54:18.193 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199478013560225801/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 20:57:02.218 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.218 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.219 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.219 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.220 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.220 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.220 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_saloon. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.368 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.368 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.368 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.368 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.369 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.369 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.369 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.369 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.370 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.370 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.370 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.370 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.370 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_saloon. If this is an error, report this it the Discord4J dev!
+2016-07-04 20:57:02.371 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_saloon. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:03:21.883 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199480293617303553/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:03:45.422 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199480391847903232/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:11:12.204 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.205 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.205 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.207 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_saloon. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.207 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel a_modded_box. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:11:12.207 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_npc_bar. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:15:03.610 [WebSocketClient@2579439-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_npc_bar. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:15:07.056 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199480391847903232/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:15:15.152 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel a_modded_box. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:15:17.636 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199480293617303553/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:15:25.212 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel the_saloon. If this is an error, report this it the Discord4J dev!
+2016-07-04 21:15:27.704 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199478013560225801/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:19:10.642 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:81)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 24 common frames omitted
+2016-07-04 21:20:19.941 [main] INFO  Client - Logging in to Discord
+2016-07-04 21:20:20.112 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @484ms
+2016-07-04 21:20:20.114 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 21:20:20.114 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 21:20:22.811 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 21:20:22.819 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 21:20:30.029 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 21:20:38.351 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:20:40.035 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 21:20:42.009 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:20:48.351 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 21:39:02.421 [main] INFO  Client - Logging in to Discord
+2016-07-04 21:39:02.702 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @908ms
+2016-07-04 21:39:02.719 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 21:39:02.719 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 21:39:20.168 [WebSocketClient@2579439-14] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 21:39:20.176 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 21:39:40.181 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 2 guilds determined unavailable!
+2016-07-04 21:39:44.436 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 21:40:16.616 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:40:31.002 [WebSocketClient@2579439-14] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:41:01.239 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 21:45:41.389 [main] INFO  Client - Logging in to Discord
+2016-07-04 21:45:41.522 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @426ms
+2016-07-04 21:45:41.524 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 21:45:41.524 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 21:45:49.713 [WebSocketClient@2579439-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 21:45:49.723 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 21:46:04.805 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 21:46:04.813 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 21:46:24.288 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:46:33.955 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:46:56.509 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 21:52:12.742 [main] INFO  Client - Logging in to Discord
+2016-07-04 21:52:12.981 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @646ms
+2016-07-04 21:52:12.984 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 21:52:12.984 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 21:52:40.978 [WebSocketClient@2579439-13] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 21:52:40.985 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 21:53:01.011 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 2 guilds determined unavailable!
+2016-07-04 21:53:05.615 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 21:53:23.848 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:53:32.227 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:53:48.899 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 21:58:46.640 [main] INFO  Client - Logging in to Discord
+2016-07-04 21:58:46.855 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @619ms
+2016-07-04 21:58:46.859 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 21:58:46.860 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 21:58:58.483 [WebSocketClient@2579439-13] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 21:58:58.491 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 21:59:18.495 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 2 guilds determined unavailable!
+2016-07-04 21:59:19.943 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/182835609327370241/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:102)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:412)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:256)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:636)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:340)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:1024)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 21:59:24.706 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 21:59:36.154 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/176667358599970816/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:102)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:412)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:256)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:636)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:340)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:1024)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 21:59:37.622 [Request Builder Async Executor] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/196411411260375040/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.PrivateChannel.<init>(PrivateChannel.java:19)
+	at sx.blah.discord.api.internal.DiscordUtils.getPrivateChannelFromJSON(DiscordUtils.java:335)
+	at sx.blah.discord.api.internal.DiscordWS.lambda$ready$46(DiscordWS.java:542)
+	at sx.blah.discord.util.RequestBuilder$Action.execute(RequestBuilder.java:368)
+	at sx.blah.discord.util.RequestBuilder.lambda$execute$61(RequestBuilder.java:274)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 21:59:42.533 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/176667376157196288/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:102)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:412)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:256)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:636)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:340)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:1024)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 21:59:48.732 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 21:59:55.290 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/177089535576899584/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:102)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:412)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:256)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:636)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:340)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:1024)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 22:00:00.186 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:00:09.242 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Discord4J Internal Exception
+sx.blah.discord.util.DiscordException: Error on request to https://discordapp.com/api/channels/199475838968791040/messages?limit=100. Received response code 500. With response text: {"code": 0, "message": "Timed out waiting for socket from pool with max_size 10 and wait_queue_timeout 5.0"}
+	at sx.blah.discord.api.internal.Requests.request(Requests.java:146)
+	at sx.blah.discord.api.internal.Requests.makeRequest(Requests.java:88)
+	at sx.blah.discord.util.MessageList.queryMessages(MessageList.java:158)
+	at sx.blah.discord.util.MessageList.load(MessageList.java:334)
+	at sx.blah.discord.util.MessageList.<init>(MessageList.java:95)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:116)
+	at sx.blah.discord.handle.impl.obj.Channel.<init>(Channel.java:102)
+	at sx.blah.discord.api.internal.DiscordUtils.getChannelFromJSON(DiscordUtils.java:412)
+	at sx.blah.discord.api.internal.DiscordUtils.getGuildFromJSON(DiscordUtils.java:256)
+	at sx.blah.discord.api.internal.DiscordWS.guildCreate(DiscordWS.java:636)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:340)
+	at sx.blah.discord.api.internal.DiscordWS.onMessage(DiscordWS.java:1024)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:71)
+	at org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryMessage(JettyAnnotatedEventDriver.java:124)
+	at org.eclipse.jetty.websocket.common.message.SimpleBinaryMessage.messageComplete(SimpleBinaryMessage.java:68)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:66)
+	at org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onBinaryFrame(JettyAnnotatedEventDriver.java:116)
+	at org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:157)
+	at org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:367)
+	at org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+	at org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:256)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:675)
+	at org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:505)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:186)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:246)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:156)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+2016-07-04 22:00:11.047 [main] INFO  Client - Logging in to Discord
+2016-07-04 22:00:11.214 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @509ms
+2016-07-04 22:00:11.218 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 22:00:11.218 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 22:00:18.050 [WebSocketClient@2579439-22] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 22:00:18.097 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 22:00:27.578 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 22:00:37.586 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 22:00:39.249 [WebSocketClient@2579439-22] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:00:44.792 [WebSocketClient@2579439-22] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:00:59.582 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 22:14:22.143 [main] INFO  Client - Logging in to Discord
+2016-07-04 22:14:22.375 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @697ms
+2016-07-04 22:14:22.383 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 22:14:22.384 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 22:14:25.594 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 22:14:25.606 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 22:14:33.288 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 22:14:41.756 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:14:43.297 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 22:14:45.515 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:14:52.503 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 22:14:52.573 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:81)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:14:52.576 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:81)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:23:02.136 [main] INFO  Client - Logging in to Discord
+2016-07-04 22:23:02.362 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @663ms
+2016-07-04 22:23:02.365 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 22:23:02.366 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 22:23:11.145 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 22:23:11.154 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 22:23:24.370 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 22:23:24.382 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-04 22:23:40.057 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:23:46.635 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:24:03.551 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 22:24:03.659 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:86)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:24:03.659 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:86)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:24:03.659 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:86)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:24:03.659 [Event Dispatch Thread] ERROR sx.blah.discord.Discord4J - Error dispatching event MessageReceivedEvent
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$11(EventDispatcher.java:275)
+	at java.util.concurrent.CopyOnWriteArrayList.forEach(CopyOnWriteArrayList.java:890)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$12(EventDispatcher.java:273)
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$null$13(EventDispatcher.java:272)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.concurrent.ConcurrentHashMap$EntrySpliterator.forEachRemaining(ConcurrentHashMap.java:3606)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at sx.blah.discord.api.events.EventDispatcher.lambda$dispatch$18(EventDispatcher.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at Commands.flushFiles(Commands.java:81)
+	at AnnotationListener.onMessageRecivedEvent(AnnotationListener.java:192)
+	... 25 common frames omitted
+2016-07-04 22:25:58.027 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 22:33:37.718 [main] INFO  Client - Logging in to Discord
+2016-07-04 22:33:37.859 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @456ms
+2016-07-04 22:33:37.861 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 22:33:37.861 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 22:33:40.492 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 22:33:40.504 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 22:33:48.357 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 22:33:57.239 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:33:58.366 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 22:34:01.297 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:34:09.650 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 22:42:26.654 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199475838968791040/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:42:29.368 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199475838968791040/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 22:43:35.030 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/199475838968791040/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:10:44.387 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:10:44.593 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @817ms
+2016-07-04 23:10:44.602 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:10:44.602 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:10:47.441 [WebSocketClient@2579439-20] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:10:47.452 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:10:55.269 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:11:03.885 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:11:05.278 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:11:07.715 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:11:14.369 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:12:50.583 [WebSocketClient@2579439-22] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 23:14:59.636 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:14:59.788 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @467ms
+2016-07-04 23:14:59.791 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:14:59.791 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:15:02.561 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:15:02.568 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:15:09.982 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:15:18.256 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:15:19.991 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:15:21.829 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:15:28.301 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:17:33.012 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 23:26:36.448 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:26:36.588 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @437ms
+2016-07-04 23:26:36.591 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:26:36.591 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:26:39.553 [WebSocketClient@2579439-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:26:39.564 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:26:47.144 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:26:55.361 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:26:57.153 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:26:58.899 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:27:06.373 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:28:44.150 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 23:28:47.207 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:28:47.466 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @843ms
+2016-07-04 23:28:47.473 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:28:47.473 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:28:50.882 [WebSocketClient@2579439-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:28:51.024 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:29:00.052 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:29:08.213 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:29:10.057 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:29:11.931 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:29:19.108 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:32:56.841 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:32:57.419 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1089ms
+2016-07-04 23:32:57.422 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:32:57.422 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:33:00.200 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:33:00.215 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:33:07.573 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:33:15.909 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:33:17.581 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:33:19.470 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:33:26.073 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:35:16.177 [WebSocketClient@2579439-20] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 23:41:00.843 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:41:01.189 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @794ms
+2016-07-04 23:41:01.191 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:41:01.191 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:41:03.926 [WebSocketClient@2579439-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:41:03.987 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:41:11.260 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:41:19.500 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:41:21.267 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:41:23.470 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:41:30.426 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:43:01.240 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-04 23:46:02.260 [main] INFO  Client - Logging in to Discord
+2016-07-04 23:46:02.437 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @483ms
+2016-07-04 23:46:02.439 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-04 23:46:02.439 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-04 23:46:05.109 [WebSocketClient@2579439-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-04 23:46:05.116 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-04 23:46:13.339 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-04 23:46:22.454 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:46:23.351 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-04 23:46:27.540 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-04 23:46:34.074 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-04 23:48:34.818 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:01:32.708 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:01:32.962 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @778ms
+2016-07-05 00:01:33.008 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:01:33.008 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:01:35.658 [WebSocketClient@2579439-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:01:35.667 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:01:43.181 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:01:51.477 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:01:53.195 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:01:54.853 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:02:01.845 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:04:40.864 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:05:28.943 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:05:29.097 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @532ms
+2016-07-05 00:05:29.099 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:05:29.100 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:05:31.975 [WebSocketClient@2579439-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:05:31.984 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:05:39.407 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:05:48.197 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:05:49.416 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:05:51.709 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:05:58.564 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:06:54.897 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:06:55.222 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @648ms
+2016-07-05 00:06:55.225 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:06:55.225 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:06:57.708 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:06:57.714 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:07:05.254 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:07:13.719 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:07:15.263 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:07:17.457 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:07:24.100 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:08:54.797 [WebSocketClient@2579439-12] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:10:50.800 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:10:51.233 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @804ms
+2016-07-05 00:10:51.235 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:10:51.235 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:10:53.519 [WebSocketClient@2579439-17] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:10:53.530 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:11:01.420 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:11:09.660 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:11:11.429 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:11:13.171 [WebSocketClient@2579439-17] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:11:19.018 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:12:58.760 [WebSocketClient@2579439-12] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:13:08.596 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:13:08.786 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @570ms
+2016-07-05 00:13:08.788 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:13:08.788 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:13:15.135 [WebSocketClient@2579439-13] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:13:15.143 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:13:28.034 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:13:28.038 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-05 00:13:41.920 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:13:47.645 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:13:56.492 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:15:46.984 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:15:47.185 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @537ms
+2016-07-05 00:15:47.188 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:15:47.188 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:15:55.203 [WebSocketClient@2579439-18] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:15:55.211 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:16:08.245 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:16:08.255 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 0 guilds determined unavailable!
+2016-07-05 00:16:19.439 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:16:24.915 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:16:35.936 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:18:26.005 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:39:41.637 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:39:41.785 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @498ms
+2016-07-05 00:39:41.787 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:39:41.787 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:39:44.438 [WebSocketClient@2579439-19] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:39:44.447 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:39:52.020 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:39:58.603 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667531078139904/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:00.185 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:02.026 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:40:03.741 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:09.815 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:40:10.418 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667531078139904/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:10.968 [WebSocketClient@2579439-19] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667531078139904/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:14.634 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667531078139904/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:40:45.953 [main] INFO  Client - Logging in to Discord
+2016-07-05 00:40:46.516 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @946ms
+2016-07-05 00:40:46.518 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 00:40:46.518 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 00:40:48.990 [WebSocketClient@2579439-13] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 00:40:49.066 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 00:40:56.601 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 00:41:05.695 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:41:06.615 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 00:41:09.400 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 00:41:15.046 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 00:42:44.760 [WebSocketClient@2579439-18] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:48:02.877 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 00:59:15.739 [WebSocketClient@2579439-12] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 00:59:15.739 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 00:59:15.740 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 00:59:16.852 [WebSocketClient@2579439-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 00:59:16.852 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 00:59:16.852 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:31:55.345 [main] INFO  Client - Logging in to Discord
+2016-07-05 01:31:55.499 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @479ms
+2016-07-05 01:31:55.502 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 01:31:55.503 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 01:32:00.518 [WebSocketClient@2579439-15] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 01:32:00.533 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 01:32:09.737 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 01:32:19.755 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 01:32:19.879 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 01:32:24.949 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 01:32:32.851 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 01:34:14.507 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
+2016-07-05 01:50:47.152 [WebSocketClient@2579439-18] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:47.152 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:47.152 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:54.115 [WebSocketClient@2579439-14] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:54.116 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:54.116 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:54.116 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:55.410 [WebSocketClient@2579439-17] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:55.410 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:55.411 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:55.411 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:50:55.411 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:05.785 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:05.786 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:05.786 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:05.786 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:05.786 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:07.649 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:07.650 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:07.651 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:07.651 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:07.651 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:19.809 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:19.809 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:19.810 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:19.811 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:19.811 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:21.262 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:21.262 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:21.263 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:21.263 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:21.263 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:29.439 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:29.440 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:29.441 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:29.441 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:29.441 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:31.053 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:31.053 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:31.053 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:31.053 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:31.054 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:40.575 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:40.577 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:40.578 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:40.578 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:40.579 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:52.819 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:52.819 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:52.820 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:52.820 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:52.820 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.192 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.192 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.192 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.192 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.192 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.784 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.785 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.785 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.785 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:53.785 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:55.196 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:55.197 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:55.197 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:55.197 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:55.197 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:57.039 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:57.039 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:57.040 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:57.040 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:54:57.040 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:03.710 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:03.710 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:03.711 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:03.711 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:03.711 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:05.383 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:05.383 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:05.383 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:05.383 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:05.383 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:06.170 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:06.172 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:06.172 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:06.172 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:06.172 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:08.734 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:08.734 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:08.735 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:08.735 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:08.735 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.270 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.271 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.271 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.271 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.271 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.740 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.741 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.741 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.741 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:10.741 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:11.787 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:11.788 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:11.788 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:11.788 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:11.788 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:12.441 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:12.442 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:12.443 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:12.443 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:12.443 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:14.263 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:14.263 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:14.264 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:14.264 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:14.264 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:15.147 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:15.147 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:15.147 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:15.147 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:15.147 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:18.537 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:18.537 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:18.538 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:18.538 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:18.539 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:33.773 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:33.774 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:33.774 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:33.774 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:33.775 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:34.606 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:34.606 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:34.607 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:34.607 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:34.607 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:35.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:35.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:35.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:35.329 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:35.329 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:37.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:37.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:37.206 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:37.207 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:37.207 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.014 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.014 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.015 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.015 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.015 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.906 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.906 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.906 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.906 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:38.906 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:45.120 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:45.121 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:45.121 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:45.121 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:45.122 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.202 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.203 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.203 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.203 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.204 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.858 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.858 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.859 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.859 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:46.860 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:47.478 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:47.479 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:47.479 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:47.479 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:47.479 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:48.142 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:48.142 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:48.142 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:48.142 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:48.142 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:54.779 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:54.779 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:54.779 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:54.779 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:54.779 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.361 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.362 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.362 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.362 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.362 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.860 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.861 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.861 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.862 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:55.862 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:56.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:56.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:56.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:56.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:56.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:58.595 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:58.595 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:58.596 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:58.596 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:58.596 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:59.237 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:59.237 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:59.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:59.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:55:59.238 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:00.327 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:00.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:00.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:00.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:00.328 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:02.058 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:02.059 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:02.059 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:02.059 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:02.059 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:03.090 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel admins. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:03.090 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:03.090 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:03.090 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:56:03.090 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.449 [WebSocketClient@2579439-19] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.450 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.450 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.450 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.450 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:50.450 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.891 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:51.892 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.249 [WebSocketClient@2579439-17] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 01:58:53.250 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel 1-0_feedback. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:13:20.524 [main] INFO  Client - Logging in to Discord
+2016-07-05 02:13:20.687 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @455ms
+2016-07-05 02:13:20.690 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 02:13:20.690 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 02:13:23.213 [WebSocketClient@2579439-21] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 02:13:23.222 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 02:13:30.850 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 02:13:39.439 [WebSocketClient@2579439-21] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:13:40.860 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 02:13:43.341 [WebSocketClient@2579439-21] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:13:49.565 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 02:14:16.317 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667519086493696/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:14:17.732 [WebSocketClient@2579439-21] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667519086493696/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:15:20.596 [main] INFO  Client - Logging in to Discord
+2016-07-05 02:15:20.956 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @956ms
+2016-07-05 02:15:20.959 [main] INFO  sx.blah.discord.Discord4J - Discord4J v2.5.0-SNAPSHOT
+2016-07-05 02:15:20.959 [main] INFO  sx.blah.discord.Discord4J - A Java binding for the unofficial Discord API, forked from https://github.com/nerd/Discord4J. Copyright (c) 2016, Licensed under GNU GPLv2
+2016-07-05 02:15:23.591 [WebSocketClient@2579439-16] INFO  sx.blah.discord.Discord4J - Connected to the Discord Websocket v5
+2016-07-05 02:15:23.623 [Request Builder Async Executor] INFO  sx.blah.discord.Discord4J - Connected to 2 guilds.
+2016-07-05 02:15:31.155 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 153513567214108673
+2016-07-05 02:15:39.730 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667695259975681/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:15:41.163 [Request Builder Async Executor] WARN  sx.blah.discord.Discord4J - 1 guilds determined unavailable!
+2016-07-05 02:15:43.635 [WebSocketClient@2579439-16] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/182130566244597760/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:15:49.624 [Event Dispatch Thread] INFO  AnnotationListener - [GuildCreateEvent] - Connected to Guild with ID 176434793674833920
+2016-07-05 02:15:49.629 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.630 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.630 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.632 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.632 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.632 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.633 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.680 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.680 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.680 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.680 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.681 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.682 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [WebSocketClient@2579439-16] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.685 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:49.686 [Event Dispatch Thread] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:50.236 [WebSocketClient@2579439-15] WARN  sx.blah.discord.Discord4J - Missing permissions required to read channel announcements. If this is an error, report this it the Discord4J dev!
+2016-07-05 02:15:53.083 [WebSocketClient@2579439-22] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667519086493696/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:15:56.620 [WebSocketClient@2579439-13] ERROR sx.blah.discord.Discord4J - Received 403 forbidden error for url https://discordapp.com/api/channels/176667519086493696/messages?limit=100. If you believe this is a Discord4J error, report this!
+2016-07-05 02:18:01.569 [WebSocketClient@2579439-15] ERROR sx.blah.discord.Discord4J - Received 404 error, please notify the developer and include the URL (https://discordapp.com/api/invite/stard)
