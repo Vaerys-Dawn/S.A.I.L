@@ -1,4 +1,3 @@
-import com.sun.java.accessibility.util.GUIInitializedListener;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.util.DiscordException;

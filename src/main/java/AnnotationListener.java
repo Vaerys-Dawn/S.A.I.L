@@ -205,6 +205,9 @@ public class AnnotationListener {
 
 
             CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
+            if (commandAnno.responseGeneral()){
+                channel = (Channel) event.getMessage().getGuild().getChannelByID(guildConfig.getGeneralChannel());
+            }
 
             if (commandAnno.channel().equalsIgnoreCase("any")) {
                 channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));

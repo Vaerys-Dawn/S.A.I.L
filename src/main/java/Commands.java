@@ -1,4 +1,3 @@
-import org.apache.commons.lang3.text.FormatFactory;
 import org.apache.commons.lang3.text.WordUtils;
 import org.slf4j.LoggerFactory;
 import sx.blah.discord.handle.impl.obj.Channel;
@@ -7,7 +6,9 @@ import sx.blah.discord.handle.impl.obj.Message;
 import sx.blah.discord.handle.obj.IRole;
 import sx.blah.discord.handle.obj.IUser;
 import sx.blah.discord.handle.obj.Permissions;
+import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.MessageList;
 import sx.blah.discord.util.MissingPermissionsException;
 import sx.blah.discord.util.RateLimitException;
 
@@ -15,7 +16,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 /**
  * Created by Vaerys on 19/05/2016.
@@ -145,7 +145,7 @@ public class Commands {
 
     @AliasAnnotation(alias = {"Hi", "Hello", "Greeting", "Hai", "Hoi"})
     @CommandAnnotation(name = "Hello", description = "Says Hello")
-    public String HelloSail() {
+    public String helloSail() {
         if (isCreator) {
             return "Hello Creator";
         } else if (isOwner) {
@@ -320,7 +320,7 @@ public class Commands {
                 String testTo = commandAnno.name().toLowerCase();
                 if ((testMessage.startsWith(testTo)) && (testMessage.length() == testTo.length())) {
                     StringBuilder builder = new StringBuilder();
-                    builder.append(Globals.commandPrefix + commandAnno.name() + "\n" + getDescription(m.getName())+ "\n");
+                    builder.append(getDescription(m.getName())+ "\n");
                     if (m.isAnnotationPresent(AliasAnnotation.class)){
                         AliasAnnotation aliasAnno = m.getAnnotation(AliasAnnotation.class);
                         String[] alias = aliasAnno.alias();
@@ -490,7 +490,7 @@ public class Commands {
         for (String[] sa : guildConfig.getServerList()) {
             response.append("  " + sa[1] + "\n");
         }
-        response.append("You can get the server information of each server by performing\n" + getUsage("listServers"));
+        response.append("You can get the server information of each server by performing\n`" + getUsage("serverInfo") + "`");
         return response.toString();
     }
 
@@ -652,6 +652,45 @@ public class Commands {
                 "  #author# - replaces with the senders nickname\n" +
                 "  #author!# - replaces with the senders username\n" +
                 "  #args# - replaces with any text after the command";
+    }
+
+    @CommandAnnotation(name =  "isStreaming",type = "Admin",description = "Sets The Bot To streaming Mode",usage = "[StreamLink] [Message]", responseGeneral = true)
+    public String isStreaming(){
+        if (isAdmin || isMod || isOwner) {
+            String streamLink;
+            String[] splitMessage = message.toString().split(" ");
+            StringBuilder builder = new StringBuilder();
+            if (message.toString().length() == getName("isStreaming").length()) {
+                message.getClient().changeStatus(Status.game("Starbound"));
+                return "Stream has stopped thank you all for coming";
+            } else streamLink = splitMessage[1];
+            builder.append(message.toString());
+            builder.delete(0, splitMessage[0].length() + splitMessage[1].length() + 2);
+            message.getClient().changeStatus(Status.stream(builder.toString(), splitMessage[1]));
+            return "Check out the stream at: " + streamLink;
+        }
+        return notAllowed;
+    }
+
+    @CommandAnnotation(name = "ClearChat", type = "Admin", description = "Clears the current channel")
+    public String clearChannel() {
+        if (isOwner) {
+            MessageList messages = channel.getMessages();
+            if (messages.size() != 0) {
+                try {
+                    messages.bulkDelete(messages);
+                } catch (DiscordException e) {
+                    e.printStackTrace();
+                } catch (RateLimitException e) {
+                    e.printStackTrace();
+                } catch (MissingPermissionsException e) {
+                    e.printStackTrace();
+                }
+                messages.purge();
+            }
+            return "channel cleared";
+        }
+        return notAllowed;
     }
 }
 

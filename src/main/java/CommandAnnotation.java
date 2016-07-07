@@ -13,4 +13,5 @@ public @interface CommandAnnotation {
     String channel() default "any";
     String description() default "Has no Description Set Yet";
     String usage() default "";
+    boolean responseGeneral() default false;
 }
