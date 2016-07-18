@@ -9,6 +9,9 @@ public class CustomCommands {
     final String[] commandNotFound = {"noUser","404","No Command with that name found."};
 
     public String createCommand(String userID, String commandName, String response){
+        if (response.equals("")){
+            return "You must specify a response\n`" + Globals.commandPrefix + "CCNew [Name] [Response]`.";
+        }
         boolean noDuplicate = true;
         for (String[] sA : commands){
             if (sA[1].equalsIgnoreCase(commandName)){
@@ -21,7 +24,7 @@ public class CustomCommands {
             newEntry[1] = commandName;
             newEntry[2] = response;
             commands.add(newEntry);
-            return "Command Added";
+            return "Command Added, you can perform you command by doing `" + Globals.CCPrefix + commandName + "`.";
         }
         return "A Command with that name already exists, Cannot create command.";
     }
@@ -53,9 +56,9 @@ public class CustomCommands {
 
     public String listCommands(){
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Here is the List of Custom Commands");
+        stringBuilder.append("Here is the List of Custom Commands:\n");
         for (String[] sA : commands){
-            stringBuilder.append("\n  "+ sA[1]);
+            stringBuilder.append(Globals.CCPrefix + sA[1]+ ", ");
         }
         return stringBuilder.toString();
     }

@@ -139,7 +139,6 @@ public class AnnotationListener {
             commands.setPOGOS(guildConfig,customCommands);
 
             Method[] methods = Commands.class.getMethods();
-            Method doMethod;
 
             if (message.toString().toLowerCase().startsWith(Globals.CCPrefix.toLowerCase())){
                 StringBuilder CCName = new StringBuilder();
@@ -160,7 +159,7 @@ public class AnnotationListener {
                 regex = CCResponse[2];
                 regex = regex.replaceAll("#author!#", message.getAuthor().getName());
                 regex = regex.replaceAll("#author#", message.getAuthor().getDisplayName(message.getGuild()));
-                regex = regex.replaceAll("#args", args);
+                regex = regex.replaceAll("#args#", args);
                 channel.sendMessage(regex);
             }
 

@@ -8,7 +8,6 @@ import sx.blah.discord.handle.obj.IUser;
 import sx.blah.discord.handle.obj.Permissions;
 import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.DiscordException;
-import sx.blah.discord.util.MessageList;
 import sx.blah.discord.util.MissingPermissionsException;
 import sx.blah.discord.util.RateLimitException;
 
@@ -209,7 +208,7 @@ public class Commands {
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("human")) {
                 return "Another day alive, congratulations " + author.getName();
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("hylotl")) {
-                return "Have a Peaceful day " + author.getName() + " May you find tranquility.";
+                return "Have a peaceful day " + author.getName() + " may you experience tranquility.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("novakid")) {
                 return author.getName() + "! the Sheriff has been shot, I need your... oooo~ whats that?";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("penguin")) {
@@ -412,6 +411,7 @@ public class Commands {
         ArrayList<String> races = guildConfig.getRaces();
         List<IRole> guildRoles = guild.getRoles();
         String response = "";
+        String newRace = "";
         for (int i = 0; i < roles.size(); i++) {
             for (String r : races) {
                 if (roles.get(i).equals(guild.getRoleByID(r))) {
@@ -427,26 +427,27 @@ public class Commands {
         }
         if (newRole[1].equalsIgnoreCase("remove")) {
             racefound = true;
-            response = "Your race was removed";
+            response = "Your race was removed, Congrats Normie.";
         }
         for (String r : races) {
             if (newRole[1].equalsIgnoreCase(guild.getRoleByID(r).getName())) {
                 roles.add(guild.getRoleByID(r));
                 racefound = true;
+                newRace = guild.getRoleByID(r).getName();
             }
         }
         IRole[] newRoleList;
         newRoleList = roles.stream().toArray(IRole[]::new);
         try {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(message.toString());
+            stringBuilder.delete(0, newRole[0].length());
             if (racefound) {
                 guild.editUserRoles(author, newRoleList);
                 if (response.equals("")) {
-                    return "Your race has been updated";
+                    return "You are now **" + newRace + "**, \uD83D\uDC4D";
                 }
             } else {
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append(message.toString());
-                stringBuilder.delete(0, newRole[0].length());
                 response = "You cannot have the race:" + stringBuilder.toString() + " as that role does not exist";
             }
             return response;
@@ -610,12 +611,6 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "WikiCodes", description = "give a list of codes usable within the "+ Globals.commandPrefix + "Wiki Command")
-    public String wikiRegex(){
-        StringBuilder response = new StringBuilder();
-        return response.toString();
-    }
-
     @AliasAnnotation(alias = {"NewCC","CCnew","CCmake","CreateCC","MakeCC"})
     @CommandAnnotation(name = "NewCC",type = "CC", description = "Creates a custom command",usage = "[CommandName] [Message]")
     public String newCC(){
@@ -668,27 +663,6 @@ public class Commands {
             builder.delete(0, splitMessage[0].length() + splitMessage[1].length() + 2);
             message.getClient().changeStatus(Status.stream(builder.toString(), splitMessage[1]));
             return "Check out the stream at: " + streamLink;
-        }
-        return notAllowed;
-    }
-
-    @CommandAnnotation(name = "ClearChat", type = "Admin", description = "Clears the current channel")
-    public String clearChannel() {
-        if (isOwner) {
-            MessageList messages = channel.getMessages();
-            if (messages.size() != 0) {
-                try {
-                    messages.bulkDelete(messages);
-                } catch (DiscordException e) {
-                    e.printStackTrace();
-                } catch (RateLimitException e) {
-                    e.printStackTrace();
-                } catch (MissingPermissionsException e) {
-                    e.printStackTrace();
-                }
-                messages.purge();
-            }
-            return "channel cleared";
         }
         return notAllowed;
     }

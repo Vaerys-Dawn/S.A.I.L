@@ -45,6 +45,7 @@ public class InfoChannel {
             File modsText = new File("Icons/Text/Moderators_Text.png");
             File sailText = new File("Icons/Text/Sail_text.png");
             File nadekoText = new File("Icons/Text/Nadeko_text.png");
+            File mee6Text = new File("Icons/Text/mee6_text.png");
             File spacer20 = new File("Icons/Text/Spacer_20.png");
             File vanillaRaces = new File("Icons/Races/Vanilla_races.png");
             File moddedRaces = new File("Icons/Races/Modded_races.png");
@@ -53,9 +54,9 @@ public class InfoChannel {
             channel.sendFile(welcomeMessage);
             Thread.sleep(2000);
             channel.sendMessage(
-                "We are a fairly new Discord for a fairly old community and as such \n" +
-                "the admins here try our hardest to make this Discord the best it \n" +
-                "can be so we hope that you enjoy your stay here.");
+                    "We are a fairly new Discord for a fairly old community and as such \n" +
+                            "the admins here try our hardest to make this Discord the best it \n" +
+                            "can be so we hope that you enjoy your stay here.");
             channel.sendFile(spacer20);
             Thread.sleep(2000);
             channel.sendFile(communityIcon);
@@ -63,33 +64,33 @@ public class InfoChannel {
             channel.sendFile(channelsText);
             Thread.sleep(2000);
             channel.sendMessage(
-                "For our Discord server we have many different channels that you\n" +
-                "can talk in that each relate to a different part of the Starbound \n" +
-                "community.\n" +
-                "\n" +
-                guild.getChannelByID("176662557199695883") + "\n" +
-                "This channel is for all things related to modding in Starbound,\n" +
-                "these things range from developing mods to just sharing them.\n" +
-                "\n" +
-                guild.getChannelByID("176667376157196288") + "\n" +
-                "This channel is there so that people can advertise their server to\n" +
-                "the community and get people playing together.\n" +
-                "\n" +
-                guild.getChannelByID("176667422500061184") + "\n" +
-                "This channel is for all of the artistic people in the community\n" +
-                "that are good at art or building so that they can show their skill.\n" +
-                "\n" +
-                guild.getChannelByID("177093464696029184") + "\n" +
-                "This channel is for all things to do with the Nightly Starbound updates\n" +
-                "we have a good community there and they are always there to help.\n" +
-                "\n" +
-                guild.getChannelByID("177089535576899584") + "\n" +
-                "This channel is for anything non Starbound related. Almost anything\n" +
-                "goes on in there so sometimes it can get a bit crazy.\n" +
-                "\n" +
-                guild.getChannelByID("176667679778668544") + "\n" +
-                "This channel is for suggestions relating to the Starbound Discord \n" +
-                "Server if you have any feedback this is the place to go."
+                    "For our Discord server we have many different channels that you\n" +
+                            "can talk in that each relate to a different part of the Starbound \n" +
+                            "community.\n" +
+                            "\n" +
+                            guild.getChannelByID("176662557199695883") + "\n" +
+                            "This channel is for all things related to modding in Starbound,\n" +
+                            "these things range from developing mods to just sharing them.\n" +
+                            "\n" +
+                            guild.getChannelByID("176667376157196288") + "\n" +
+                            "This channel is there so that people can advertise their server to\n" +
+                            "the community and get people playing together.\n" +
+                            "\n" +
+                            guild.getChannelByID("176667422500061184") + "\n" +
+                            "This channel is for all of the artistic people in the community\n" +
+                            "that are good at art or building so that they can show their skill.\n" +
+                            "\n" +
+                            guild.getChannelByID("177093464696029184") + "\n" +
+                            "This channel is for all things to do with the Nightly Starbound updates\n" +
+                            "we have a good community there and they are always there to help.\n" +
+                            "\n" +
+                            guild.getChannelByID("177089535576899584") + "\n" +
+                            "This channel is for anything non Starbound related. Almost anything\n" +
+                            "goes on in there so sometimes it can get a bit crazy.\n" +
+                            "\n" +
+                            guild.getChannelByID("176667679778668544") + "\n" +
+                            "This channel is for suggestions relating to the Starbound Discord \n" +
+                            "Server if you have any feedback this is the place to go."
             );
             Thread.sleep(2000);
             channel.sendFile(racesText);
@@ -99,10 +100,10 @@ public class InfoChannel {
             channel.sendFile(moddedRaces);
             Thread.sleep(2000);
             channel.sendMessage(
-                "You can choose any of the Above Races by doing the\n" +
-                "command `Sail.Race [Race]`, the race you choose will give you\n" +
-                "a custom colour and access to one of the many race specific\n" +
-                "channels which you can find below the " + guild.getChannelByID("176667358599970816") + " channel.");
+                    "You can choose any of the Above Races by doing the\n" +
+                            "command `Sail.Race [Race]`, the race you choose will give you\n" +
+                            "a custom colour and access to one of the many race specific\n" +
+                            "channels which you can find below the " + guild.getChannelByID("176667358599970816") + " channel.");
             Thread.sleep(2000);
             channel.sendFile(spacer20);
             Thread.sleep(2000);
@@ -110,20 +111,20 @@ public class InfoChannel {
             Thread.sleep(2000);
             channel.sendFile(generalRulesText);
             channel.sendMessage(
-                "**1** - Please Be kind to the other people on the server.\n" +
-                "**2** - Swearing is Allowed but we generally prefer if you don't.\n" +
-                "**3** - This Server is PG only Mods have the right to remove any\n" +
-                "      content we deem not safe for work with no warning. If you \n" +
-                "      repeatedly post NSFW content we will have to mute you.\n" +
-                "**4** - Please keep chat spam to a minimum, this includes links,\n" +
-                "      images and bot commands.\n" +
-                "**5** - we would love it if you kept to the channels that fit the topic and\n" +
-                "      we generally wont do anything about that unless you are \n" +
-                "      excessive.\n" +
-                "**6** - please keep all nightly spoilers in the "+ guild.getChannelByID("177093464696029184") + " channel.\n" +
-                "**7** - respect the staff and they will respect you, this one is common\n" +
-                "      sense.\n" +
-                "**8** - Have fun!");
+                    "**1** - Please Be kind to the other people on the server.\n" +
+                            "**2** - Swearing is Allowed but we generally prefer if you don't.\n" +
+                            "**3** - This Server is PG only Mods have the right to remove any\n" +
+                            "      content we deem not safe for work with no warning. If you \n" +
+                            "      repeatedly post NSFW content we will have to mute you.\n" +
+                            "**4** - Please keep chat spam to a minimum, this includes links,\n" +
+                            "      images and bot commands.\n" +
+                            "**5** - we would love it if you kept to the channels that fit the topic and\n" +
+                            "      we generally wont do anything about that unless you are \n" +
+                            "      excessive.\n" +
+                            "**6** - please keep all nightly spoilers in the " + guild.getChannelByID("177093464696029184") + " channel.\n" +
+                            "**7** - respect the staff and they will respect you, this one is common\n" +
+                            "      sense.\n" +
+                            "**8** - Have fun!");
             Thread.sleep(2000);
             channel.sendFile(spacer20);
             Thread.sleep(2000);
@@ -133,28 +134,28 @@ public class InfoChannel {
             Thread.sleep(2000);
             channel.sendMessage(
                     "**@" + guild.getUserByID("153159020528533505").getName() + " (aka @" + guild.getUserByID("159186011455225856").getName() + ")** - Server Owner\n" +
-                    "Does everything in her power to make this Discord great.\n" +
-                    "\n" +
-                    "**@" + guild.getUserByID("153044547880878080").getName() + "**\n" +
-                    "The original owner.\n" +
-                    "\n" +
-                    "**@" + guild.getUserByID("139974256535535616").getName() + "**\n" +
-                    "A helper who goes the extra lightyear.\n" +
-                    "\n" +
-                    "**@" + guild.getUserByID("142642744836358145").getName() + "**\n" +
-                    "Who?\n");
+                            "Does everything in her power to make this Discord great.\n" +
+                            "\n" +
+                            "**@" + guild.getUserByID("153044547880878080").getName() + "**\n" +
+                            "The original owner.\n" +
+                            "\n" +
+                            "**@" + guild.getUserByID("139974256535535616").getName() + "**\n" +
+                            "A helper who goes the extra lightyear.\n" +
+                            "\n" +
+                            "**@" + guild.getUserByID("142642744836358145").getName() + "**\n" +
+                            guild.getUserByID("142642744836358145").mention() + " Message @Dawn Felstar with a quote.\n" +
+                            "\n" +
+                            "**@" + guild.getUserByID("178354254464024576").getName() + "**\n" +
+                            "Makes some cool mods, always on the Subreddit to help!.");
             Thread.sleep(2000);
             channel.sendFile(modsText);
             Thread.sleep(2000);
             channel.sendMessage(
                     "**@" + guild.getUserByID("83984886494400512").getName() + "**\n" +
-                    "Avali Mod dev and overall a cool guy.\n" +
-                    "\n" +
-                    "**@" + guild.getUserByID("177800413334994944").getName() + "**\n" +
-                    "Helps out a bunch, knows their stuff.\n" +
-                    "\n" +
-                    "**@" + guild.getUserByID("178354254464024576").getName() + "**\n" +
-                    "Makes some cool mods, always on the Subreddit to help!.\n");
+                            "Avali Mod dev and overall a cool guy.\n" +
+                            "\n" +
+                            "**@" + guild.getUserByID("138839301483003904").getName() + "**\n" +
+                            guild.getUserByID("138839301483003904").mention() + " Message @Dawn Felstar with a quote.");
             Thread.sleep(2000);
             channel.sendFile(spacer20);
             Thread.sleep(2000);
@@ -173,6 +174,12 @@ public class InfoChannel {
                     "to the Discord.\n" +
                     "Help command: `-help`");
             Thread.sleep(2000);
+            channel.sendFile(mee6Text);
+            Thread.sleep(2000);
+            channel.sendMessage("Website - <https://mee6.xyz/>\n" +
+                    "Level up! this bot tracks your message count and levels you up\n" +
+                    "you can get some cool rewards at certain levels.\n" +
+                    "Help command `!help`");
             channel.sendFile(spacer20);
             Thread.sleep(2000);
             channel.sendFile(linksIcon);
@@ -181,15 +188,16 @@ public class InfoChannel {
             Thread.sleep(2000);
             channel.sendMessage(
                     "Home page: <http://playstarbound.com/>\n" +
-                    "Wiki: <http://starbounder.org/Starbound_Wiki>\n" +
-                    "Forums: <http://community.playstarbound.com/>\n" +
-                    "Blog: <http://playstarbound.com/blog/>\n" +
-                    "Subreddit: <https://www.reddit.com/r/starbound>\n" +
-                    "Steam Page: <http://store.steampowered.com/app/211820/>");
+                            "Wiki: <http://starbounder.org/Starbound_Wiki>\n" +
+                            "Forums: <http://community.playstarbound.com/>\n" +
+                            "Blog: <http://playstarbound.com/blog/>\n" +
+                            "Subreddit: <https://www.reddit.com/r/starbound>\n" +
+                            "Steam Page: <http://store.steampowered.com/app/211820/>");
             Thread.sleep(2000);
             channel.sendFile(affiliatesText);
             Thread.sleep(2000);
-            channel.sendMessage("https://discord.gg/stardewvalley");
+            channel.sendMessage("https://discord.gg/stardewvalley\n" +
+                    "http://discord.gg/4vMVUm8");
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (RateLimitException e) {
@@ -203,3 +211,8 @@ public class InfoChannel {
         }
     }
 }
+/*
+" +
+"**@" + guild.getUserByID("177800413334994944").getName() + "**\n" +
+"Helps out a bunch, knows their stuff.\n" +
+"*/
