@@ -666,5 +666,14 @@ public class Commands {
         }
         return notAllowed;
     }
+
+    @CommandAnnotation(name = "UpdateInfo",type = "Admin",description = "Posts the info channel contents")
+    public String Thinger(){
+        if (isOwner){
+            InfoChannel infoChannel = new InfoChannel();
+            infoChannel.updateInfo(channel,guild);
+            return "";
+        }else return notAllowed;
+    }
 }
 

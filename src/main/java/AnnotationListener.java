@@ -128,13 +128,6 @@ public class AnnotationListener {
             if (message.toString().equalsIgnoreCase("/shrug")) {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
-            if (message.toString().equalsIgnoreCase("sail.updateInfo")) {
-                if (event.getMessage().getAuthor().equals(event.getMessage().getGuild().getOwner())) {
-                    InfoChannel infoChannel = new InfoChannel();
-                    infoChannel.updateInfo(channel,guild);
-                }
-            }
-
 
             commands.setPOGOS(guildConfig,customCommands);
 
@@ -201,7 +194,7 @@ public class AnnotationListener {
     public void handleCommand(Method doMethod, MessageReceivedEvent event, GuildConfig guildConfig,Commands commands) {
         try {
             Channel channel = (Channel) event.getMessage().getChannel();
-
+            String responce;
 
             CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
             if (commandAnno.responseGeneral()){
@@ -209,13 +202,19 @@ public class AnnotationListener {
             }
 
             if (commandAnno.channel().equalsIgnoreCase("any")) {
-                channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+                responce = (String) doMethod.invoke(commands, new Object[]{});
+                if (!responce.equals("")) {
+                    channel.sendMessage(responce);
+                }
             } else if (commandAnno.channel().equalsIgnoreCase("servers")) {
                 if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
                     channel.sendMessage(commands.channelNotInit("Servers"));
                 } else {
-                    if (channel.equals((Channel) event.getClient().getChannelByID(guildConfig.getServersChannel()))) {
-                        channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+                    if (channel.equals(event.getClient().getChannelByID(guildConfig.getServersChannel()))) {
+                        responce = (String) doMethod.invoke(commands, new Object[]{});
+                        if (!responce.equals("")) {
+                            channel.sendMessage(responce);
+                        }
                     } else {
                         channel.sendMessage(commands.wrongChannel(guildConfig.getServersChannel()));
                     }
@@ -224,8 +223,11 @@ public class AnnotationListener {
                 if (guildConfig.getRaceSelectChannel().equalsIgnoreCase("")) {
                     channel.sendMessage(commands.channelNotInit("RaceSelect"));
                 } else {
-                    if (channel.equals((Channel) event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {
-                        channel.sendMessage((String) doMethod.invoke(commands, new Object[]{}));
+                    if (channel.equals(event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {
+                        responce = (String) doMethod.invoke(commands, new Object[]{});
+                        if (!responce.equals("")) {
+                            channel.sendMessage(responce);
+                        }
                     } else {
                         channel.sendMessage(commands.wrongChannel(guildConfig.getRaceSelectChannel()));
                     }
