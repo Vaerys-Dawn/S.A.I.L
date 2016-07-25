@@ -69,7 +69,7 @@ The original owner.
 A helper who goes the extra lightyear.
 
 **@#username#'142642744836358145'**
-#mention#'142642744836358145' Message @Dawn Felstar with a quote.
+Friendly neighborhood ~~Spider-Man~~ administrator
 
 **@#username#'178354254464024576'**
 Makes some cool mods, always on the Subreddit to help!.
@@ -79,6 +79,9 @@ Avali Mod dev and overall a cool guy.
 
 **@#username#'138839301483003904'**
 #mention#'138839301483003904' Message @Dawn Felstar with a quote.
+
+**@#username#'88265738904698880'**
+A pretty chill person, ironically.
 #image#:Icons/Text/Spacer_20.png
 #image#:Icons/Headers/Bots_Icon.png
 #image#:Icons/Text/Sail_text.png
@@ -94,7 +97,7 @@ Help command: `-help`
 Website - <https://mee6.xyz/>
 Level up! this bot tracks your message count and levels you up
 you can get some cool rewards at certain levels.
-Help command !help
+Help command `!help`
 #image#:Icons/Text/Spacer_20.png
 #image#:Icons/Headers/Links_Icon.png
 #image#:Icons/Text/Important_Links_Text.png

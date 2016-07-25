@@ -1,5 +1,6 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sun.util.calendar.BaseCalendar;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.GuildCreateEvent;
 import sx.blah.discord.handle.impl.events.MentionEvent;
@@ -8,6 +9,7 @@ import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
+import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.*;
 
@@ -16,6 +18,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.time.LocalTime;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -65,18 +72,19 @@ public class AnnotationListener {
             handler.createDirectory("GuildConfigs");
             handler.createDirectory("CommandLists");
             String file = "GuildConfigs/" + readableGuildID + "_config.json";
+            String CCfile;
             GuildConfig guildConfig = new GuildConfig();
             if (!Files.exists(Paths.get(file))) {
                 handler.writetoJson(file, guildConfig);
                 logger.info("[GuildCreateEvent] - Creating config file for Guild with ID " + readableGuildID);
             }
-            file = "CommandLists/" + readableGuildID + "_CustomCommands.json";
+            guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
+            CCfile = "CommandLists/" + readableGuildID + "_CustomCommands.json";
             CustomCommands customCommands = new CustomCommands();
-            if (!Files.exists(Paths.get(file))){
-                handler.writetoJson(file, customCommands);
+            if (!Files.exists(Paths.get(CCfile))) {
+                handler.writetoJson(CCfile, customCommands);
                 logger.info("Creating Custom Commands List");
             }
-            guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
             if (guildConfig.getDoLoginMessage()) {
                 Channel channel;
                 if (!guildConfig.getGeneralChannel().equals("")) {
@@ -88,6 +96,8 @@ public class AnnotationListener {
                         "If you want to see my commands you can perform " + Globals.commandPrefix + "Help\n" +
                         "(if you dont want to see this message again have an admin do the command " + Globals.commandPrefix + "doLoginMessage)");
             }
+            guildConfig.setGuildName(event.getGuild().getName());
+            handler.writetoJson(file,guildConfig);
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (MissingPermissionsException e) {
@@ -95,13 +105,15 @@ public class AnnotationListener {
         } catch (RateLimitException e) {
             e.printStackTrace();
         }
+
     }
 
     @EventSubscriber
     public void onMessageRecivedEvent(MessageReceivedEvent event) {
+        boolean failedToSend = false;
+        String errorMessage = "";
         Message message = (Message) event.getMessage();
         Channel channel = (Channel) event.getMessage().getChannel();
-        Guild guild = (Guild) event.getMessage().getGuild();
         String readableGuildID = event.getMessage().getGuild().getID();
         String file;
 
@@ -185,16 +197,33 @@ public class AnnotationListener {
         } catch (MissingPermissionsException e) {
             logger.info("Bot does not have Permission for that thing");
         } catch (DiscordException e) {
+            failedToSend = true;
+            errorMessage = e.getErrorMessage();
             e.printStackTrace();
         } catch (RateLimitException e) {
             e.printStackTrace();
+        }
+        if (failedToSend){
+            try {
+                Thread.sleep(2000);
+                channel.sendMessage(errorMessage + "\n" +
+                        "> Please Try Again In a Second.");
+            } catch (DiscordException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (RateLimitException e) {
+                e.printStackTrace();
+            } catch (MissingPermissionsException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void handleCommand(Method doMethod, MessageReceivedEvent event, GuildConfig guildConfig,Commands commands) {
         try {
             Channel channel = (Channel) event.getMessage().getChannel();
-            String responce;
+            String response;
 
             CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
             if (commandAnno.responseGeneral()){
@@ -202,31 +231,31 @@ public class AnnotationListener {
             }
 
             if (commandAnno.channel().equalsIgnoreCase("any")) {
-                responce = (String) doMethod.invoke(commands, new Object[]{});
-                if (!responce.equals("")) {
-                    channel.sendMessage(responce);
+                response = (String) doMethod.invoke(commands, new Object[]{});
+                if (!response.equals("")) {
+                    channel.sendMessage(response);
                 }
             } else if (commandAnno.channel().equalsIgnoreCase("servers")) {
                 if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
                     channel.sendMessage(commands.channelNotInit("Servers"));
                 } else {
                     if (channel.equals(event.getClient().getChannelByID(guildConfig.getServersChannel()))) {
-                        responce = (String) doMethod.invoke(commands, new Object[]{});
-                        if (!responce.equals("")) {
-                            channel.sendMessage(responce);
+                        response = (String) doMethod.invoke(commands, new Object[]{});
+                        if (!response.equals("")) {
+                            channel.sendMessage(response);
                         }
                     } else {
                         channel.sendMessage(commands.wrongChannel(guildConfig.getServersChannel()));
                     }
                 }
-            } else if (commandAnno.channel().equalsIgnoreCase("raceselect")) {
+            } else if (commandAnno.channel().equalsIgnoreCase("raceSelect")) {
                 if (guildConfig.getRaceSelectChannel().equalsIgnoreCase("")) {
                     channel.sendMessage(commands.channelNotInit("RaceSelect"));
                 } else {
                     if (channel.equals(event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {
-                        responce = (String) doMethod.invoke(commands, new Object[]{});
-                        if (!responce.equals("")) {
-                            channel.sendMessage(responce);
+                        response = (String) doMethod.invoke(commands, new Object[]{});
+                        if (!response.equals("")) {
+                            channel.sendMessage(response);
                         }
                     } else {
                         channel.sendMessage(commands.wrongChannel(guildConfig.getRaceSelectChannel()));

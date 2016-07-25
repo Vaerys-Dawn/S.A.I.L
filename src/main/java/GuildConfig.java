@@ -5,6 +5,7 @@ import java.util.ArrayList;
  */
 public class GuildConfig {
 
+    String guildName = "";
     String raceSelectChannel = "";
     String generalChannel = "";
     String serversChannel = "";
@@ -19,6 +20,14 @@ public class GuildConfig {
     the next part should be the server name no spaces allowed.
     then comes the server IP and port
     lastly the server description*/
+
+    public String getGuildName() {
+        return guildName;
+    }
+
+    public void setGuildName(String guildName) {
+        this.guildName = guildName;
+    }
 
     public String getServerToEdit() {
         return ServerToEdit;
