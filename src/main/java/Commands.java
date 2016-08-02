@@ -3,10 +3,7 @@ import org.slf4j.LoggerFactory;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
-import sx.blah.discord.handle.obj.IRole;
-import sx.blah.discord.handle.obj.IUser;
-import sx.blah.discord.handle.obj.Permissions;
-import sx.blah.discord.handle.obj.Status;
+import sx.blah.discord.handle.obj.*;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.MissingPermissionsException;
 import sx.blah.discord.util.RateLimitException;
@@ -21,25 +18,31 @@ import java.util.Random;
  */
 public class Commands {
 
-    String guildConfigFile;
-    String CCFile;
+    final static org.slf4j.Logger logger = LoggerFactory.getLogger(AnnotationListener.class);
+    private FileHandler handler = new FileHandler();
+
     Guild guild;
     Channel channel;
     Message message;
     IUser author;
     String guildID;
+
     private GuildConfig guildConfig;
     private CustomCommands customCommands;
-    FileHandler handler = new FileHandler();
-    private boolean isOwner;
-    private boolean isAdmin;
-    private boolean isMod;
-    private boolean isCF;
-    private boolean isCreator;
-    String notAllowed;
-    String errorMessage;
+    private Characters characters;
+    private String guildConfigFile;
+    private String CCFile;
+    private String charFile;
 
-    final static org.slf4j.Logger logger = LoggerFactory.getLogger(AnnotationListener.class);
+    boolean isOwner;
+    boolean isAdmin;
+    boolean isMod;
+    boolean isCF;
+    boolean isCreator;
+
+    private String notAllowed;
+    private String errorMessage;
+
 
     public Commands(Message message) {
         this.message = message;
@@ -50,7 +53,10 @@ public class Commands {
         notAllowed = "I'm Sorry " + author.getName() + " I'm afraid I can't do that.";
         guildConfigFile = "GuildConfigs/" + guildID + "_config.json";
         CCFile = "CommandLists/" + guildID + "_CustomCommands.json";
+        charFile = "Characters/" + guildID + "_CharList.json";
         errorMessage = "You have Found an error, please Mention this bot or " + guild.getUserByID(Globals.creatorID).getName() + " to let them know of this error";
+
+
         if (author.getID().equals(Globals.creatorID)) {
             isCreator = true;
         }
@@ -71,9 +77,10 @@ public class Commands {
         }
     }
 
-    public void setPOGOS(GuildConfig guildConfig,CustomCommands customCommands) {
+    public void setPOGOS(GuildConfig guildConfig,CustomCommands customCommands, Characters characters) {
         this.guildConfig = guildConfig;
         this.customCommands = customCommands;
+        this.characters = characters;
     }
 
     public void flushFiles() {
@@ -86,6 +93,11 @@ public class Commands {
             logger.error("Commands Object is empty stopping flush");
         }else {
             handler.writetoJson(CCFile, customCommands);
+        }
+        if (characters.equals(null)){
+            logger.error("Commands Object is empty stopping flush");
+        }else {
+            handler.writetoJson(charFile, characters);
         }
     }
 
@@ -146,15 +158,15 @@ public class Commands {
     @CommandAnnotation(name = "Hello", description = "Says Hello")
     public String helloSail() {
         if (isCreator) {
-            return "Hello Creator";
+            return "> Hello Creator";
         } else if (isOwner) {
-            return "Hello Server Owner";
+            return "> Hello Server Owner";
         } else if (isAdmin) {
-            return "Hello Admin";
+            return "> Hello Admin";
         } else if (isMod) {
-            return "Hello Moderator";
+            return "> Hello Moderator";
         } else if (isCF) {
-            return "Hello Chucklefish Staff Member";
+            return "> Hello Chucklefish Staff Member";
         } else {
             String[] lock;
 
@@ -180,78 +192,78 @@ public class Commands {
                 randomInt = Integer.parseInt(lock[1]);
             }
             if (randomInt == 0) {
-                return "Hello " + author.getName() + ", How was your day?";
+                return "> Hello " + author.getName() + ", How was your day?";
             } else if (randomInt == 1) {
-                return "Hello... " + author.getName();
+                return "> Hello... " + author.getName();
             } else if (randomInt == 2) {
-                return "Greetings " + author.getName() + ", I am S.A.I.L";
+                return "> Greetings " + author.getName() + ", I am S.A.I.L";
             } else if (randomInt == 3) {
-                return "Hi " + author.getName() + ", That's an interesting name.";
+                return "> Hi " + author.getName() + ", That's an interesting name.";
             } else if (randomInt == 4) {
-                return "Goodbye " + author.getName();
+                return "> Goodbye " + author.getName();
             } else if (randomInt == 5) {
-                return "0100 1000 0110 0101 0110 1100 0110 1100 0110 1111 0010 1110";
+                return "> 0100 1000 0110 0101 0110 1100 0110 1100 0110 1111 0010 1110";
             } else if (randomInt == 6) {
-                return "Initiating greeting protocol... Hello " + author.getName();
+                return "> Initiating greeting protocol... Hello " + author.getName();
             } else if (randomInt == 7) {
-                return "ERROR: CANNOT PARSE COMMAND 'HELLO'";
+                return "> ERROR: CANNOT PARSE COMMAND 'HELLO'";
             } else if (randomInt == 8) {
-                return "Glad to see you escaped the black hole, " + author.getName();
+                return "> Glad to see you escaped the black hole, " + author.getName();
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("apex")) {
-                return "Hello there, " + author.getName() + " , Miniknog Smiles on you today.";
+                return "> Hello there, " + author.getName() + " , Miniknog Smiles on you today.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("avian")) {
-                return "My, my, " + author.getName() + " , your plumage is looking extraordinary today.";
+                return "> My, my, " + author.getName() + " , your plumage is looking extraordinary today.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("floran")) {
-                return "Greetingsssss " + author.getName() + ", Does Floran want to go huntingsss later?";
+                return "> Greetingsssss " + author.getName() + ", Does Floran want to go huntingsss later?";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("glitch")) {
-                return "Happy. Hello " + author.getName() + ", You seem especially well polished today.";
+                return "> Happy. Hello " + author.getName() + ", You seem especially well polished today.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("human")) {
-                return "Another day alive, congratulations " + author.getName();
+                return "> Another day alive, congratulations " + author.getName();
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("hylotl")) {
-                return "Have a peaceful day " + author.getName() + " may you experience tranquility.";
+                return "> Have a peaceful day " + author.getName() + " may you experience tranquility.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("novakid")) {
-                return author.getName() + "! the Sheriff has been shot, I need your... oooo~ whats that?";
+                return "> "+ author.getName() + "! the Sheriff has been shot, I need your... oooo~ whats that?";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("penguin")) {
-                return "Dreadwing will not find you here " + author.getName() + " you are safe.";
+                return "> Dreadwing will not find you here " + author.getName() + " you are safe.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("agaran")) {
-                return "Hoom Shroom Nab Nab Agaran " + author.getName() + " Click Clack Flap Flap.";
+                return "> Hoom Shroom Nab Nab Agaran " + author.getName() + " Click Clack Flap Flap.";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("avali")) {
-                return "Did you get the get the new message from the Local network " + author.getName() + "?";
+                return "> Did you get the get the new message from the Local network " + author.getName() + "?";
             } else if ((randomInt == 9) && roles.equalsIgnoreCase("felin")) {
-                return "All we are is cats in the wind " + author.getName();
+                return "> All we are is cats in the wind " + author.getName();
             } else if ((randomInt == 9)) {
-                return "Ello " + author.getName() + "Ain't Seen you around much";
+                return "> Ello " + author.getName() + "Ain't Seen you around much";
             } else {
-                return "How did you get this message " + author.getName();
+                return "> How did you get this message " + author.getName();
             }
         }
     }
 
-    @CommandAnnotation(name = "GeneralHere",type = "Admin",description = "Sets the current Channel as the Server's 'General' Channel")
+    @CommandAnnotation(name = "GeneralHere",type = Globals.typeAdmin,description = "Sets the current Channel as the Server's 'General' Channel")
     public String setGeneral() {
         if (isAdmin || isOwner) {
             guildConfig.setGeneralChannel(channel.getID());
-            return "This Channel is now the Server's 'General' Channel.";
+            return "> This Channel is now the Server's 'General' Channel.";
         } else {
             return notAllowed;
         }
     }
 
-    @CommandAnnotation(name = "ServersHere", type = "Admin",description = "Sets the current Channel as the Server's 'Servers' Channel")
+    @CommandAnnotation(name = "ServersHere", type = Globals.typeAdmin,description = "Sets the current Channel as the Server's 'Servers' Channel")
     public String setServersChannel() {
         if (isAdmin || isOwner) {
             guildConfig.setServersChannel(channel.getID());
-            return "This Channel is now the Server's 'Servers' Channel.";
+            return "> This Channel is now the Server's 'Servers' Channel.";
         } else {
             return notAllowed;
         }
     }
 
-    @CommandAnnotation(name = "RaceSelectHere", type = "Admin", description = "Sets the current Channel as the Server's 'Race Select' Channel")
+    @CommandAnnotation(name = "RaceSelectHere", type = Globals.typeAdmin, description = "Sets the current Channel as the Server's 'Race Select' Channel")
     public String setRaceSelect() {
         if (isAdmin || isOwner) {
             guildConfig.setRaceSelectChannel(channel.getID());
-            return "This Channel is now the Server's 'Race Select' Channel.";
+            return "> This Channel is now the Server's 'Race Select' Channel.";
         } else {
             return notAllowed;
         }
@@ -290,14 +302,14 @@ public class Commands {
             }else {
                 return notAllowed;
             }
-        } else if (splitMessage[1].equalsIgnoreCase("Race")){
-            commandList.append(helpHandler("Race"));
-        } else if (splitMessage[1].equalsIgnoreCase("Servers")){
-            commandList.append(helpHandler("Servers"));
-        } else if (splitMessage[1].equalsIgnoreCase("General")){
-            commandList.append(helpHandler("General"));
-        } else if (splitMessage[1].equalsIgnoreCase("CC")){
-            commandList.append(helpHandler("CC"));
+        } else if (splitMessage[1].equalsIgnoreCase(Globals.typeRace)){
+            commandList.append(helpHandler(Globals.typeRace));
+        } else if (splitMessage[1].equalsIgnoreCase(Globals.typeServers)){
+            commandList.append(helpHandler(Globals.typeServers));
+        } else if (splitMessage[1].equalsIgnoreCase(Globals.typeGeneral)){
+            commandList.append(helpHandler(Globals.typeGeneral));
+        } else if (splitMessage[1].equalsIgnoreCase(Globals.typeCC)){
+            commandList.append(helpHandler(Globals.typeCC));
         } else {
             return getDescription("sailHelp");
         }
@@ -319,11 +331,11 @@ public class Commands {
                 String testTo = commandAnno.name().toLowerCase();
                 if ((testMessage.startsWith(testTo)) && (testMessage.length() == testTo.length())) {
                     StringBuilder builder = new StringBuilder();
-                    builder.append(getDescription(m.getName())+ "\n");
+                    builder.append(getDescription(m.getName()));
                     if (m.isAnnotationPresent(AliasAnnotation.class)){
                         AliasAnnotation aliasAnno = m.getAnnotation(AliasAnnotation.class);
                         String[] alias = aliasAnno.alias();
-                        builder.append("Aliases: ");
+                        builder.append("\nAliases: ");
                         for (int i = 0; i < alias.length;i++){
                             builder.append(alias[i] + ", ");
                         }
@@ -332,10 +344,10 @@ public class Commands {
                 }
             }
         }
-        return "That command does not exist.";
+        return "> That command does not exist.";
     }
 
-    @CommandAnnotation(name = "doLoginMessage",type = "Admin", description = "Toggles the login mesaage")
+    @CommandAnnotation(name = "doLoginMessage",type = Globals.typeAdmin, description = "Toggles the login mesaage")
     public String setLoginMessage() {
         if (isAdmin || isOwner) {
             if (guildConfig.getDoLoginMessage()) {
@@ -343,29 +355,31 @@ public class Commands {
             } else {
                 guildConfig.setDoLoginMessage(true);
             }
-            return "Toggled the Login Message";
+            return "> Toggled the Login Message";
         } else {
             return notAllowed;
         }
     }
 
-    @CommandAnnotation(name = "ListRaces",type = "Race", channel = "RaceSelect", description = "Lists the Available races that you can choose from")
+    @AliasAnnotation(alias = {"ListRaces","Races","RaceList"})
+    @CommandAnnotation(name = "ListRaces",type = "Race", channel = Globals.channelRaceSelect, description = "Lists the Available races that you can choose from")
     public String listRaces() {
         StringBuilder response = new StringBuilder();
         ArrayList<String> races = guildConfig.getRaces();
-        response.append("Here are the Races you can choose from:\n");
+        response.append("> Here are the Races you can choose from:\n`");
         for (String s : races) {
             response.append(guild.getRoleByID(s).getName() + ", ");
         }
+        response.append("`");
         return response.toString();
     }
 
-    @CommandAnnotation(name = "AddRace",type = "Admin",channel = "RaceSelect", description = "Adds role to selectable races",usage = "[Role name]")
+    @CommandAnnotation(name = "AddRace",type = Globals.typeAdmin,channel = Globals.channelRaceSelect, description = "Adds role to selectable races",usage = "[Role name]")
     public String addRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
             if (message.toString().length() == getName("addRace").length() || testMessage[1].equals("")) {
-                return "Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\n" + getUsage("addRace");
+                return "> Could not add race because you did not tell me which one you wanted to add. I'm a bot not a wizard.\n" + getUsage("addRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
             String raceID;
@@ -373,21 +387,21 @@ public class Commands {
                 if (r.getName().toLowerCase().equals(testMessage[1].toLowerCase()) && !testMessage[1].equals("")) {
                     raceID = r.getID();
                     guildConfig.addRace(raceID);
-                    return "Race added.";
+                    return "> Race added.";
                 }
             }
-            return "role not found";
+            return "> role not found";
         } else {
             return notAllowed;
         }
     }
 
-    @CommandAnnotation(name = "RemoveRace",type = "Admin", channel = "RaceSelect", description = "Removes the role from the selectable races",usage = "[Role name]")
+    @CommandAnnotation(name = "RemoveRace",type = Globals.typeAdmin, channel = Globals.channelRaceSelect, description = "Removes the role from the selectable races",usage = "[Role name]")
     public String removeRace() {
         if (isAdmin || isOwner || isMod) {
             String[] testMessage = message.toString().split(" ");
             if (message.toString().length() == getName("removeRace").length() || testMessage[1].equals("")) {
-                return "ERROR: USER SPECIFIED NOTHING AS A PARAMETER, CANNOT REMOVE NOTHING FROM RACE LIST.\n" + getUsage("removeRace");
+                return "> ERROR: USER SPECIFIED NOTHING AS A PARAMETER, CANNOT REMOVE NOTHING FROM RACE LIST.\n" + getUsage("removeRace");
             }
             ArrayList<IRole> roles = (ArrayList) guild.getRoles();
             String raceID;
@@ -395,17 +409,17 @@ public class Commands {
                 if (r.getName().toLowerCase().equals(testMessage[1].toLowerCase()) && !testMessage[1].equals("")) {
                     raceID = r.getName();
                     guildConfig.removeRace(raceID);
-                    return "Race removed.";
+                    return "> Race removed.";
                 }
             }
-            return "race not found";
+            return "> race not found";
         } else {
             return notAllowed;
         }
     }
 
     @AliasAnnotation(alias = {"Race","Iam","Role"})
-    @CommandAnnotation(name = "Race",type = "Race", channel = "RaceSelect", description = "Gives you a race.",usage = "[Race]")
+    @CommandAnnotation(name = "Race",type = "Race", channel = Globals.channelRaceSelect, description = "Gives you a race.",usage = "[Race]")
     public String race() {
         List<IRole> roles = author.getRolesForGuild(guild);
         ArrayList<String> races = guildConfig.getRaces();
@@ -427,7 +441,7 @@ public class Commands {
         }
         if (newRole[1].equalsIgnoreCase("remove")) {
             racefound = true;
-            response = "Your race was removed, Congrats Normie.";
+            response = "> Your race was removed, Congrats Normie.";
         }
         for (String r : races) {
             if (newRole[1].equalsIgnoreCase(guild.getRoleByID(r).getName())) {
@@ -445,10 +459,10 @@ public class Commands {
             if (racefound) {
                 guild.editUserRoles(author, newRoleList);
                 if (response.equals("")) {
-                    return "You are now **" + newRace + "**, \uD83D\uDC4D";
+                    return "> You have selected race: **" + newRace + "**.";
                 }
             } else {
-                response = "You cannot have the race:" + stringBuilder.toString() + " as that role does not exist";
+                response = "> You cannot have the race:" + stringBuilder.toString() + " as that race does not exist";
             }
             return response;
         } catch (MissingPermissionsException e) {
@@ -458,10 +472,10 @@ public class Commands {
         } catch (RateLimitException e) {
             e.printStackTrace();
         }
-        return "failed to update race, if you are an admin S.A.I.L Cannot change your race, but you can do it manually, you lazy person.";
+        return "> Error 502, Try again.";
     }
 
-    @CommandAnnotation(name = "AddServer",type = "Servers", channel = "Servers", description = "Adds a sever to the server list.",usage = "[ServerName]")
+    @CommandAnnotation(name = "AddServer",type = Globals.typeServers, channel = Globals.channelServers, description = "Adds a sever to the server list.",usage = "[ServerName]")
     public String addServer() {
         String[] testMessage = message.toString().split(" ");
         boolean isUsed = false;
@@ -473,29 +487,30 @@ public class Commands {
             }
             if (!isUsed) {
                 guildConfig.addServer(author.getID(), testMessage[1]);
-                return "Server Added";
+                return "> Server Added";
             } else {
-                return "Server name has already been used";
+                return "> Server name has already been used";
             }
         } else if (testMessage.length == 1) {
-            return "You must Specify a Server Name\n" + getUsage("addServer");
+            return "> You must Specify a Server Name\n" + getUsage("addServer");
         } else {
-            return "Server name cannot have spaces";
+            return "> Server name cannot have spaces";
         }
     }
 
-    @CommandAnnotation(name = "ListServers",type = "Servers", channel = "Servers", description = "Lists all of the servers")
+    @AliasAnnotation(alias = {"ListServers","Servers","ServerList"})
+    @CommandAnnotation(name = "ListServers",type = Globals.typeServers, channel = Globals.channelServers, description = "Lists all of the servers")
     public String listServers() {
         StringBuilder response = new StringBuilder();
         response.append("Here are the Servers Currently Saved to my list\n");
         for (String[] sa : guildConfig.getServerList()) {
-            response.append("  " + sa[1] + "\n");
+            response.append("   " + sa[1] + "\n");
         }
         response.append("You can get the server information of each server by performing\n`" + getUsage("serverInfo") + "`");
         return response.toString();
     }
 
-    @CommandAnnotation(name = "Server",type = "Servers", channel = "Servers", description = "Gives the server's Details",usage = "[ServerName]")
+    @CommandAnnotation(name = "Server",type = Globals.typeServers, channel = Globals.channelServers, description = "Gives the server's Details",usage = "[ServerName]")
     public String serverInfo() {
         String[] testMessage = message.toString().split(" ");
         StringBuilder response = new StringBuilder();
@@ -515,7 +530,7 @@ public class Commands {
         return response.toString();
     }
 
-    @CommandAnnotation(name = "EditServer",type = "Servers", channel = "Servers", description = "Edits the server",usage = "[ServerName] Ip, Port, or Desc")
+    @CommandAnnotation(name = "EditServer",type = Globals.typeServers, channel = Globals.channelServers, description = "Edits the server",usage = "[ServerName] Ip, Port, or Desc")
     public String editServer() {
         String[] testMessage = message.toString().split(" ");
         if (guildConfig.getEditingServer()) {
@@ -525,18 +540,18 @@ public class Commands {
                         if (guildConfig.getServerEditingType().equalsIgnoreCase("IP")) {
                             sa[2] = testMessage[1];
                             stopServerEdit();
-                            return "IP Edited";
+                            return "> IP Edited";
                         } else if (guildConfig.getServerEditingType().equalsIgnoreCase("Port")) {
                             sa[3] = testMessage[1];
                             stopServerEdit();
-                            return "Port Edited";
+                            return "> Port Edited";
                         } else if (guildConfig.getServerEditingType().equalsIgnoreCase("Desc")) {
                             StringBuilder stringBuilder = new StringBuilder();
                             stringBuilder.append(message.toString());
                             stringBuilder.delete(0, testMessage[0].length() + 1);
                             sa[4] = stringBuilder.toString();
                             stopServerEdit();
-                            return "Description Edited";
+                            return "> Description Edited";
                         } else {
                             stopServerEdit();
                             return errorMessage;
@@ -545,7 +560,7 @@ public class Commands {
                 }
                 stopServerEdit();
             } else {
-                return "A Server Listing is currently being edited.\nAn admin or Moderator will have to perform  "+ Globals.commandPrefix + "AbandonEdit` to allow for another edit.";
+                return "> A Server Listing is currently being edited.\n> An admin or Moderator will have to perform  "+ Globals.commandPrefix + "AbandonEdit` to allow for another edit.";
             }
         } else {
             if (testMessage.length == 3) {
@@ -563,30 +578,30 @@ public class Commands {
                                 return "Cannot edit " + testMessage[2];
                             }
                         } else {
-                            return "You do not have permission to edit this server listing.";
+                            return "> You do not have permission to edit this server listing.";
                         }
                     }
                 }
-                return "server does not exist";
+                return "> server does not exist";
             } else if (testMessage.length == 2) {
-                return "You must specify a channel, this channel is either IP, Port or Desc";
+                return "> You must specify a channel, this channel is either IP, Port or Desc";
             } else if (testMessage.length == 1) {
-                return "You must specify a server to edit\n" + getUsage("editServer");
+                return "> You must specify a server to edit\n" + getUsage("editServer");
             } else {
-                return "Too many or too few arguments\n" + getUsage("editServer");
+                return "> Too many or too few arguments\n" + getUsage("editServer");
             }
         }
         return errorMessage;
     }
 
-    @CommandAnnotation(name = "AbandonEdit",type = "Servers", channel = "Servers", description = "Stops the Server Listing Editing process")
+    @CommandAnnotation(name = "AbandonEdit",type = Globals.typeServers, channel = Globals.channelServers, description = "Stops the Server Listing Editing process")
     public String stopServerEdit() {
         if (isAdmin || isMod || isOwner || author.equals(guild.getUserByID(guildConfig.getServerEditor()))) {
             guildConfig.setEditingServer(false);
             guildConfig.setServerEditor("");
             guildConfig.setServerEditingType("");
             guildConfig.setServerToEdit("");
-            return "Stopped the Server Listing Editing process";
+            return "> Stopped the Server Listing Editing process";
         } else {
             return notAllowed;
         }
@@ -605,14 +620,14 @@ public class Commands {
         newMessage.delete(0,splitMessage[0].length() + 1);
         String regexedMessage = WordUtils.capitalize(newMessage.toString());
         regexedMessage = regexedMessage.replaceAll(" ", "_");
-        response.append("Here is Your Search\n<http://starbounder.org/Special:Search/");
+        response.append("> Here is Your Search\n<http://starbounder.org/Special:Search/");
         response.append(regexedMessage);
         response.append(">");
         return response.toString();
     }
 
     @AliasAnnotation(alias = {"NewCC","CCnew","CCmake","CreateCC","MakeCC"})
-    @CommandAnnotation(name = "NewCC",type = "CC", description = "Creates a custom command",usage = "[CommandName] [Message]")
+    @CommandAnnotation(name = "NewCC",type = Globals.typeCC, description = "Creates a custom command",usage = "[CommandName] [Message]")
     public String newCC(){
         if(message.toString().length() == getName("newCC").length()){
             return getUsage("newCC");
@@ -625,7 +640,7 @@ public class Commands {
     }
 
     @AliasAnnotation(alias = {"DelCC", "CCDel","RemoveCC"})
-    @CommandAnnotation(name = "DelCC",type = "CC", description = "Removes the Command",usage = "[CommandName]")
+    @CommandAnnotation(name = "DelCC",type = Globals.typeCC, description = "Removes the Command",usage = "[CommandName]")
     public String delCC(){
         if (message.toString().length() == getName("delCC").length()){
             return getUsage("delCC");
@@ -635,21 +650,58 @@ public class Commands {
     }
 
     @AliasAnnotation(alias = {"CClist","ListCCs"})
-    @CommandAnnotation(name = "CCList",type = "CC", description = "Lists the Server's Custom Commands")
+    @CommandAnnotation(name = "CCList",type = Globals.typeCC, description = "Lists the Server's Custom Commands", usage = "[Page number]")
     public String listCCs(){
-        return customCommands.listCommands();
+        int args = 1;
+        boolean isfound = false;
+        String[] splitString = message.toString().split(" ");
+        if ((splitString.length == 1) || splitString[1].equals("")){
+            args = 1;
+        }else{
+            char[] chars = splitString[1].toCharArray();
+            for (char c: chars){
+                if (Character.isLetter(c)){
+                    isfound = true;
+                }
+            }
+            if (!isfound){
+                args = Integer.parseInt(splitString[1]);
+            }
+        }
+        if(isfound){
+            return "> what are you doing, why are you trying to search for the " + splitString[1] + " page... \n" +
+                    "> pretty sure you cant do that...";
+        }else {
+            return customCommands.listCommands(args);
+        }
     }
 
-    @CommandAnnotation(name = "CCTags",type = "CC", description = "List all of the tags available to use in a custom command")
+    @CommandAnnotation(name = "WhoMadeCC", type = Globals.typeCC, description = "Tells you who made a command.", usage = "[Command]")
+    public String whoDunit(){
+        String[] splitString = message.toString().split(" ");
+        if ((splitString.length == 1) || splitString[1].equals("")){
+            return "> Missing Args [Command]";
+        }
+        String creator = customCommands.getCreator(splitString[1]);
+        if (creator.equals("-1")){
+            return "> Command not found";
+        }
+        if (creator.equals("locked")){
+            return "> An Admin.";
+        }
+        return "> " + guild.getUserByID(creator).getDisplayName(guild);
+    }
+
+    @CommandAnnotation(name = "CCTags",type = Globals.typeCC, description = "List all of the tags available to use in a custom command")
     public String tagsCC(){
         return "You can add any of the following tags to a Custom command to \n" +
                 "get a special responce:\n" +
-                "  #author# - replaces with the senders nickname\n" +
-                "  #author!# - replaces with the senders username\n" +
-                "  #args# - replaces with any text after the command";
+                " #author# - replaces with the senders nickname\n" +
+                " #author!# - replaces with the senders username\n" +
+                " #args# - replaces with any text after the command";
     }
 
-    @CommandAnnotation(name =  "isStreaming",type = "Admin",description = "Sets The Bot To streaming Mode",usage = "[StreamLink] [Message]", responseGeneral = true)
+    @CommandAnnotation(name =  "isStreaming",type = Globals.typeAdmin,description = "Sets The Bot To streaming Mode",usage = "[StreamLink] [Message]", responseGeneral = true)
     public String isStreaming(){
         if (isAdmin || isMod || isOwner) {
             String streamLink;
@@ -657,23 +709,50 @@ public class Commands {
             StringBuilder builder = new StringBuilder();
             if (message.toString().length() == getName("isStreaming").length()) {
                 message.getClient().changeStatus(Status.game("Starbound"));
-                return "Stream has stopped thank you all for coming";
+                return "> Stream has stopped thank you all for coming";
             } else streamLink = splitMessage[1];
             builder.append(message.toString());
             builder.delete(0, splitMessage[0].length() + splitMessage[1].length() + 2);
             message.getClient().changeStatus(Status.stream(builder.toString(), splitMessage[1]));
-            return "Check out the stream at: " + streamLink;
+            return "> Check out the stream at: " + streamLink;
         }
         return notAllowed;
     }
 
-    @CommandAnnotation(name = "UpdateInfo",type = "Admin",description = "Posts the info channel contents")
+    @CommandAnnotation(name = "UpdateInfo",type = Globals.typeAdmin,description = "Posts the info channel contents")
     public String Thinger(){
         if (isOwner){
             InfoChannel infoChannel = new InfoChannel();
             infoChannel.updateInfo(channel,guild);
             return "";
         }else return notAllowed;
+    }
+
+    @CommandAnnotation(name = "SaveChar", channel = Globals.channelRaceSelect,description = "Saves character settings to your current user settings",usage = "[Character Name]")
+    public String saveCharacter(){
+        String[] splitString = message.toString().split(" ");
+        if ((splitString.length == 1) || splitString[1].equals("")){
+            return "> Missing Args [Character Name]";
+        }
+        return characters.saveChar(author,guild,splitString[1]);
+    }
+
+    @CommandAnnotation(name = "DelChar", channel = Globals.channelRaceSelect, description = "Deleted the selected character", usage = "[Character name]")
+    public String deleteCharacter(){
+        String[] splitString = message.toString().split(" ");
+        if ((splitString.length == 1) || splitString[1].equals("")){
+            return "> Missing Args [Character Name]";
+        }
+        return characters.delChar(author,splitString[1]);
+    }
+
+    @CommandAnnotation(name = "Char",channel = Globals.channelRaceSelect,description = "Sets you user settings to the character's Settings", usage = "[Character name]")
+    public String selectcharacter(){
+        String[] splitString = message.toString().split(" ");
+        if ((splitString.length == 1) || splitString[1].equals("")){
+            return "> Missing Args [Character Name]";
+        }
+        return characters.selChar(author,guild,splitString[1]);
     }
 }
 

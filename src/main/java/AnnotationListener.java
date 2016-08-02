@@ -1,6 +1,5 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.util.calendar.BaseCalendar;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.GuildCreateEvent;
 import sx.blah.discord.handle.impl.events.MentionEvent;
@@ -9,7 +8,6 @@ import sx.blah.discord.handle.impl.events.ReadyEvent;
 import sx.blah.discord.handle.impl.obj.Channel;
 import sx.blah.discord.handle.impl.obj.Guild;
 import sx.blah.discord.handle.impl.obj.Message;
-import sx.blah.discord.handle.obj.IGuild;
 import sx.blah.discord.handle.obj.Status;
 import sx.blah.discord.util.*;
 
@@ -18,11 +16,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Time;
-import java.text.DateFormat;
-import java.time.LocalTime;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -38,11 +31,17 @@ public class AnnotationListener {
     @EventSubscriber
     public void onReadyEvent(ReadyEvent event) {
         try {
-            final Image avatar = Image.forFile(new File("Icons/Sailvector.png"));
-            event.getClient().changeAvatar(avatar);
-            final Status status = Status.game("Starbound");
-            event.getClient().changeStatus(status);
+            try {
+                final Image avatar = Image.forFile(new File("Icons/Sailvector.png"));
+                event.getClient().changeAvatar(avatar);
+                final Status status = Status.game("Starbound");
+                event.getClient().changeStatus(status);
+                Thread.sleep(30000);
 
+                Scanner scanner = new Scanner(System.in);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Scanner scanner = new Scanner(System.in);
             while (scanner.hasNextLine()) {
                 Channel channel = (Channel) event.getClient().getChannelByID(Globals.consoleMessageCID);
@@ -56,9 +55,9 @@ public class AnnotationListener {
             }
         } catch (DiscordException e) {
             e.printStackTrace();
-        } catch (MissingPermissionsException e) {
-            e.printStackTrace();
         } catch (RateLimitException e) {
+            e.printStackTrace();
+        } catch (MissingPermissionsException e) {
             e.printStackTrace();
         }
     }
@@ -71,19 +70,25 @@ public class AnnotationListener {
             handler = new FileHandler();
             handler.createDirectory("GuildConfigs");
             handler.createDirectory("CommandLists");
+            handler.createDirectory("Characters");
             String file = "GuildConfigs/" + readableGuildID + "_config.json";
-            String CCfile;
+            String CCfile = "CommandLists/" + readableGuildID + "_CustomCommands.json";
+            String charFile = "Characters/" + readableGuildID + "_CharList.json";
             GuildConfig guildConfig = new GuildConfig();
             if (!Files.exists(Paths.get(file))) {
                 handler.writetoJson(file, guildConfig);
                 logger.info("[GuildCreateEvent] - Creating config file for Guild with ID " + readableGuildID);
             }
             guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
-            CCfile = "CommandLists/" + readableGuildID + "_CustomCommands.json";
             CustomCommands customCommands = new CustomCommands();
             if (!Files.exists(Paths.get(CCfile))) {
                 handler.writetoJson(CCfile, customCommands);
-                logger.info("Creating Custom Commands List");
+                logger.info("Creating Custom Commands List for guild with ID " + readableGuildID);
+            }
+            Characters characters = new Characters();
+            if (!Files.exists(Paths.get(charFile))){
+                handler.writetoJson(charFile, characters);
+                logger.info("Creating Char file for guild with ID " + readableGuildID);
             }
             if (guildConfig.getDoLoginMessage()) {
                 Channel channel;
@@ -92,12 +97,10 @@ public class AnnotationListener {
                 } else {
                     channel = (Channel) event.getClient().getChannelByID(event.getGuild().getID());
                 }
-                channel.sendMessage("Hello everyone I am a Bot and my name is S.A.I.L, I am now helping out on your server. " +
-                        "If you want to see my commands you can perform " + Globals.commandPrefix + "Help\n" +
-                        "(if you dont want to see this message again have an admin do the command " + Globals.commandPrefix + "doLoginMessage)");
+                channel.sendMessage("> I have finished booting and I am now listening for commands...");
             }
             guildConfig.setGuildName(event.getGuild().getName());
-            handler.writetoJson(file,guildConfig);
+            handler.writetoJson(file, guildConfig);
         } catch (DiscordException e) {
             e.printStackTrace();
         } catch (MissingPermissionsException e) {
@@ -126,6 +129,8 @@ public class AnnotationListener {
         GuildConfig guildConfig = (GuildConfig) handler.readfromJson(file, GuildConfig.class);
         file = "CommandLists/" + readableGuildID + "_CustomCommands.json";
         CustomCommands customCommands = (CustomCommands) handler.readfromJson(file, CustomCommands.class);
+        file = "Characters/" + readableGuildID + "_CharList.json";
+        Characters characters = (Characters) handler.readfromJson(file, Characters.class);
 
         Commands commands = new Commands((Message) event.getMessage());
 
@@ -141,33 +146,13 @@ public class AnnotationListener {
                 channel.sendMessage("¯" + "\\" + "_(ツ)_/¯");
             }
 
-            commands.setPOGOS(guildConfig,customCommands);
+            commands.setPOGOS(guildConfig, customCommands,characters);
 
             Method[] methods = Commands.class.getMethods();
 
-            if (message.toString().toLowerCase().startsWith(Globals.CCPrefix.toLowerCase())){
-                StringBuilder CCName = new StringBuilder();
-                String[] splitMessage = message.toString().split(" ");
-                CCName.append(splitMessage[0]);
-                CCName.delete(0, Globals.CCPrefix.length());
-                String regex;
-                String args;
-                StringBuilder builder = new StringBuilder();
-                String[] CCResponse = customCommands.getCommand(CCName.toString());
-                if (message.toString().length() != (CCResponse[1].length() + Globals.CCPrefix.length())){
-                    builder.append(message.toString());
-                    builder.delete(0,CCResponse[1].length() + Globals.CCPrefix.length() + 1);
-                    args = builder.toString();
-                } else {
-                    args = "Nothing";
-                }
-                regex = CCResponse[2];
-                regex = regex.replaceAll("#author!#", message.getAuthor().getName());
-                regex = regex.replaceAll("#author#", message.getAuthor().getDisplayName(message.getGuild()));
-                regex = regex.replaceAll("#args#", args);
-                channel.sendMessage(regex);
+            if (message.toString().toLowerCase().startsWith(Globals.CCPrefix.toLowerCase())) {
+                channel.sendMessage(customCommands.getCommand(message.toString(),event.getMessage().getAuthor(),(Guild) event.getMessage().getGuild()));
             }
-
 
             if (message.toString().toLowerCase().startsWith(Globals.commandPrefix.toLowerCase())) {
                 for (Method m : methods) {
@@ -187,7 +172,7 @@ public class AnnotationListener {
                             }
                         } else {
                             if (testMessage.startsWith(testTo) && splitMessage[0].length() == testTo.length()) {
-                                handleCommand(m, event,guildConfig, commands);
+                                handleCommand(m, event, guildConfig, commands);
                             }
                         }
                     }
@@ -203,7 +188,7 @@ public class AnnotationListener {
         } catch (RateLimitException e) {
             e.printStackTrace();
         }
-        if (failedToSend){
+        if (failedToSend) {
             try {
                 Thread.sleep(2000);
                 channel.sendMessage(errorMessage + "\n" +
@@ -220,13 +205,13 @@ public class AnnotationListener {
         }
     }
 
-    public void handleCommand(Method doMethod, MessageReceivedEvent event, GuildConfig guildConfig,Commands commands) {
+    public void handleCommand(Method doMethod, MessageReceivedEvent event, GuildConfig guildConfig, Commands commands) {
+        Channel channel = (Channel) event.getMessage().getChannel();
         try {
-            Channel channel = (Channel) event.getMessage().getChannel();
             String response;
 
             CommandAnnotation commandAnno = doMethod.getAnnotation(CommandAnnotation.class);
-            if (commandAnno.responseGeneral()){
+            if (commandAnno.responseGeneral()) {
                 channel = (Channel) event.getMessage().getGuild().getChannelByID(guildConfig.getGeneralChannel());
             }
 
@@ -235,9 +220,9 @@ public class AnnotationListener {
                 if (!response.equals("")) {
                     channel.sendMessage(response);
                 }
-            } else if (commandAnno.channel().equalsIgnoreCase("servers")) {
+            } else if (commandAnno.channel().equalsIgnoreCase(Globals.channelServers)) {
                 if (guildConfig.getServersChannel().equalsIgnoreCase("")) {
-                    channel.sendMessage(commands.channelNotInit("Servers"));
+                    channel.sendMessage(commands.channelNotInit(Globals.channelServers));
                 } else {
                     if (channel.equals(event.getClient().getChannelByID(guildConfig.getServersChannel()))) {
                         response = (String) doMethod.invoke(commands, new Object[]{});
@@ -248,9 +233,9 @@ public class AnnotationListener {
                         channel.sendMessage(commands.wrongChannel(guildConfig.getServersChannel()));
                     }
                 }
-            } else if (commandAnno.channel().equalsIgnoreCase("raceSelect")) {
+            } else if (commandAnno.channel().equalsIgnoreCase(Globals.channelRaceSelect)) {
                 if (guildConfig.getRaceSelectChannel().equalsIgnoreCase("")) {
-                    channel.sendMessage(commands.channelNotInit("RaceSelect"));
+                    channel.sendMessage(commands.channelNotInit(Globals.channelRaceSelect));
                 } else {
                     if (channel.equals(event.getClient().getChannelByID(guildConfig.getRaceSelectChannel()))) {
                         response = (String) doMethod.invoke(commands, new Object[]{});

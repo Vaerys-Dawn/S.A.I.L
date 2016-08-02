@@ -3,7 +3,7 @@
 We are a fairly new Discord for a fairly old community and as such
 the admins here try our hardest to make this Discord the best it
 can be so we hope that you enjoy your stay here.
-#image#:Icons/Text/Spacer_20.png
+#spacer#
 #image#:Icons/Headers/Community_Icon.png
 #image#:Icons/Text/Channels_Text.png
 For our Discord server we have many different channels that you
@@ -39,7 +39,7 @@ Server if you have any feedback this is the place to go.
 #image#:Icons/Races/Modded_races.png
 You can choose any of the Above Races by doing the command
 `Sail.Race [Race]`.
-#image#:Icons/Text/Spacer_20.png
+#spacer#
 #image#:Icons/Headers/Rules_Icon.png
 #image#:Icons/Text/General_Rules_Text.png
 **1** - Please Be kind to the other people on the server.
@@ -49,14 +49,16 @@ You can choose any of the Above Races by doing the command
       repeatedly post NSFW content we will have to mute you.
 **4** - Please keep chat spam to a minimum, this includes links,
       images and bot commands.
-**5** - we would love it if you kept to the channels that fit the topic and
+**5** - We would love it if you kept to the channels that fit the topic and
       we generally wont do anything about that unless you are 
       excessive.
-**6** - please keep all nightly spoilers in the #nightly_talk channel.
+**6** - please keep all spoilers in the #channel#'177093464696029184' channel.
 **7** - respect the staff and they will respect you, this one is common
       sense.
-**8** - Have fun!
-#image#:Icons/Text/Spacer_20.png
+**8** - Mention spamming is no cool nobody wants to wake up to 20
+      mentions in their recent mentions so keep them to a minimum.
+**9** - Have fun!
+#spacer#
 #image#:Icons/Headers/Staff_Icon.png
 #image#:Icons/Text/Admins_Text.png
 **@#username#'153159020528533505' (aka @#username#'159186011455225856')** - server owner
@@ -82,7 +84,7 @@ Avali Mod dev and overall a cool guy.
 
 **@#username#'88265738904698880'**
 A pretty chill person, ironically.
-#image#:Icons/Text/Spacer_20.png
+#spacer#
 #image#:Icons/Headers/Bots_Icon.png
 #image#:Icons/Text/Sail_text.png
 GitHub - <https://github.com/Vaerys-Dawn/S.A.I.L>
@@ -98,7 +100,12 @@ Website - <https://mee6.xyz/>
 Level up! this bot tracks your message count and levels you up
 you can get some cool rewards at certain levels.
 Help command `!help`
-#image#:Icons/Text/Spacer_20.png
+#image#:Icons/Text/RH1-N0.png
+GitHub - <https://github.com/SexualRhinoceros/ModTools/wiki>
+This is an administration bot that will be helping out
+making this server a better place.
+Help command `!!help`
+#spacer#
 #image#:Icons/Headers/Links_Icon.png
 #image#:Icons/Text/Important_Links_Text.png
 Home page: <http://playstarbound.com/>

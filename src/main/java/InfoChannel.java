@@ -22,7 +22,7 @@ public class InfoChannel {
 
     public void updateInfo(Channel channel, Guild guild) {
         try {
-            if (channel.getID().equals("176667531078139904")) {
+            if (channel.getID().equals("176434793674833920")) {
                 MessageList messages = channel.getMessages();
                 if (messages.size() != 0) {
                     messages.bulkDelete(messages);
@@ -116,6 +116,7 @@ public class InfoChannel {
                     }
                     finalBuilder.append(builder.toString() + "\n");
                 } else {
+                    s = s.replaceAll("#spacer#","\u200b");
                     finalBuilder.append(s + "\n");
                 }
             }
