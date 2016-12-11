@@ -11,105 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="430621d0-3779-4519-8839-ee790dc023d7" name="Default" comment="Refactored code">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Competition/Entries.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GuildInfo/176434793674833920_Info.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Chathead.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Bots_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Community_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Links_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Rules_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Staff_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Headers/Welcome_Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Agaran_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/All_Races.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Apex_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Avian_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Floran_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Glitch_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Human_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Hylotl_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Modded_races.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Novakid_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Penguin_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Races/Vanilla_races.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/S_A_I_L.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/SailVector.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Admins_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Affiliates_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Channels_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/General_Rules_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Important_Links_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Moderators_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Nadeko_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/RH1-N0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Roles_Races_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Sail_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Spacer_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Spacer_50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Text_Channels_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Voice_Rules_Text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/Welcome_Message.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Icons/Text/mee6_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ReadMe.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bot.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/AliasAnnotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/AnnotationListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Characters.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Client.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/CommandAnnotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Commands.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/CustomCommands.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Globals.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/GuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/InfoChannel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/InterfaceListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/DiscordSAIL-1.3.0-shaded.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/DiscordSAIL-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AliasAnnotation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AnnotationListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Characters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CommandAnnotation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Commands.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CustomCommands.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/FileHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Globals.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/InfoChannel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/InterfaceListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/original-DiscordSAIL-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/run.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/DiscordSAIL_jar.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Handlers/MessageHandler.class" afterPath="$PROJECT_DIR$/target/classes/Handlers/MessageHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main/Constants.class" afterPath="$PROJECT_DIR$/target/classes/Main/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main/TimedEvents$1.class" afterPath="$PROJECT_DIR$/target/classes/Main/TimedEvents$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main/Utility.class" afterPath="$PROJECT_DIR$/target/classes/Main/Utility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/POGOs/GuildConfig.class" afterPath="$PROJECT_DIR$/target/classes/POGOs/GuildConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DiscordSAIL.iml" afterPath="$PROJECT_DIR$/DiscordSAIL.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="$PROJECT_DIR$/target/classes/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_austinv11_Discord4j_shaded_0da0b83.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_austinv11_Discord4j_shaded_7a92c99.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_jlayer_1_0_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_jlayer_1_0_1_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_mp3spi_1_9_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_mp3spi_1_9_5_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_tritonus_share_0_3_7_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_soundlibs_tritonus_share_0_3_7_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_2_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jodah_typetools_0_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jodah_typetools_0_4_7.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_3_8_v20160314.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_3_11_v20160721.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_3_8_v20160314.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_3_11_v20160721.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_3_8_v20160314.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_3_11_v20160721.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_3_8_v20160314.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_3_11_v20160721.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_3_8_v20160314.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_3_11_v20160721.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java" afterPath="$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main/TimedEvents.java" afterPath="$PROJECT_DIR$/src/main/java/Main/TimedEvents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Utility.java" />
     </list>
     <ignored path="DiscordSAIL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -149,8 +61,8 @@
       <file leaf-file-name="TimedEvents.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/TimedEvents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+            <state relative-caret-position="459">
+              <caret line="94" column="100" selection-start-line="94" selection-start-column="100" selection-end-line="94" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -159,8 +71,8 @@
       <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Utility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+            <state relative-caret-position="438">
+              <caret line="421" column="9" selection-start-line="421" selection-start-column="9" selection-end-line="421" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -169,8 +81,77 @@
       <file leaf-file-name="MessageHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="878" column="81" selection-start-line="878" selection-start-column="81" selection-end-line="878" selection-end-column="81" />
+            <state relative-caret-position="364">
+              <caret line="441" column="43" selection-start-line="441" selection-start-column="43" selection-end-line="441" selection-end-column="43" />
+              <folding>
+                <element signature="method#checkMentionCount#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#flushFiles#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#handleLogging#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#checkBlacklist#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#handleCommand#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#help#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#info#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#getGuildInfo#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#toggles#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#toggleTypes#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#channelHere#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#channelTypes#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#setAdminRole#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#setMutedRole#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#addRace#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#removeRace#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#addModifyerRole#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#removeModifyerRole#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#trustedRoles#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#updateInfo#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#logoff#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#updateAvatar#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#setRole#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#modifiers#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#listRoles#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#listModif#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#addServer#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#editServerIP#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#editServeDesc#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#editServeName#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#updateChar#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#delChar#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#newCC#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#listCCs#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#competition#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#voting#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#finalVotes#0;class#MessageHandler#0" expanded="false" />
+                <element signature="method#getEntries#0;class#MessageHandler#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Guild_Config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Storage/254790152851816458/Guild_Config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1050">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -213,9 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/SailInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AnnotatedCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SailCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/WriteToFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/SailFileManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/GeneralCommands.java" />
@@ -262,7 +240,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Commands.java" />
         <option value="$PROJECT_DIR$/CommandLists/176434793674833920_CustomCommands.json" />
         <option value="$PROJECT_DIR$/src/main/java/Main/Globals.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/TimedEvents.java" />
+        <option value="$PROJECT_DIR$/Storage/254790152851816458/Guild_Config.json" />
+        <option value="$PROJECT_DIR$/src/main/java/Main/Utility.java" />
         <option value="$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java" />
       </list>
     </option>
@@ -283,10 +264,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -414,7 +395,7 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -424,7 +405,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -434,7 +415,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -448,7 +429,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -466,7 +447,25 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L - DEV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="254790152851816458" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -480,7 +479,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -498,7 +497,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -524,7 +523,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -546,7 +545,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemId" value="S.A.I.L - DEV" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -570,12 +569,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L - DEV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Listeners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L - DEV" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="S.A.I.L" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Handlers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4827586" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DiscordSailv2" />
@@ -978,8 +1029,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
@@ -989,11 +1040,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5063966" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33910036" sideWeight="0.4936034" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.4936034" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4225352" sideWeight="0.48933902" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3090615" sideWeight="0.47003156" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20362474" sideWeight="0.47003156" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1081,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="130" />
+      <option name="time" value="135" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1049,9 +1100,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backups/176434793674833920/176434793674833920_CustomCommands.json1" />
-    <entry file="file://$PROJECT_DIR$/Backups/176434793674833920/176434793674833920_CustomCommands.json3" />
-    <entry file="file://$PROJECT_DIR$/Backups/176434793674833920/176434793674833920_config.json2" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/austinv11/Discord4j/0da0b83/Discord4j-0da0b83-shaded.jar!/sx/blah/discord/api/events/EventSubscriber.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1153,27 +1201,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/TimedEvents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+        <state relative-caret-position="459">
+          <caret line="94" column="100" selection-start-line="94" selection-start-column="100" selection-end-line="94" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Storage/254790152851816458/Guild_Config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/Utility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+        <state relative-caret-position="438">
+          <caret line="421" column="9" selection-start-line="421" selection-start-column="9" selection-end-line="421" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Handlers/MessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="878" column="81" selection-start-line="878" selection-start-column="81" selection-end-line="878" selection-end-column="81" />
-          <folding />
+        <state relative-caret-position="364">
+          <caret line="441" column="43" selection-start-line="441" selection-start-column="43" selection-end-line="441" selection-end-column="43" />
+          <folding>
+            <element signature="method#checkMentionCount#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#flushFiles#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#handleLogging#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#checkBlacklist#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#handleCommand#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#help#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#info#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#getGuildInfo#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#toggles#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#toggleTypes#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#channelHere#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#channelTypes#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#setAdminRole#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#setMutedRole#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#addRace#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#removeRace#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#addModifyerRole#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#removeModifyerRole#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#trustedRoles#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#updateInfo#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#logoff#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#updateAvatar#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#setRole#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#modifiers#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#listRoles#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#listModif#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#addServer#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#editServerIP#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#editServeDesc#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#editServeName#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#updateChar#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#delChar#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#newCC#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#listCCs#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#competition#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#voting#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#finalVotes#0;class#MessageHandler#0" expanded="false" />
+            <element signature="method#getEntries#0;class#MessageHandler#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,7 +1294,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>DiscordSAIL:jar</last-edited>
+          <last-edited>SAIL.jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

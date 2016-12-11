@@ -6,8 +6,8 @@ package Main;
 public class Constants {
 
     //Command prefix constants
-    public static final String PREFIX_COMMAND = "$";
-    public static final String PREFIX_CC = "$$";
+    public static final String PREFIX_COMMAND = "Sail.";
+    public static final String PREFIX_CC = "CC.";
     public static final String PREFIX_INDENT = "    ";
     public static final String PREFIX_EDT_LOGGER_INDENT = "                                     ";
 

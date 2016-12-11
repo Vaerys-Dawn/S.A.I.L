@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="DiscordSAIL:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/DiscordSAIL_jar</output-path>
+  <artifact type="jar" name="SAIL.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SAIL_jar</output-path>
     <root id="archive" name="DiscordSAIL.jar">
       <element id="module-output" name="DiscordSAIL" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar" path-in-jar="/" />

@@ -90,7 +90,7 @@ public class TimedEvents {
                          if (guildConfig.doDailyMessage()){
                              IChannel channel = Globals.getClient().getChannelByID(guildConfig.getChannelTypeID(Constants.CHANNEL_GENERAL));
                              for (Field f : Constants.class.getFields()){
-                                 if (f.getName().equals("DAILY_MESSAGE_" + day)){
+                                 if (f.getName().equals("DAILY_MESSAGE_" + 1)){
                                      try {
                                          String response = TagSystem.tagRandom((String) f.get(null));
                                          Thread.sleep(1000);

@@ -9,6 +9,7 @@ import POGOs.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.helpers.Util;
 import sx.blah.discord.api.internal.json.objects.EmbedObject;
 import sx.blah.discord.api.internal.json.objects.MessageObject;
 import sx.blah.discord.handle.impl.obj.Embed;
@@ -78,14 +79,6 @@ public class MessageHandler {
         guildID = guild.getID();
         noAllowed = "> I'm sorry " + author.getDisplayName(guild) + ", I'm afraid I can't do that.";
         guildConfig = (GuildConfig) Utility.initFile(guildID, Constants.FILE_GUILD_CONFIG, GuildConfig.class);
-//        if (counter > 1) {
-//            logger.error("Guild config for guild with id : " + guildID + " took " + counter + " tries to init. sending data to Error files.");
-//            MessageErrorObject messageError = new MessageErrorObject(message);
-//            ZonedDateTime now = ZonedDateTime.now();
-//            String timeNow = now.getYear() + "-" + now.getMonth() + "-" + now.getDayOfMonth() + "_" + now.getHour() + "-" + now.getMinute() + "-" + now.getSecond() + "-" + now.getNano();
-//            FileHandler.writeToJson(Constants.DIRECTORY_ERROR + timeNow + "_MSG_" + guildID + "_" + ".json", messageError);
-//            FileHandler.writeToJson(Constants.DIRECTORY_ERROR + timeNow + "_GCF_" + guildID + "_" + ".json", guildConfig);
-//        }
         checkBlacklist();
         checkMentionCount();
         if (author.isBot()) {
@@ -407,39 +400,6 @@ public class MessageHandler {
         return "> Command with the name " + args + " not found.";
     }
 
-    @CommandAnnotation(
-            name = "Report", description = "Can be used to send a user report to the server staff.", usage = "[@user] [Reason]",
-            type = Constants.TYPE_HELP, requiresArgs = true, doAdminLogging = true)
-    public String report() {
-        if (message.getMentions().size() > 0) {
-            String mentionee = message.getMentions().get(0).mention();
-            String channelID = guildConfig.getChannelTypeID(Constants.CHANNEL_ADMIN);
-            String reason = args.replace("<@" + message.getMentions().get(0).getID() + ">", "");
-            reason = reason.replace("<@!" + message.getMentions().get(0).getID() + ">", "");
-            if (channelID != null) {
-                StringBuilder builder = new StringBuilder();
-                if (guildConfig.getRoleToMention().getRoleID() != null) {
-                    builder.append(guild.getRoleByID(guildConfig.getRoleToMention().getRoleID()).mention() + "\n");
-                }
-                builder.append("**User Report**\nReporter: " + author.mention() + "\nReported: " + mentionee + "\nReason: `" + reason + "`");
-                Utility.sendMessage(builder.toString(), guild.getChannelByID(channelID));
-                return "> User Report sent.";
-            } else {
-                return "> Your report could not be sent as the server does not have an admin channel set up at this time.";
-            }
-        }
-        return Utility.getCommandInfo("report", guildConfig);
-    }
-
-    @CommandAnnotation(
-            name = "SilentReport", description = "Can be used to send a user report to the server staff.\n"
-            + Constants.PREFIX_INDENT + " It will also remove the message used to call the command.", usage = "[@user] [Reason]",
-            type = Constants.TYPE_HELP, requiresArgs = true, doAdminLogging = true)
-    public String silentReport() {
-        Utility.deleteMessage(message);
-        report();
-        return "";
-    }
 
     //
     //
@@ -456,34 +416,76 @@ public class MessageHandler {
 
     @CommandAnnotation(
             name = "Test", description = "Tests things.", usage = "[Lol this command has no usages XD]",
-            type = Constants.TYPE_GENERAL, channel = Constants.CHANNEL_BOT_COMMANDS, perms = {Permissions.MANAGE_MESSAGES}, doAdminLogging = true)
+            type = Constants.TYPE_GENERAL, doAdminLogging = true)
     public String test() {
+        Method[] methods = this.getClass().getMethods();
+        ArrayList<String> types = new ArrayList<>();
         EmbedBuilder helpEmbed = new EmbedBuilder();
-        helpEmbed.withTitle("## > Here are the command types you can search from:");
-        helpEmbed.withDescription("[GITHUB](https://github.com/Vaerys-Dawn/DiscordSailv2)");
-        helpEmbed.withDescription("Thing.");
-        try {
-            channel.sendMessage("",helpEmbed.build(),false);
-        } catch (RateLimitException e) {
-            e.printStackTrace();
-        } catch (DiscordException e) {
-            e.printStackTrace();
-        } catch (MissingPermissionsException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
-
-    @CommandAnnotation(
-            name = "UserImage", description = "Gets the Mentionee's Profile Image.", usage = "[@Users...]",
-            type = Constants.TYPE_GENERAL, requiresArgs = true)
-    public String getUserAvatar() {
-        List<IUser> mentions = message.getMentions();
         StringBuilder builder = new StringBuilder();
-        for (IUser u : mentions) {
-            builder.append(u.getDisplayName(guild) + ": " + u.getAvatarURL() + "\n");
+        ArrayList<String> commands = new ArrayList<>();
+        String spacer = TagSystem.tagSpacer("#spacer#");
+
+        //setting embed colour to match Bot's Colour
+        helpEmbed.withColor(Utility.getUsersColour(Globals.getClient().getOurUser(),guild));
+
+        //getting Types of commands.
+        for (Method m : methods) {
+            if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                boolean typeFound = false;
+                CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
+                for (String s : types) {
+                    if (s.equalsIgnoreCase(anno.type())) {
+                        typeFound = true;
+                    }
+                }
+                if (!typeFound) {
+                    types.add(anno.type());
+                }
+            }
         }
-        return builder.toString();
+        //sort types
+        Collections.sort(types);
+
+        //building the embed
+        if (args.equals("")) {
+            builder.append("```\n");
+            for (String s : types) {
+                builder.append(s + "\n");
+            }
+            builder.append("```\n");
+            helpEmbed.withTitle("Here are the Command Types I have available for use:");
+            builder.append(">>**`" + spacer + Utility.getCommandInfo("help", guildConfig) + spacer + "`**<<\n");
+            builder.append("Support Discord - https://discord.gg/XSyQQrR\n");
+            builder.append("[Bot's GitHub](https://github.com/Vaerys-Dawn/DiscordSailv2)");
+            helpEmbed.withDescription(builder.toString());
+        } else {
+            boolean isFound = false;
+            for (String s : types) {
+                if (args.equalsIgnoreCase(s)) {
+                    isFound = true;
+                    helpEmbed.withTitle("> Here are all of the " + s + " Commands I have available.");
+                    for (Method m : methods) {
+                        if (m.isAnnotationPresent(CommandAnnotation.class)) {
+                            CommandAnnotation anno = m.getAnnotation(CommandAnnotation.class);
+                            if (anno.type().equalsIgnoreCase(s)) {
+                                commands.add(guildConfig.getPrefixCommand() + anno.name() + "\n");
+                            }
+                        }
+                    }
+                    Collections.sort(commands);
+                    builder.append("```\n");
+                    commands.forEach(builder::append);
+                    builder.append("```\n");
+                    builder.append(">>**`" + spacer + Utility.getCommandInfo("info", guildConfig) + spacer + "`**<<");
+                    helpEmbed.withDescription(builder.toString());
+                }
+            }
+            if (!isFound) {
+                return "> There are no commands with the type: " + args + ".\n" + Constants.PREFIX_INDENT + Utility.getCommandInfo("help", guildConfig);
+            }
+        }
+        Utility.sendEmbededMessage("", helpEmbed.build(), channel, true);
+        return "";
     }
 
 
@@ -584,28 +586,6 @@ public class MessageHandler {
         builder.append("\n\n------{END OF INFO}------");
         Utility.sendDM(builder.toString(), author.getID());
         return "> Info sent to you via Direct Message.";
-    }
-
-    @CommandAnnotation(
-            name = "RemindMe", description = "Sets a Reminder for yourself, Limit 1 per user.", usage = "[Time Minutes] [Reminder Message]",
-            type = Constants.TYPE_GENERAL, requiresArgs = true)
-    public String setReminder() {
-        String timeString = args.split(" ")[0];
-        try {
-            long timeMins = Long.parseLong(timeString);
-            if (timeMins > 1440) {
-                return "> Max reminder time is 1 day and your time is to large.";
-            }
-            String reminderMessage = args.replaceFirst(Pattern.quote(timeString + " "), "");
-            if (!TimedEvents.addReminder(guildID, author.getID(), channel.getID(), timeMins, reminderMessage)) {
-                return "> Reminder set for " + timeString + " Minute(s) from now.";
-            } else {
-                return "> You already have a reminder set.";
-            }
-        } catch (NumberFormatException e) {
-            return "> Error Trying to set reminder.\n" +
-                    Utility.getCommandInfo("setReminder", guildConfig);
-        }
     }
 
     //
@@ -812,27 +792,6 @@ public class MessageHandler {
             type = Constants.TYPE_ADMIN, perms = {Permissions.MANAGE_MESSAGES}, requiresArgs = true)
     public String toggleLock() {
         return customCommands.toggleLock(args);
-    }
-
-    @CommandAnnotation(
-            name = "AddBlacklist", description = "Adds a phrase to a blacklist of a certain type.", usage = "[Type] [Phrase] [Reason]",
-            type = Constants.TYPE_ADMIN, perms = {Permissions.MANAGE_SERVER}, requiresArgs = true, doAdminLogging = true)
-    public String addToBlackList() {
-        return "> Nothing interesting happens.";
-    }
-
-    @CommandAnnotation(
-            name = "RemoveBlacklist", description = "Removes a phrase from a blacklist of a certain type.", usage = "[Type] [Phrase]",
-            type = Constants.TYPE_ADMIN, perms = {Permissions.MANAGE_SERVER}, requiresArgs = true, doAdminLogging = true)
-    public String removefromBlackList() {
-        return "> Nothing interesting happens.";
-    }
-
-    @CommandAnnotation(
-            name = "Blacklist", description = "Tells you the blacklisted phrases of a certain type.", usage = "[Type]",
-            type = Constants.TYPE_ADMIN, requiresArgs = true)
-    public String blacklist() {
-        return "> Nothing interesting happens.";
     }
 
     @CommandAnnotation(
@@ -1108,19 +1067,6 @@ public class MessageHandler {
     //
     //character commands
 
-    @CommandAnnotation(name = "CharTransfer", description = "Required cus whatever",
-            type = Constants.TYPE_ADMIN, perms = {Permissions.MANAGE_SERVER})
-    public String transferChars() {
-        BadCode.Characters oldchars = (BadCode.Characters) FileHandler.readFromJson(Constants.DIRECTORY_OLD_FILES + guildID + "_CharList.json", BadCode.Characters.class);
-        ArrayList<CharacterObject> toTransfer = oldchars.transferCharacters();
-        StringBuilder response = new StringBuilder();
-        for (CharacterObject c : toTransfer) {
-            response.append(characters.updateChar(c) + "\n");
-        }
-        System.out.println(response);
-        return "> Characters transfered";
-    }
-
     @CommandAnnotation(
             name = "UpdateChar", description = "Updates/Creates a Character.", usage = "[Character Name]",
             type = Constants.TYPE_CHARACTER, channel = Constants.CHANNEL_BOT_COMMANDS, requiresArgs = true)
@@ -1262,46 +1208,6 @@ public class MessageHandler {
         return null;
     }
 
-    @CommandAnnotation(
-            name = "TransferCC", description = "Transfers a legacy command to the new system", usage = "[Command Name]",
-            type = Constants.TYPE_CC, channel = Constants.CHANNEL_BOT_COMMANDS, requiresArgs = true)
-    public String transferCommand() {
-        String filePath = Constants.DIRECTORY_OLD_FILES + guildID + "_CustomCommands.json";
-        if (Paths.get(filePath).toFile().exists()) {
-            BadCode.CustomCommands oldCommands = null;
-            while (oldCommands == null) {
-                oldCommands = (BadCode.CustomCommands) FileHandler.readFromJson(filePath, BadCode.CustomCommands.class);
-            }
-            CCommandObject transfering = oldCommands.convertCommand(args);
-            if (transfering == null) {
-                return Constants.ERROR_CC_NOT_FOUND;
-            }
-            boolean locked = transfering.isLocked();
-            String userID = transfering.getUserID();
-            if (guild.getUserByID(userID) == null) {
-                Utility.sendMessage("> This command's old owner no longer is part of this server.\n" + Constants.PREFIX_INDENT +
-                        author.getDisplayName(guild) + " will become the new owner of this command.\n" +
-                        "> I am now attempting to transfer the command over.", channel);
-                userID = author.getID();
-            } else {
-                Utility.sendMessage("> I am now attempting to transfer " + guild.getUserByID(userID).getDisplayName(guild) + "'s command.", channel);
-            }
-            String name = transfering.getName();
-            String contents = transfering.getContents(false);
-            contents = contents.replace("#author!#", "#username#");
-            boolean shitpost = transfering.isShitPost();
-            boolean trusted;
-            if (userID.equals(Globals.getClient().getOurUser().getID())) {
-                trusted = true;
-            } else {
-                trusted = guildConfig.testIsTrusted(Globals.getClient().getUserByID(userID), guild);
-            }
-            return customCommands.addCommand(locked, userID, name, contents, shitpost, guild, trusted, guildConfig);
-        } else {
-            return "> Your Server Has no Legacy commands to transfer.";
-        }
-    }
-
     //
     //
     //
@@ -1383,9 +1289,9 @@ public class MessageHandler {
             type = Constants.TYPE_ADMIN, perms = {Permissions.MANAGE_MESSAGES})
     public String getEntries() {
         int i = 1;
-        for (PollObject p:competition.getEntries()){
+        for (PollObject p : competition.getEntries()) {
             Utility.sendMessage("Entry " + i + " : " + guild.getUserByID(p.getUserID()).mention() + "\n" +
-                    p.getFileUrl(),channel);
+                    p.getFileUrl(), channel);
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

@@ -8,10 +8,12 @@ import POGOs.GuildConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.api.internal.json.objects.EmbedObject;
 import sx.blah.discord.handle.obj.*;
 import sx.blah.discord.util.*;
+import sx.blah.discord.util.Image;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -122,7 +124,7 @@ public class Utility {
                 e.printStackTrace();
             }
         }
-        if (counter > 1){
+        if (counter > 1) {
             logger.error(filePath + " File for guild with id " + guildID + " took " + counter + " tries to Init");
         }
         return object;
@@ -213,6 +215,30 @@ public class Utility {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (MissingPermissionsException e) {
+                logger.error("Error sending File to channel with id: " + channel.getID() + " on guild with id: " + channel.getGuild().getID() +
+                        ".\n" + Constants.PREFIX_EDT_LOGGER_INDENT + "Reason: Missing permissions.");
+                return true;
+            }
+            return false;
+        });
+    }
+
+    public static RequestBuffer.RequestFuture<Boolean> sendEmbededMessage(String message, EmbedObject embed, IChannel channel, boolean b) {
+        return RequestBuffer.request(() -> {
+            try {
+                String iMessage = message;
+                if (iMessage == null) {
+                    iMessage = "";
+                }
+                channel.sendMessage(iMessage, embed, b);
+            } catch (DiscordException e) {
+                if (e.getMessage().contains("CloudFlare")) {
+                    sendMessage(message, channel);
+                } else {
+                    e.printStackTrace();
+                    return true;
+                }
             } catch (MissingPermissionsException e) {
                 logger.error("Error sending File to channel with id: " + channel.getID() + " on guild with id: " + channel.getGuild().getID() +
                         ".\n" + Constants.PREFIX_EDT_LOGGER_INDENT + "Reason: Missing permissions.");
@@ -377,6 +403,27 @@ public class Utility {
             }
             return false;
         });
+    }
+
+    public static Color getUsersColour(IUser user, IGuild guild) {
+        List<IRole> botRoles = guild.getRolesForUser(Globals.getClient().getOurUser());
+        IRole topColour = null;
+        String defaultColour = "0,0,0";
+        for (IRole role : botRoles) {
+            if (!(role.getColor().getRed() + "," + role.getColor().getGreen() + "," + role.getColor().getBlue()).equals(defaultColour)) {
+                if (topColour != null) {
+                    if (role.getPosition() > topColour.getPosition()) {
+                        topColour = role;
+                    }
+                } else {
+                    topColour = role;
+                }
+            }
+        }
+        if (topColour != null) {
+            return topColour.getColor();
+        }
+        return null;
     }
 
     //Time Utils
