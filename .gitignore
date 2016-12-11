@@ -45,11 +45,22 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-Token/Token.txt
-bot.log
-Mentions/Mentions.txt
+
+# Files that should not be pushed
+Token.txt
 *.json
-Icons/Buiders/
-*.psd
-Info discord.txt
+*.json1
+*.json2
+*.json3
+*.txt1
+*.txt2
+*.txt3
+*.png
 *.log
+*.txt
+Storage
+*.txt
+*.json1
+*.json2
+*.json3
+bot.log
